@@ -23,6 +23,13 @@ p, li {
     color: #1D509D;
 }
 
+.rectangle {
+    height: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #555;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #D5D5D5;
