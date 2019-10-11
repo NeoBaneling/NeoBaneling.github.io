@@ -6,6 +6,8 @@ html {
 h1 {
     font-size: 40px;
     padding-left: 20px;
+    color: #FFFFFF;
+    background-color: #121476;
 }
 
 h2 {
