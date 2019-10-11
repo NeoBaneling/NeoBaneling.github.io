@@ -41,7 +41,7 @@ p, li {
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
+  float: right;
   display: block;
   color: #FFFFFF;
   text-align: center;
@@ -90,6 +90,6 @@ clicks on the icon. This class makes the topnav look good on small screens
   .topnav.responsive a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: right;
   }
 }
