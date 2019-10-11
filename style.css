@@ -30,6 +30,8 @@ p, li {
     position: fixed;
     top: 0;
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Style the links inside the navigation bar */
