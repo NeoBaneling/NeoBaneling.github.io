@@ -7,16 +7,17 @@ h1 {
     font-size: 40px;
     padding-left: 20px;
     color: #FFFFFF;
-    background-color: #121476;
 }
 
 h2 {
     font-size: 20px;
     padding-left: 20px;
+    color: #5C6C8F;
 }
 
 p, li {
     font-size: 16px;
     line-height: 2px;
     padding-left: 40px;
+    color: #1D509D;
 }
