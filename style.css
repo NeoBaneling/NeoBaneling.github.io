@@ -28,6 +28,8 @@ p, li {
     background-color: #D5D5D5;
     overflow: hidden;
     position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 /* Style the links inside the navigation bar */
