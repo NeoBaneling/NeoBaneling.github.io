@@ -29,7 +29,9 @@ p, li {
     overflow: hidden;
     position: fixed;
     top: 0;
-    width: 95%;
+    /* width: 95%; */
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 /* Style the links inside the navigation bar */
