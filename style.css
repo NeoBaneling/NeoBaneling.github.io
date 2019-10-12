@@ -6,7 +6,6 @@ html {
 h1 {
     font-size: 40px;
     padding-left: 20px;
-    padding-top: 0px;
     color: #FFFFFF;
 }
 
@@ -28,7 +27,6 @@ p, li {
     height: 150px;
     padding-left: 16px;
     padding-right: 16px;
-    padding-bottom: 0px;
     background-color: #121476;
 }
 
@@ -39,7 +37,6 @@ p, li {
     position: fixed;
     top: 0;
     width: 100%;
-    padding-right: 16px;
 }
 
 /* Style the links inside the navigation bar */
