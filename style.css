@@ -24,9 +24,7 @@ p, li {
 }
 
 .rectangle {
-    height: 150px;
-    padding-left: 16px;
-    padding-right: 16px;
+    height: 165px;
     background-color: #121476;
 }
 
