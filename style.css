@@ -41,7 +41,7 @@ p, li {
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    float: right;
+    float: left;
     display: block;
     color: #FFFFFF;
     text-align: center;
