@@ -43,6 +43,7 @@ p.column {
 
 .column.text {
     width: 33.33%;
+    text-align: center;
 }
 
 .row:after {
