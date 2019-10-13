@@ -70,7 +70,7 @@ first one ("Home"). Show the link that contains should open and close the topnav
 @media screen and (max-width: 780px) {
     .topnav {position: relative;}
     .topnav a:not(a.active, a.icon) {display: none;}
-    .topnav a.icon {
+    .topnav .icon {
         float: right;
         display: block;
     }
@@ -81,10 +81,15 @@ clicks on the icon. This class makes the topnav look good on small screens
 (display the links vertically instead of horizontally) */
 @media screen and (max-width: 780px) {
     .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
+    .topnav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
+    }
+    .topnav.responsive a:not(a.active) {
+        float: none;
+        display: block;
+        text-align: left;
     }
     .topnav.responsive a {
         float: none;
