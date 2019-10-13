@@ -39,12 +39,17 @@ p.column {
     background-color: #121476;
 }
 
+.column {
+    float: left;
+    padding: 10px;
+}
+
 .column.image {
-    width: 66.66%;
+    width: 60%;
 }
 
 .column.text {
-    width: 33.33%;
+    width: 30%;
 }
 
 .row:after {
@@ -101,7 +106,12 @@ first one ("Home"). Show the link that contains should open and close the topnav
     }
 
     .column.image, .column.text {
+        text-align: center;
         width: 100%;
+    }
+
+    img {
+        align-self: center;
     }
 }
 
