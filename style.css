@@ -24,7 +24,7 @@ p, li {
 }
 
 p.column {
-    font-size: 18px;
+    font-size: 24px;
     font-family: 'Geneva', sans-serif;
     font-style: italic;
     padding-left: 12px;
@@ -35,6 +35,10 @@ p.column {
 .rectangle {
     height: 165px;
     background-color: #121476;
+}
+
+.column {
+    width: 100%;
 }
 
 .column.image {
