@@ -30,6 +30,7 @@ p.column {
     padding-left: 12px;
     padding-right: 12px;
     line-height: 28px;
+    text-align: center;
     color: #5C6C8F;
 }
 
@@ -38,17 +39,12 @@ p.column {
     background-color: #121476;
 }
 
-.column {
-    width: 100%;
-}
-
 .column.image {
     width: 66.66%;
 }
 
 .column.text {
     width: 33.33%;
-    text-align: center;
 }
 
 .row:after {
