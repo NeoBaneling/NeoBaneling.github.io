@@ -23,9 +23,39 @@ p, li {
     color: #98849F;
 }
 
+p.column {
+    font-size: 24px;
+    font-family: 'Geneva', sans-serif;
+    font-style: italic;
+    padding-left: 12px;
+    padding-right: 12px;
+    line-height: 28px;
+    text-align: center;
+    color: #A980BE;
+}
+
 .rectangle {
     height: 165px;
-    background-color: #7820A8;
+    background-color: #121476;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.column.image {
+    width: 60%;
+}
+
+.column.text {
+    width: 30%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Add a black background color to the top navigation */
@@ -73,6 +103,15 @@ first one ("Home"). Show the link that contains should open and close the topnav
     .topnav .icon {
         float: right;
         display: block;
+    }
+
+    .column.image, .column.text {
+        text-align: center;
+        width: 100%;
+    }
+
+    img {
+        align-self: center;
     }
 }
 
