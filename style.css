@@ -23,6 +23,12 @@ p, li {
     color: #1D509D;
 }
 
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
 p.column {
     font-size: 24px;
     font-family: 'Geneva', sans-serif;
