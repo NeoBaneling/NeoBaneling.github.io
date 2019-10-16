@@ -39,6 +39,33 @@
                 established me as a unique thinker that is constantly looking for
                 solutions to implement the features I desire.
             </p>
+            <p>
+                At first glance the graphics might not seem that complicated, but
+                every pixel of Shruden is rendered programatically; rather than
+                having a set of sprites to cycle through to match the different
+                states of the characters, the positions, facial features, and eyes
+                are computed and drawn at every frame. This computation takes into
+                account the direction Blip and Bloop, the blue and pink characters,
+                are moving, as well as Blip's position relative to Blarp, the
+                grumpy red character.
+            </p>
+            <p>
+                Because of this constant computation for 24 frames a second, the
+                game utilizes double buffering to keep the game smooth and fast.
+                In addition to double buffering, Shruden implements a few other
+                mechanics that improve gameplay. For example, Blarp's direction is
+                always computed relative to Blip's position so that the red grump
+                will move until his exact center is equal to Blip's exact center.
+                Additionally, the green coins are stored via pooling, a concept
+                often used in video games for duplicates of the same object or
+                character. When building the homework, we had not yet covered this
+                concept in lecture, but I continued searching for a means to
+                control the coins efficiently until pooling was taught in class.
+            </p>
+            <p>
+                If you found Shruden interesting, you can find out more about the
+                game's planning, concept, and design <a href="shruden.html">here</a>.
+            </p>
         </div>
         <script src="scripts/programming.js"></script>
     </body>
