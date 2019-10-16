@@ -23,6 +23,21 @@ p, li {
     color: #98849F;
 }
 
+.footer {
+    background-color: #7820A8;
+    padding: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.center-fit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+}
+
 p.column {
     font-size: 24px;
     font-family: 'Geneva', sans-serif;
