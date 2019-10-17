@@ -63,12 +63,12 @@ p.column {
     padding: 10px;
 }
 
-.column.image {
-    width: 60%;
+.column.large {
+    width: 50%;
 }
 
-.column.text {
-    width: 30%;
+.column.small {
+    width: 40%;
 }
 
 .row:after {
@@ -124,7 +124,7 @@ first one ("Home"). Show the link that contains should open and close the topnav
         display: block;
     }
 
-    .column.image, .column.text {
+    .column.large, .column.small {
         text-align: center;
         width: 100%;
     }
