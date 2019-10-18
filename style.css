@@ -58,6 +58,11 @@ p.column {
     background-color: #121476;
 }
 
+.rectangle.divide {
+    width: 100%;
+    background-color: #D6DAE5;
+}
+
 .column {
     float: left;
     padding: 10px;
