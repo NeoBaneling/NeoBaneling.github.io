@@ -59,7 +59,7 @@ p.column {
 }
 
 .rectangle.divide {
-    width: 100%;
+    height: 66px;
     background-color: #D6DAE5;
 }
 
