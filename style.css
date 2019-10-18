@@ -59,8 +59,9 @@ p.column {
 }
 
 .rectangle.divide {
-    height: 66px;
+    height: 50px;
     text-align: center;
+    overflow: hidden;
     background-color: #D6DAE5;
 }
 
