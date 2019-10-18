@@ -60,6 +60,7 @@ p.column {
 
 .rectangle.divide {
     height: 66px;
+    text-align: center;
     background-color: #D6DAE5;
 }
 
