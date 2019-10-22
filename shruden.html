@@ -29,6 +29,12 @@
                 them. Shruden is no different. Players grasp the concept and goal
                 of the game quickly, but completing it is far more difficult.
             </p>
+            <p>
+                Shruden is one of my favorite projects that I have worked on. I
+                believe it is a well made and addictive game that builds on its
+                hardware limitations and shows my strength as both a video game
+                designer and programmer.
+            </p>
             <img class="center-fit" src="img/shruden-main-screen.png">
             <h2>Background</h2>
             <p>
@@ -41,6 +47,7 @@
                 I focused on using these limitations to my advantage in the class,
                 as I hinged my game design around various retro-style games.
             </p>
+
             <img class="center-fit" src="img/shruden-instructions-screen.png">
             <h2 id="design">Design</h2>
             <p>
@@ -78,7 +85,34 @@
                     <img class="center-fit" src="img/shruden-concept.png">
                 </div>
             </div>
+            <video class="center-fit" autoplay loop muted playsinline>
+                <source src="img/shruden-capture.mp4" type=video/mp4>
+                Your browser does not support the video tag.
+            </video>
             <h2 id="programming">Programming</h2>
+                <p>
+                    At first glance the graphics might not seem that complicated, but
+                    every pixel of Shruden is rendered programatically; rather than
+                    having a set of sprites to cycle through to match the different
+                    states of the characters, the positions, facial features, and eyes
+                    are computed and drawn at every frame. This computation takes into
+                    account the direction Blip and Bloop, the blue and pink characters,
+                    are moving, as well as Blip's position relative to Blarp, the
+                    grumpy red character.
+                </p>
+                <p>
+                    Because of this constant computation for 24 frames a second, the
+                    game utilizes double buffering to keep the game smooth and fast.
+                    In addition to double buffering, Shruden implements a few other
+                    mechanics that improve gameplay. For example, Blarp's direction is
+                    always computed relative to Blip's position so that the red grump
+                    will move until his exact center is equal to Blip's exact center.
+                    Additionally, the green coins are stored via pooling, a concept
+                    which is used often in video games to this day. This concept
+                    allows video games to access duplicates of certain objects,
+                    such as bullets, coins, or Goombas, to be rendered into the
+                    game efficiently.
+                </p>
 
             <div class="footer">
                 <p class="footer">Be inquisitive, stay positive, always strive for success, and
