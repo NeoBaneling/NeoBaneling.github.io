@@ -31,7 +31,7 @@ p, li {
 }
 
 p.footer {
-    font-size: 16px;
+    font-size: 20px;
     color: #FFFFFF;
 }
 
@@ -141,6 +141,10 @@ first one ("Home"). Show the link that contains should open and close the topnav
 
     img {
         align-self: center;
+    }
+    h2, p, li {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
