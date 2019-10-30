@@ -4,22 +4,23 @@ html {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 60px;
     padding-left: 20px;
     color: #FFFFFF;
 }
 
 h2 {
-    font-size: 20px;
-    padding-left: 20px;
+    font-size: 32px;
+    padding-left: 80px;
+    padding-right: 80px;
     color: #A980BE;
 }
 
 p, li {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
     color: #98849F;
 }
 
@@ -125,7 +126,7 @@ p.column {
 
 /* When the screen is less than 62- pixels wide, hide all links, except for the
 first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 700px) {
     .topnav {position: relative;}
     .topnav a:not(a.active, a.icon) {display: none;}
     .topnav .icon {
@@ -146,7 +147,7 @@ first one ("Home"). Show the link that contains should open and close the topnav
 /* The "responsive" class is added to the topnav with JavaScript when the user
 clicks on the icon. This class makes the topnav look good on small screens
 (display the links vertically instead of horizontally) */
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 700px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
         position: absolute;
