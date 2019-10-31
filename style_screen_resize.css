@@ -1,0 +1,46 @@
+/* When the screen is less than 780 pixels wide, hide all links, except for the
+first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px) {
+    .topnav {position: relative;}
+    .topnav a:not(.active, .icon) {display: none;}
+    .topnav .icon {
+        float: right;
+        display: block;
+    }
+
+    .column.large, .column.small {
+        text-align: left;
+        width: 100%;
+    }
+
+    img {
+        align-self: center;
+    }
+
+    h2, p, li {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user
+clicks on the icon. This class makes the topnav look good on small screens
+(display the links vertically instead of horizontally) */
+@media screen and (max-width: 700px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a:not(a.active) {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
