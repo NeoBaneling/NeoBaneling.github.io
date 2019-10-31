@@ -26,6 +26,7 @@ p, li {
 }
 
 .footer {
+    margin-top: 24px;
     background-color: #7820A8;
     padding: 10px;
     text-align: center;
@@ -34,6 +35,8 @@ p, li {
 p.footer {
     font-size: 20px;
     color: #FFFFFF;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .center-fit {
