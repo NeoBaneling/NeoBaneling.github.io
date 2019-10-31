@@ -114,7 +114,7 @@ p.column {
   transition: opacity 0.2s, visibility 0.2s;
 }
 
-p.img__description_layer {
+p.img__description, a.img__description {
     color: #FFF;
 }
 
