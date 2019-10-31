@@ -1,6 +1,5 @@
-@import "style_screen_resize.css";
 @import "image_blur_control.css";
-/*@import "video_wrapper.css";*/
+@import "video_wrapper.css";
 
 html {
     font-family: 'PT Sans', sans-serif;
