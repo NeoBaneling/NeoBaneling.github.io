@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Joey Bishop/ Programming</title>
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="topnav" id="homeTopNav">
+            <a href="index.html">Home</a>
+            <a href="programming.html">Programming</a>
+            <a href="design.html">Design</a>
+            <a href="shruden.html">Shruden</a>
+            <!--<a href="mother.html">Mother</a>-->
+            <a href="about.html">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="rectangle" id="headerRect">
+            <br><br><br><br><br>
+            <h1>Gamblin' for Gold</h1>
+
+            <h2>Gambling is Design</h2>
+
+            <p>
+                Gamblin' for Gold is a collaborative group project and
+                showcases my ability in back-end development and team-based
+                workflow. It was built in
+                <a href="https://processing.org" target="_blank">Processing</a>,
+                 and the background and island images were designed by one of the
+                team members.
+            </p>
+            <div class="row">
+                <div class="column large">
+                    <img class="center-fit" src="img/gamblin-for-gold.png">
+                </div>
+                <div class="column small">
+                    <p>
+                        My primary contribution to the project was developing
+                        back-end data structures and classes that drive the game.
+                        Both the bridges and islands are represented in classes
+                        that follow common practices such as encapsulation and
+                        following the DRY principle. In the island class I
+                        implemented an adjacency map that dynamically adds islands
+                        that have been connected to a particular island via bridges.
+                        Having this dynamic map makes it very simple for real-time
+                        lookup to check if it is valid to move from one island to
+                        another.
+                    </p>
+                </div>
+            </div>
+            <p>
+                While every member of the team had their own role, the entire group
+                contributed to the concept, design, and development of the project.
+                Because of this, we met and communicated often to keep the project
+                moving forward.
+            </p>
+
+            <div class="footer">
+                <p class="footer">Be inquisitive, stay positive, always strive for success, and
+                watch out for facehuggers</p>
+            </div>
+
+        </div>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
