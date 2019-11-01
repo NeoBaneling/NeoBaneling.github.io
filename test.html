@@ -20,19 +20,12 @@
             </a>
         </div>
 
-        <div class="rectangle" id="headerRect">
-            <br><br><br><br><br>
-            <h1>Test Development</h1>
-            <h2>SECTION HEADER</h2>
-
-            <div class="img-wrap">
-                <img class="img-img" src="img/eclipse.png"></>
-                <div class="img-description-layer">
-                    <a class="img-description", href="planet-of-dreams.html">
-                        Hello, I am a bit of text.
-                    </a>
-                </div>
-            </div>
+        <div id="game"></div>
+        <script type="text/javascript" src="https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+        <script>
+            Crafty.init(500,350, document.getElementById('game'));
+            Crafty.e('2D, DOM, Color').attr({x: 0, y: 0, w: 100, h: 100}).color('#F00').fourway(200);
+        </script>
 
             <div class="footer">
                 <p class="footer">Be inquisitive, stay positive, always strive for success, and
@@ -40,6 +33,6 @@
             </div>
 
         </div>
-        <script src="scripts/main.js"></script>
+        <script src="scripts/shruden-game.js"></script>
     </body>
 </html>
