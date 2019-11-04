@@ -150,6 +150,10 @@ first one ("Home"). Show the link that contains should open and close the topnav
         align-self: center;
     }
 
+    h1 {
+        width: 90%;
+    }
+
     h2, p, li {
         padding-left: 20px;
         padding-right: 20px;
