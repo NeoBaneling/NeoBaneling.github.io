@@ -30,6 +30,10 @@ p, li {
     color: #B467F4;
 }
 
+a:link {
+    color: #B467F4;
+}
+
 .footer {
     margin-top: 24px;
     background-color: #000000;
