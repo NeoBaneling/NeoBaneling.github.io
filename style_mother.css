@@ -12,14 +12,14 @@ html {
 h1 {
     font-size: 60px;
     padding-left: 20px;
-    color: #FFFFFF;
+    color: #E74B89;
 }
 
 h2 {
     font-size: 32px;
     padding-left: 80px;
     padding-right: 80px;
-    color: #5C6C8F;
+    color: #A159DE;
 }
 
 p, li {
@@ -27,19 +27,19 @@ p, li {
     line-height: 20px;
     padding-left: 80px;
     padding-right: 80px;
-    color: #1D509D;
+    color: #B467F4;
 }
 
 .footer {
     margin-top: 24px;
-    background-color: #121476;
+    background-color: #000000;
     padding: 10px;
     text-align: center;
 }
 
 p.footer {
     font-size: 20px;
-    color: #FFFFFF;
+    color: #E74B89;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -65,7 +65,7 @@ p.column {
 
 .rectangle {
     height: 165px;
-    background-color: #121476;
+    background-color: #000000;
 }
 
 .rectangle.divide {
@@ -109,7 +109,7 @@ p.column {
 .topnav a {
     float: left;
     display: block;
-    color: #5C6C8F;
+    color: #A159DE;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -119,14 +119,14 @@ p.column {
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: #FFFFFF;
-    color: #121476;
+    color: #B467F4;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
 
-    background-color: #121476;
-    color: #FFFFFF;
+    background-color: #000000;
+    color: #E74B89;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
