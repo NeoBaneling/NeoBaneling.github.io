@@ -30,7 +30,21 @@ p, li {
     color: #B467F4;
 }
 
-a:visited {
+p a:link {
+    text-decoration: none;
+    color: #BF8EE9;
+    background-color: #000000;
+}
+
+p a:visited {
+    text-decoration: none;
+    color: #BF8EE9;
+    background-color: #000000;
+}
+
+p a:hover {
+    text-decoration: none;
+    background-color: #333333;
     color: #B467F4;
 }
 
