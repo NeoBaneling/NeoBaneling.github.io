@@ -2,7 +2,7 @@
 @import "video_wrapper.css";
 
 body {
-    background-color: #222222;
+    background-color: #101010;
 }
 
 html {
@@ -19,7 +19,7 @@ h2 {
     font-size: 32px;
     padding-left: 80px;
     padding-right: 80px;
-    color: #A159DE;
+    color: #BF8EE9;
 }
 
 p, li {
@@ -98,7 +98,7 @@ p.column {
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #D6DAE5;
+    background-color: #2A2A2A;
     overflow: hidden;
     position: relative;
     top: 0;
@@ -118,7 +118,7 @@ p.column {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #FFFFFF;
+    background-color: #333333;
     color: #B467F4;
 }
 
