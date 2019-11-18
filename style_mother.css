@@ -191,6 +191,10 @@ first one ("Home"). Show the link that contains should open and close the topnav
         width: 100%;
     }
 
+    .gradient.top, .gradient.bottom {
+        height: 100px;
+    }
+
     img {
         align-self: center;
     }
