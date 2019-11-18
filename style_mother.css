@@ -48,6 +48,13 @@ p a:hover {
     color: #B467F4;
 }
 
+.bg.image {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .footer {
     margin-top: 24px;
     background-color: #000000;
@@ -101,26 +108,6 @@ p.column {
     text-align: center;
     overflow: hidden;
     background-color: #D6DAE5;
-}
-
-.row.img {
-    margin: 8px, 16px;
-}
-
-.row.img,
-.row.img > .column.img {
-    padding: 8px;
-}
-
-.column.img {
-    float: left;
-    width: 25%;
-}
-
-.row.img:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .column {
