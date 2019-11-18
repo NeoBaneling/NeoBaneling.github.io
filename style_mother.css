@@ -70,6 +70,14 @@ p.footer {
     height: auto;
 }
 
+.center-full {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+
 p.column {
     font-size: 24px;
     font-family: 'Geneva', sans-serif;
