@@ -85,6 +85,11 @@ p.column {
     width: 40%;
 }
 
+.row {
+    margin-left: 48px;
+    margin-right: -48px;
+}
+
 .row:after {
     content: "";
     display: table;
@@ -141,6 +146,11 @@ first one ("Home"). Show the link that contains should open and close the topnav
     .column.large, .column.small {
         text-align: left;
         width: 100%;
+    }
+
+    .row {
+        margin-left: -10px;
+        margin-right: 10px;
     }
 
     img {
