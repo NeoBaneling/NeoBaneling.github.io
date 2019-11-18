@@ -193,7 +193,7 @@ first one ("Home"). Show the link that contains should open and close the topnav
 
     .column.large, .column.small, .column.img {
         text-align: left;
-        width: 50%;
+        width: 45%;
     }
 
     img {
