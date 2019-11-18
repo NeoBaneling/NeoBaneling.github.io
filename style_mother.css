@@ -48,13 +48,6 @@ p a:hover {
     color: #B467F4;
 }
 
-.bg.image {
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .footer {
     margin-top: 24px;
     background-color: #000000;
