@@ -103,6 +103,26 @@ p.column {
     background-color: #D6DAE5;
 }
 
+.row.img {
+    margin: 8px, 16px;
+}
+
+.row.img,
+.row.img > .column.img {
+    padding: 8px;
+}
+
+.column.img {
+    float: left;
+    width: 25%;
+}
+
+.row.img:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .column {
     float: left;
     padding: 10px;
@@ -171,7 +191,7 @@ first one ("Home"). Show the link that contains should open and close the topnav
         display: block;
     }
 
-    .column.large, .column.small {
+    .column.large, .column.small, .column.img {
         text-align: left;
         width: 100%;
     }
