@@ -186,9 +186,9 @@ first one ("Home"). Show the link that contains should open and close the topnav
         display: block;
     }
 
-    .column.large, .column.small, .column.img {
+    .column.large, .column.small {
         text-align: left;
-        width: 45%;
+        width: 100%;
     }
 
     img {
