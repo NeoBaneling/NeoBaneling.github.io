@@ -100,7 +100,7 @@ p.column {
 }
 
 .gradient.rectangle {
-    height: 640px;
+    height: max-content;
     background-color: #000000;
 }
 
