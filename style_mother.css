@@ -89,6 +89,14 @@ p.column {
     color: #5C6C8F;
 }
 
+.gradient.top {
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+.gradient.bottom {
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
 .rectangle {
     height: 165px;
     background-color: #000000;
