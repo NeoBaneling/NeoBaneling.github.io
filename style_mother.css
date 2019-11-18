@@ -104,10 +104,7 @@ p.column {
 }
 
 .row.img {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: auto;
+    margin: 8px, 16px;
 }
 
 .row.img,
@@ -196,7 +193,7 @@ first one ("Home"). Show the link that contains should open and close the topnav
 
     .column.large, .column.small, .column.img {
         text-align: left;
-        width: 100%;
+        width: 50%;
     }
 
     img {
