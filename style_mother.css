@@ -49,8 +49,8 @@ p a:hover {
 }
 
 .footer {
-    margin-top: 24px;
-    background-color: #000000;
+    margin-top: 36px;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1));
     padding: 10px;
     text-align: center;
 }
