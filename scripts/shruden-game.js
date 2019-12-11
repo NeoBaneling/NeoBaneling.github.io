@@ -19,5 +19,5 @@ Crafty.e('2D, DOM, Color, Fourway')
             this.x = this.x + 1;
         }
 
-        console.log(this.x, this.y);
+        console.log(this.x, this.y, e.key);
     });
