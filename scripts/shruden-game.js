@@ -18,4 +18,6 @@ Crafty.e('2D, DOM, Color, Fourway')
         if (e.key == Crafty.keys.D && this.x < Crafty.viewport.x - this.attr.w) {
             this.x = this.x + 1;
         }
+
+        console.log(this.x, this.y, Crafty.viewport.x, Crafty.viewport.y);
     });
