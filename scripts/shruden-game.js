@@ -35,7 +35,7 @@ var blip = Crafty.e('2D, DOM, Color, Fourway, Bind')
         }
         if (oldPosition.x >= 480 - this.w) {
             console.log("RightBorder");
-            this.x = 480 - this.x;
+            this.x = 480 - this.w;
         }
 
         /*
