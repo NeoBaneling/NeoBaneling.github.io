@@ -70,18 +70,18 @@ var blop = Crafty.e("2D, DOM, Color, Bind")
 
         if (oldPosition._y < 0) {
             this.y = 0;
-            dy = 3;
+            dy = -1 * dy;
         }
         if (oldPosition._y > height - this.h) {
             this.y = 320 - this.h;
-            dy = -3;
+            dy = -1 * dy;
         }
         if (oldPosition._x < 0) {
             this.x = 0;
-            dx = 3;
+            dx = -1 * dx;
         }
         if (oldPosition._x > width - this.w) {
             this.x = 480 - this.w;
-            dx = -3;
+            dx = -1 * dx;
         }
     });
