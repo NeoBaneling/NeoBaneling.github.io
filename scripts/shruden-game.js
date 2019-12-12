@@ -93,7 +93,7 @@ var blop = Crafty.e("2D, DOM, Color, Bind, Collision, Blop")
 
             if (this.y + this.h > blarp.y) {
                 // this.y = blarp.y - this.h;
-                dy = 3;
+                dy = -3;
             }
             if (this.y < blarp.y + blarp.h) {
                 // this.y = blarp.y + blarp.h;
@@ -101,7 +101,7 @@ var blop = Crafty.e("2D, DOM, Color, Bind, Collision, Blop")
             }
             if (this.x + this.w > blarp.x) {
                 // this.x = blarp.x - this.w;
-                dx = 3;
+                dx = -3;
             }
             if (this.x < blarp.x + blarp.w) {
                 // this.x = blarp.x + blarp.w;
