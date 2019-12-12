@@ -1,7 +1,7 @@
 let height = 320;
 let width = 480;
-let dx = 150;
-let dy = 150;
+let dx = 3;
+let dy = 3;
 
 Crafty.init(width, height, document.getElementById("game"));
 
