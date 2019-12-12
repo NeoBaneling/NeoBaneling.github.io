@@ -1,31 +1,19 @@
-Crafty.init(480, 320, document.getElementById('game'));
+let height = 320;
+let width = 480;
 
-var blip = Crafty.e('2D, DOM, Color, Fourway, Bind')
-    .attr({x: 0, y: 0, w: 32, h: 32})
-    .color('#0FF')
+Crafty.init(width, height, document.getElementById("game"));
+
+var blip = Crafty.e("2D, DOM, Color, Fourway, Bind")
+    .attr({x: width / 3, y: height / 2, w: 32, h: 32})
+    .color("#0FF")
     .fourway(200)
     .bind("Move", function(oldPosition) {
-
-        /*
-        if (e.key == Crafty.keys.W && this.y > 0) {
-            this.y = this.y - 1;
-        }
-        if (e.key == Crafty.keys.S && this.y < 320 - this.attr.h) {
-            this.y = this.y + 1;
-        }
-        if (e.key == Crafty.keys.A && this.x > 0) {
-            this.x = this.x - 1;
-        }
-        if (e.key == Crafty.keys.D && this.x < 480 - this.attr.w) {
-            this.x = this.x + 1;
-        }
-        */
 
         if (oldPosition._y < 0) {
             console.log("Top Border");
             this.y = 0;
         }
-        if (oldPosition._y > 320 - this.h) {
+        if (oldPosition._y > height - this.h) {
             console.log("Bottom Border");
             this.y = 320 - this.h;
         }
@@ -33,25 +21,46 @@ var blip = Crafty.e('2D, DOM, Color, Fourway, Bind')
             console.log("Left Border");
             this.x = 0;
         }
-        if (oldPosition._x > 480 - this.w) {
+        if (oldPosition._x > width - this.w) {
             console.log("RightBorder");
             this.x = 480 - this.w;
         }
+    });
 
-        /*
-        if (this.y > 0) {
-            console.log("Y is greater than 0");
-        }
-        if (this.y < 320 - this.h) {
-            console.log("Y is less than 320");
-        }
-        if (this.x > 0) {
-            console.log("X is greater than 0");
-        }
-        if (this.x < 480 - this.w) {
-            console.log("X is less than 480");
-        }
-        */
+var blarp = Crafty.e("2D, DOM, Color, Bind")
+    .attr({x: width * 2 / 3, y: height / 2, w: 64, h: 64})
+    .color("")
+    .bind("UpdateFrame", function() {
 
-        // console.log(this.x, this.y, e.key);
+        if (this.y + this.h/2 > blip.y + blip.h/2) {
+            this.y = this.y - 2;
+        }
+        if (this.x + this.w/2 > blip.x + blip.w/2) {
+            this.x = this.x - 2;
+        }
+        if (this.y + this.h/2 < blip.y + blip.h/2) {
+            this.y = this.y + 2;
+        }
+        if (this.x + this.w/2 < blip.x + blip.w/2) {
+            this.x = this.x + 2;
+        }
+    })
+    .bind("Move", function(oldPosition) {
+
+        if (oldPosition._y < 0) {
+            console.log("Top Border");
+            this.y = 0;
+        }
+        if (oldPosition._y > height - this.h) {
+            console.log("Bottom Border");
+            this.y = 320 - this.h;
+        }
+        if (oldPosition._x < 0) {
+            console.log("Left Border");
+            this.x = 0;
+        }
+        if (oldPosition._x > width - this.w) {
+            console.log("RightBorder");
+            this.x = 480 - this.w;
+        }
     });
