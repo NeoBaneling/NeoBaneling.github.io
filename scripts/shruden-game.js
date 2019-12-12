@@ -21,6 +21,7 @@ Crafty.e('2D, DOM, Color, Fourway, Bind')
         }
         */
 
+        /*
         if (e.key == Crafty.keys.W) {
             console.log("W");
         }
@@ -32,6 +33,20 @@ Crafty.e('2D, DOM, Color, Fourway, Bind')
         }
         if (e.key == Crafty.keys.D) {
             console.log("D");
+        }
+        */
+
+        if (this.y > 0) {
+            console.log("Y is greater than 0");
+        }
+        if (this.y < 320 - this.attr.h) {
+            console.log("Y is less than 320");
+        }
+        if (this.x > 0) {
+            console.log("X is greater than 0");
+        }
+        if (this.x < 480 - this.attr.w) {
+            console.log("X is less than 480");
         }
 
         // console.log(this.x, this.y, e.key);
