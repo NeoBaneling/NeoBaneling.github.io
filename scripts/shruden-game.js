@@ -92,19 +92,19 @@ var blop = Crafty.e("2D, DOM, Color, Bind, Collision, Blop")
         if (hitData = this.hit("Blarp")) {
 
             if (this.y + this.h > blarp.y) {
-                this.y = blarp.y - this.h;
+                // this.y = blarp.y - this.h;
                 dy = -3;
             }
             if (this.y < blarp.y + blarp.h) {
-                this.y = blarp.y + blarp.h;
+                // this.y = blarp.y + blarp.h;
                 dy = 3;
             }
             if (this.x + this.w > blarp.x) {
-                this.x = blarp.x - this.w;
+                // this.x = blarp.x - this.w;
                 dx = -3;
             }
             if (this.x < blarp.x + blarp.w) {
-                this.x = blarp.x + blarp.w;
+                // this.x = blarp.x + blarp.w;
                 dx = 3;
             }
         }
