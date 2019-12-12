@@ -1,9 +1,21 @@
 let height = 320;
 let width = 480;
-let dx = 3;
-let dy = 3;
+var dx = 3;
+var dy = 3;
+let MAXCOINS = 8;
+var coinsRemaining = MAXCOINS;
+let coins = [MAXCOINS];
 
 Crafty.init(width, height, document.getElementById("game"));
+
+for (var i = 0; i < MAXCOINS; i++) {
+    coins[i] = Crafty.e("2D, DOM, Color, Bind")
+        .attr({x: Math.random() * width*4/5 + width/5, y: Math.random() * height*5/6 + height/6, w: 12, h: 24})
+        .color("#0F0")
+        .bind("UpdateFrame", function(eventData) {
+            //this.x += Math.cos(eventData.dt);
+        });
+}
 
 var blip = Crafty.e("2D, DOM, Color, Fourway, Bind")
     .attr({x: width / 4, y: height / 2, w: 24, h: 24})
