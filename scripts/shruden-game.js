@@ -6,6 +6,7 @@ Crafty.e('2D, DOM, Color, Fourway, Bind')
     .fourway(200)
     .bind("KeyDown", function(e) {
 
+        /*
         if (e.key == Crafty.keys.W && this.y > 0) {
             this.y = this.y - 1;
         }
@@ -18,6 +19,20 @@ Crafty.e('2D, DOM, Color, Fourway, Bind')
         if (e.key == Crafty.keys.D && this.x < 480 - this.attr.w) {
             this.x = this.x + 1;
         }
+        */
 
-        console.log(this.x, this.y, e.key);
+        if (e.key == Crafty.keys.W) {
+            console.log("W");
+        }
+        if (e.key == Crafty.keys.S) {
+            console.log("S");
+        }
+        if (e.key == Crafty.keys.A) {
+            console.log("A");
+        }
+        if (e.key == Crafty.keys.D) {
+            console.log("D");
+        }
+
+        // console.log(this.x, this.y, e.key);
     });
