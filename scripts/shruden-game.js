@@ -21,7 +21,7 @@ var blip = Crafty.e("2D, DOM, Color, Fourway, Bind, Collision, Blip")
     .attr({x: width / 4, y: height / 2, w: 24, h: 24})
     .color("#0FF")
     .fourway(200)
-    .bind("UpdateFrame", function()) {
+    .bind("UpdateFrame", function() {
 
         var hitData;
 
@@ -44,7 +44,7 @@ var blip = Crafty.e("2D, DOM, Color, Fourway, Bind, Collision, Blip")
                 dx = 3;
             }
         }
-    }
+    })
     .bind("Move", function(oldPosition) {
 
         if (oldPosition._y < 0) {
