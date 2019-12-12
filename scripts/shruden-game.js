@@ -25,7 +25,7 @@ var blip = Crafty.e("2D, DOM, Color, Fourway, Bind, Collision, Blip")
 
         var hitData;
 
-        if (hitData = this.hit("Blarp") || hitData = this.hit("Blop")) {
+        if ((hitData = this.hit("Blarp")) || (hitData = this.hit("Blop"))) {
 
             if (this.y + this.h > blarp.y) {
                 this.y = blarp.y - this.h;
