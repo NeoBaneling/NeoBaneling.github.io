@@ -24,36 +24,30 @@ var blip = Crafty.e('2D, DOM, Color, Fourway, Bind')
         if (e.key == Crafty.keys.W && this.y > 0) {
             console.log("W");
         }
-        /*
-        if (e.key == Crafty.keys.S) {
+        if (e.key == Crafty.keys.S && this.y < 320 - this.h) {
             console.log("S");
         }
-        */
         if (e.key == Crafty.keys.A && this.x > 0) {
             console.log("A");
         }
-        /*
-        if (e.key == Crafty.keys.D) {
+        if (e.key == Crafty.keys.D && this.x < 480 - this.w) {
             console.log("D");
         }
-        */
 
         /*
         if (this.y > 0) {
             console.log("Y is greater than 0");
         }
-        */
         if (this.y < 320 - this.h) {
             console.log("Y is less than 320");
         }
-        /*
         if (this.x > 0) {
             console.log("X is greater than 0");
         }
-        */
         if (this.x < 480 - this.w) {
             console.log("X is less than 480");
         }
+        */
 
         // console.log(this.x, this.y, e.key);
     });
