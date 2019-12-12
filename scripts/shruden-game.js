@@ -1,6 +1,6 @@
 Crafty.init(480, 320, document.getElementById('game'));
 
-Crafty.e('2D, DOM, Color, Fourway, Bind')
+var blip = Crafty.e('2D, DOM, Color, Fourway, Bind')
     .attr({x: 0, y: 0, w: 32, h: 32})
     .color('#0FF')
     .fourway(200)
@@ -43,8 +43,7 @@ Crafty.e('2D, DOM, Color, Fourway, Bind')
             console.log("Y is greater than 0");
         }
         */
-        console.log(this.attr.h, this.attr.w);
-        if (this.y < 320 - this.attr.h) {
+        if (this.y < 320 - this.h) {
             console.log("Y is less than 320");
         }
         /*
@@ -52,7 +51,7 @@ Crafty.e('2D, DOM, Color, Fourway, Bind')
             console.log("X is greater than 0");
         }
         */
-        if (this.x < 480 - this.attr.w) {
+        if (this.x < 480 - this.w) {
             console.log("X is less than 480");
         }
 
