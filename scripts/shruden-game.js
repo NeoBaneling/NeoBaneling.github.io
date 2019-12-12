@@ -15,13 +15,13 @@ var blip = Crafty.e("2D, DOM, Color, Fourway, Bind")
             this.y = 0;
         }
         if (oldPosition._y > height - this.h) {
-            this.y = 320 - this.h;
+            this.y = height - this.h;
         }
         if (oldPosition._x < 0) {
             this.x = 0;
         }
         if (oldPosition._x > width - this.w) {
-            this.x = 480 - this.w;
+            this.x = width - this.w;
         }
     });
 
@@ -49,13 +49,13 @@ var blarp = Crafty.e("2D, DOM, Color, Bind")
             this.y = 0;
         }
         if (oldPosition._y > height - this.h) {
-            this.y = 320 - this.h;
+            this.y = height - this.h;
         }
         if (oldPosition._x < 0) {
             this.x = 0;
         }
         if (oldPosition._x > width - this.w) {
-            this.x = 480 - this.w;
+            this.x = width - this.w;
         }
     });
 
@@ -70,18 +70,18 @@ var blop = Crafty.e("2D, DOM, Color, Bind")
 
         if (oldPosition._y < 0) {
             this.y = 0;
-            dy = -1 * dy;
+            dy = 3;
         }
         if (oldPosition._y > height - this.h) {
-            this.y = 320 - this.h;
-            dy = -1 * dy;
+            this.y = height - this.h;
+            dy = -3;
         }
         if (oldPosition._x < 0) {
             this.x = 0;
-            dx = -1 * dx;
+            dx = 3;
         }
         if (oldPosition._x > width - this.w) {
-            this.x = 480 - this.w;
-            dx = -1 * dx;
+            this.x = width - this.w;
+            dx = -3;
         }
     });
