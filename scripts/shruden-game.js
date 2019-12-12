@@ -1,5 +1,7 @@
 let height = 320;
 let width = 480;
+let dx = 150;
+let dy = 150;
 
 Crafty.init(width, height, document.getElementById("game"));
 
@@ -39,10 +41,10 @@ var blarp = Crafty.e("2D, DOM, Color, Bind")
             this.x -= 2;
         }
         if (this.y + this.h/2 < blip.y + blip.h/2) {
-            this.y -= 2;
+            this.y += 2;
         }
         if (this.x + this.w/2 < blip.x + blip.w/2) {
-            this.x -= 2;
+            this.x += 2;
         }
     })
     .bind("Move", function(oldPosition) {
@@ -66,31 +68,31 @@ var blarp = Crafty.e("2D, DOM, Color, Bind")
     });
 
 var blop = Crafty.e("2D, DOM, Color, Bind")
-    .attr({x: width/2, y: height*2/3, w: 24, h: 24, dx: 150, dy: 150})
+    .attr({x: width/2, y: height*2/3, w: 24, h: 24})
     .color("#F0F")
     .bind("UpdateFrame", function() {
-        this.x += this.dx;
-        this.y += this.dy;
+        this.x += dx;
+        this.y += dy;
     })
     .bind("Move", function(oldPosition) {
         if (oldPosition._y < 0) {
             console.log("Top Border");
             this.y = 0;
-            this.dy *= -1;
+            dy *= -1;
         }
         if (oldPosition._y > height - this.h) {
             console.log("Bottom Border");
             this.y = 320 - this.h;
-            this.dy *= -1;
+            dy *= -1;
         }
         if (oldPosition._x < 0) {
             console.log("Left Border");
             this.x = 0;
-            this.dx *= -1;
+            dx *= -1;
         }
         if (oldPosition._x > width - this.w) {
             console.log("RightBorder");
             this.x = 480 - this.w;
-            this.dx *= -1;
+            dx *= -1;
         }
     });
