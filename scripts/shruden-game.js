@@ -13,7 +13,7 @@ for (var i = 0; i < MAXCOINS; i++) {
         .attr({x: Math.random() * width*3/5 + width/5, y: Math.random() * height*4/6 + height/6, w: 8, h: 16})
         .color("#0F0")
         .bind("UpdateFrame", function(eventData) {
-            this.y += Math.cos(eventData.dt%8);
+            this.y += Math.cos(eventData.dt/8);
         });
 }
 
