@@ -72,7 +72,7 @@ var blop = Crafty.e("2D, DOM, Color, Bind")
         this.x += this.dx;
         this.y += this.dy;
     })
-    .bind("Move", function(oldPosition)) {
+    .bind("Move", function(oldPosition) {
         if (oldPosition._y < 0) {
             console.log("Top Border");
             this.y = 0;
@@ -93,4 +93,4 @@ var blop = Crafty.e("2D, DOM, Color, Bind")
             this.x = 480 - this.w;
             this.dx *= -1;
         }
-    }
+    });
