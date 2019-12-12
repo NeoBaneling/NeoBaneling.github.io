@@ -84,6 +84,6 @@ var blop = Crafty.e("2D, DOM, Color, Bind")
             this.x = 480 - this.w;
             dx *= -1;
         }
-    });
 
-console.log(blop);
+        console.log(dx, dy);
+    });
