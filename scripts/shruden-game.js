@@ -27,22 +27,7 @@ var blip = Crafty.e("2D, DOM, Color, Fourway, Bind, Collision, Blip")
 
         if ((hitData = this.hit("Blarp")) || (hitData = this.hit("Blop"))) {
 
-            if (this.y + this.h > blarp.y) {
-                this.y = blarp.y - this.h;
-                dy = -3;
-            }
-            if (this.y < blarp.y + blarp.h) {
-                this.y = blarp.y + blarp.h;
-                dy = 3;
-            }
-            if (this.x + this.w > blarp.x) {
-                this.x = blarp.x - this.w;
-                dx = -3;
-            }
-            if (this.x < blarp.x + blarp.w) {
-                this.x = blarp.x + blarp.w;
-                dx = 3;
-            }
+            console.log(hitData);
         }
     })
     .bind("Move", function(oldPosition) {
@@ -106,7 +91,22 @@ var blop = Crafty.e("2D, DOM, Color, Bind, Collision, Blop")
 
         if (hitData = this.hit("Blarp")) {
 
-            console.log(hitData);
+            if (this.y + this.h > blarp.y) {
+                this.y = blarp.y - this.h;
+                dy = -3;
+            }
+            if (this.y < blarp.y + blarp.h) {
+                this.y = blarp.y + blarp.h;
+                dy = 3;
+            }
+            if (this.x + this.w > blarp.x) {
+                this.x = blarp.x - this.w;
+                dx = -3;
+            }
+            if (this.x < blarp.x + blarp.w) {
+                this.x = blarp.x + blarp.w;
+                dx = 3;
+            }
         }
     })
     .bind("Move", function(oldPosition) {
