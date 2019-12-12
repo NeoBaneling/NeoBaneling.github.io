@@ -69,19 +69,19 @@ var blop = Crafty.e("2D, DOM, Color, Bind")
     .bind("Move", function(oldPosition) {
 
         if (oldPosition._y < 0) {
-            this.y = 0;
+            this.y = dy;
             dy *= -1;
         }
         if (oldPosition._y > height - this.h) {
-            this.y = 320 - this.h;
+            this.y = 320 - this.h - dy;
             dy *= -1;
         }
         if (oldPosition._x < 0) {
-            this.x = 0;
+            this.x = dx;
             dx *= -1;
         }
         if (oldPosition._x > width - this.w) {
-            this.x = 480 - this.w;
+            this.x = 480 - this.w - dx;
             dx *= -1;
         }
 
