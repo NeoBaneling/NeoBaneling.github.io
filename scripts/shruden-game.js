@@ -9,11 +9,15 @@ let coins = [MAXCOINS];
 Crafty.init(width, height, document.getElementById("game"));
 
 for (var i = 0; i < MAXCOINS; i++) {
-    coins[i] = Crafty.e("2D, DOM, Color, Bind")
+    coins[i] = Crafty.e("2D, DOM, Color, Bind, Collision, Coin")
         .attr({x: Math.random() * width*3/5 + width/5, y: Math.random() * height*4/6 + height/6, w: 8, h: 16})
         .color("#0F0")
         .bind("UpdateFrame", function(eventData) {
 
+            if ((hitData = this.hit("Blip"))) {
+                this.destroy();
+                coinsRemaining--;
+            }
         });
 }
 
@@ -27,7 +31,7 @@ var blip = Crafty.e("2D, DOM, Color, Fourway, Bind, Collision, Blip")
 
         if ((hitData = this.hit("Blarp")) || (hitData = this.hit("Blop"))) {
 
-            console.log(hitData);
+            console.log("I've been hit!");
         }
     })
     .bind("Move", function(oldPosition) {
