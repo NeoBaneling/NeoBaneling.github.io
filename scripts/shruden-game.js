@@ -17,7 +17,7 @@ for (var i = 0; i < MAXCOINS; i++) {
         });
 }
 
-var blip = Crafty.e("2D, DOM, Color, Fourway, Bind")
+var blip = Crafty.e("2D, DOM, Color, Fourway, Bind, Collision, Blip")
     .attr({x: width / 4, y: height / 2, w: 24, h: 24})
     .color("#0FF")
     .fourway(200)
@@ -37,7 +37,7 @@ var blip = Crafty.e("2D, DOM, Color, Fourway, Bind")
         }
     });
 
-var blarp = Crafty.e("2D, DOM, Color, Bind")
+var blarp = Crafty.e("2D, DOM, Color, Bind, Collision, Blarp")
     .attr({x: width * 2 / 3, y: height / 2, w: 48, h: 48})
     .color("#F00")
     .bind("UpdateFrame", function() {
@@ -71,12 +71,19 @@ var blarp = Crafty.e("2D, DOM, Color, Bind")
         }
     });
 
-var blop = Crafty.e("2D, DOM, Color, Bind")
+var blop = Crafty.e("2D, DOM, Color, Bind, Collision, Blop")
     .attr({x: width/2, y: height*2/3, w: 32, h: 32})
     .color("#F0F")
     .bind("UpdateFrame", function() {
         this.x += dx;
         this.y += dy;
+
+        var hitData;
+
+        if (hitData = this.hit("Blarp")) {
+
+            console.log(hitData);
+        }
     })
     .bind("Move", function(oldPosition) {
 
