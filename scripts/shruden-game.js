@@ -23,19 +23,19 @@ var blip = Crafty.e('2D, DOM, Color, Fourway, Bind')
 
         if (oldPosition.y <= 0) {
             console.log("Top Border");
-            this.y = this.y + 1;
+            this.y = 0;
         }
         if (oldPosition.y >= 320 - this.h) {
             console.log("Bottom Border");
-            this.y = this.y - 1;
+            this.y = 320 - this.h;
         }
         if (oldPosition.x <= 0) {
             console.log("Left Border");
-            this.x = this.x + 1;
+            this.x = 0;
         }
         if (oldPosition.x >= 480 - this.w) {
             console.log("RightBorder");
-            this.x = this.x - 1;
+            this.x = 480 - this.x;
         }
 
         /*
