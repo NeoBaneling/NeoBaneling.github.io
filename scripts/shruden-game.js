@@ -4,7 +4,7 @@ let width = 480;
 Crafty.init(width, height, document.getElementById("game"));
 
 Crafty.defineScene("start", function(attributes) {
-    Crafty.background("#A0A");
+    Crafty.background("#7820A8");
 
     var unneeded = Crafty.e("Bind")
         .bind("KeyDown", function(e) {
