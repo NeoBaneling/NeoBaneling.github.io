@@ -23,18 +23,18 @@ Crafty.defineScene("game", function(attributes) {
     let coins = [MAXCOINS];
     Crafty.background("#FFF");
 
-    let borderThick = 4;
+    let bWidth = 4;
     var borderTop = Crafty.e("2D, DOM, Color")
-        .attr({x: 0, y: 0, w: width, h: borderThick})
+        .attr({x: 0, y: 0, w: width, h: bWidth})
         .color("#7820A8");
     var borderLeft = Crafty.e("2D, DOM, Color")
-        .attr({x: 0, y: 0, w: borderThick, h: height})
+        .attr({x: 0, y: 0, w: bWidth, h: height})
         .color("#7820A8");
     var borderRight = Crafty.e("2D, DOM, Color")
-        .attr({x: width - borderThick, y: 0, w: borderThick, h: height})
+        .attr({x: width - bWidth, y: 0, w: bWidth, h: height})
         .color("#7820A8");
     var borderBottom = Crafty.e("2D, DOM, Color")
-        .attr({x: 0, y: height - borderThick, w: width, h: borderThick})
+        .attr({x: 0, y: height - bWidth, w: width, h: bWidth})
         .color("#7820A8");
 
     for (var i = 0; i < MAXCOINS; i++) {
@@ -69,17 +69,17 @@ Crafty.defineScene("game", function(attributes) {
         })
         .bind("Move", function(oldPosition) {
 
-            if (oldPosition._y < borderThick) {
-                this.y = 0;
+            if (oldPosition._y < bWidth) {
+                this.y = bWidth;
             }
-            if (oldPosition._y > height - this.h - borderThick) {
-                this.y = height - this.h;
+            if (oldPosition._y > height - this.h - bWidth) {
+                this.y = height - this.h - bWidth;
             }
-            if (oldPosition._x < borderThick) {
-                this.x = 0;
+            if (oldPosition._x < bWidth) {
+                this.x = bWidth;
             }
-            if (oldPosition._x > width - this.w - borderThick) {
-                this.x = width - this.w;
+            if (oldPosition._x > width - this.w - bWidth) {
+                this.x = width - this.w - bWidth;
             }
         });
 
@@ -103,17 +103,17 @@ Crafty.defineScene("game", function(attributes) {
         })
         .bind("Move", function(oldPosition) {
 
-            if (oldPosition._y < borderThick) {
-                this.y = 0;
+            if (oldPosition._y < bWidth) {
+                this.y = bWidth;
             }
-            if (oldPosition._y > height - this.h - borderThick) {
-                this.y = height - this.h;
+            if (oldPosition._y > height - this.h - bWidth) {
+                this.y = height - this.h - bWidth;
             }
-            if (oldPosition._x < borderThick) {
-                this.x = 0;
+            if (oldPosition._x < bWidth) {
+                this.x = bWidth;
             }
-            if (oldPosition._x > width - this.w - borderThick) {
-                this.x = width - this.w;
+            if (oldPosition._x > width - this.w - bWidth) {
+                this.x = width - this.w - bWidth;
             }
         });
 
@@ -148,20 +148,20 @@ Crafty.defineScene("game", function(attributes) {
         })
         .bind("Move", function(oldPosition) {
 
-            if (oldPosition._y < borderThick) {
-                this.y = 0;
+            if (oldPosition._y < bWidth) {
+                this.y = Bwidth;
                 dy = 3;
             }
-            if (oldPosition._y > height - this.h - borderThick) {
-                this.y = height - this.h;
+            if (oldPosition._y > height - this.h - bWidth) {
+                this.y = height - this.h - bWidth;
                 dy = -3;
             }
-            if (oldPosition._x < borderThick) {
-                this.x = 0;
+            if (oldPosition._x < bWidth) {
+                this.x = bWidth;
                 dx = 3;
             }
-            if (oldPosition._x > width - this.w - borderThick) {
-                this.x = width - this.w;
+            if (oldPosition._x > width - this.w - bWidth) {
+                this.x = width - this.w - bWidth;
                 dx = -3;
             }
         });
