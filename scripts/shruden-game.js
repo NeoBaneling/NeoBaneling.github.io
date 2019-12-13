@@ -25,16 +25,16 @@ Crafty.defineScene("game", function(attributes) {
 
     let bWidth = 4;
     var borderTop = Crafty.e("2D, DOM, Color")
-        .attr({x: 0, y: 0, w: width, h: bWidth})
+        .attr({x: 0, y: 0, z: 1, w: width, h: bWidth})
         .color("#7820A8");
     var borderLeft = Crafty.e("2D, DOM, Color")
-        .attr({x: 0, y: 0, w: bWidth, h: height})
+        .attr({x: 0, y: 0, z: 1, w: bWidth, h: height})
         .color("#7820A8");
     var borderRight = Crafty.e("2D, DOM, Color")
-        .attr({x: width - bWidth, y: 0, w: bWidth, h: height})
+        .attr({x: width - bWidth, y: 0, z: 1, w: bWidth, h: height})
         .color("#7820A8");
     var borderBottom = Crafty.e("2D, DOM, Color")
-        .attr({x: 0, y: height - bWidth, w: width, h: bWidth})
+        .attr({x: 0, y: height - bWidth, z: 1, w: width, h: bWidth})
         .color("#7820A8");
 
     for (var i = 0; i < MAXCOINS; i++) {
@@ -55,7 +55,7 @@ Crafty.defineScene("game", function(attributes) {
     }
 
     var blip = Crafty.e("2D, DOM, Color, Fourway, Bind, Collision, Blip")
-        .attr({x: width / 4, y: height / 2, w: 24, h: 24})
+        .attr({x: width / 4, y: height / 2, z: 0, w: 24, h: 24})
         .color("#0FF")
         .fourway(200)
         .bind("UpdateFrame", function() {
@@ -84,7 +84,7 @@ Crafty.defineScene("game", function(attributes) {
         });
 
     var blarp = Crafty.e("2D, DOM, Color, Bind, Collision, Blarp")
-        .attr({x: width * 2 / 3, y: height / 2, w: 48, h: 48})
+        .attr({x: width * 2 / 3, y: height / 2, z: 0, w: 48, h: 48})
         .color("#F00")
         .bind("UpdateFrame", function() {
 
@@ -118,7 +118,7 @@ Crafty.defineScene("game", function(attributes) {
         });
 
     var blop = Crafty.e("2D, DOM, Color, Bind, Collision, Blop")
-        .attr({x: width/2, y: height*2/3, w: 32, h: 32})
+        .attr({x: width/2, y: height*2/3, z: 0, w: 32, h: 32})
         .color("#F0F")
         .bind("UpdateFrame", function() {
             this.x += dx;
@@ -149,7 +149,7 @@ Crafty.defineScene("game", function(attributes) {
         .bind("Move", function(oldPosition) {
 
             if (oldPosition._y < bWidth) {
-                this.y = Bwidth;
+                this.y = bWidth;
                 dy = 3;
             }
             if (oldPosition._y > height - this.h - bWidth) {
