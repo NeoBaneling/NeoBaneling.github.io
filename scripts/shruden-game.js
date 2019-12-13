@@ -49,7 +49,7 @@ Crafty.defineScene("game", function(attributes) {
                 }
 
                 if (!coinsRemaining) {
-                    Crafty.enterScene("win");
+                    Crafty.enterScene("win", blip);
                 }
             });
     }
@@ -64,7 +64,7 @@ Crafty.defineScene("game", function(attributes) {
 
             if ((hitData = this.hit("Blarp")) || (hitData = this.hit("Blop"))) {
 
-                Crafty.enterScene("lose");
+                Crafty.enterScene("lose", blip);
             }
         })
         .bind("Move", function(oldPosition) {
@@ -170,6 +170,9 @@ Crafty.defineScene("game", function(attributes) {
 Crafty.defineScene("win", function (attributes) {
     Crafty.background("#0F0");
 
+    blip.color("#FFF");
+    blip.fourway(0);
+
     var keyBinding = Crafty.e("Bind")
         .bind("KeyDown", function(e) {
 
@@ -181,6 +184,9 @@ Crafty.defineScene("win", function (attributes) {
 
 Crafty.defineScene("lose", function (attributes) {
     Crafty.background("#000");
+
+    blip.color("#FFF");
+    blip.fourway(0);
 
     var keyBinding = Crafty.e("Bind")
         .bind("KeyDown", function(e) {
