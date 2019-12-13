@@ -2,11 +2,11 @@ let height = 320;
 let width = 480;
 
 Crafty.init(width, height, document.getElementById("game"));
-Crafty.enterScene("start");
+// Crafty.enterScene("start");
 
-Crafty.defineScene("start", function(attributes) {
-    Crafty.background("#A0A");
-});
+// Crafty.defineScene("start", function(attributes) {
+//     Crafty.background("#A0A");
+// });
 
 Crafty.defineScene("game", function(attributes) {
     var dx = 3;
@@ -141,3 +141,5 @@ Crafty.defineScene("game", function(attributes) {
             }
         });
 });
+
+Crafty.enterScene("game");
