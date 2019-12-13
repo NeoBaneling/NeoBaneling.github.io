@@ -31,10 +31,10 @@ Crafty.defineScene("game", function(attributes) {
         .attr({x: 0, y: 0, w: borderThick, h: height})
         .color("#7820A8");
     var borderRight = Crafty.e("2D, DOM, Color")
-        .attr({x: width - 2, y: height - 2, w: borderThick, h: height})
+        .attr({x: width - borderThick, y: 0, w: borderThick, h: height})
         .color("#7820A8");
     var borderBottom = Crafty.e("2D, DOM, Color")
-        .attr({x: width - borderThick, y: 0, w: width, h: borderThick})
+        .attr({x: 0, y: height - borderThick, w: width, h: borderThick})
         .color("#7820A8");
 
     for (var i = 0; i < MAXCOINS; i++) {
