@@ -23,6 +23,20 @@ Crafty.defineScene("game", function(attributes) {
     let coins = [MAXCOINS];
     Crafty.background("#FFF");
 
+    let borderThick = 4;
+    var borderTop = Crafty.e("2D, DOM, Color")
+        .attr({x: 0, y: 0, w: width, h: borderThick})
+        .color("#7820A8");
+    var borderLeft = Crafty.e("2D, DOM, Color")
+        .attr({x: 0, y: 0, w: borderThick, h: height})
+        .color("#7820A8");
+    var borderRight = Crafty.e("2D, DOM, Color")
+        .attr({x: width - 2, y: height - 2, w: borderThick, h: height})
+        .color("#7820A8");
+    var borderBottom = Crafty.e("2D, DOM, Color")
+        .attr({x: width - borderThick, y: 0, w: width, h: borderThick})
+        .color("#7820A8");
+
     for (var i = 0; i < MAXCOINS; i++) {
         coins[i] = Crafty.e("2D, DOM, Color, Bind, Collision, Coin")
             .attr({x: Math.random() * width*3/5 + width/5, y: Math.random() * height*4/6 + height/6, w: 8, h: 16})
