@@ -69,16 +69,16 @@ Crafty.defineScene("game", function(attributes) {
         })
         .bind("Move", function(oldPosition) {
 
-            if (oldPosition._y < 0) {
+            if (oldPosition._y < borderThick) {
                 this.y = 0;
             }
-            if (oldPosition._y > height - this.h) {
+            if (oldPosition._y > height - this.h - borderThick) {
                 this.y = height - this.h;
             }
-            if (oldPosition._x < 0) {
+            if (oldPosition._x < borderThick) {
                 this.x = 0;
             }
-            if (oldPosition._x > width - this.w) {
+            if (oldPosition._x > width - this.w - borderThick) {
                 this.x = width - this.w;
             }
         });
@@ -103,16 +103,16 @@ Crafty.defineScene("game", function(attributes) {
         })
         .bind("Move", function(oldPosition) {
 
-            if (oldPosition._y < 0) {
+            if (oldPosition._y < borderThick) {
                 this.y = 0;
             }
-            if (oldPosition._y > height - this.h) {
+            if (oldPosition._y > height - this.h - borderThick) {
                 this.y = height - this.h;
             }
-            if (oldPosition._x < 0) {
+            if (oldPosition._x < borderThick) {
                 this.x = 0;
             }
-            if (oldPosition._x > width - this.w) {
+            if (oldPosition._x > width - this.w - borderThick) {
                 this.x = width - this.w;
             }
         });
@@ -148,19 +148,19 @@ Crafty.defineScene("game", function(attributes) {
         })
         .bind("Move", function(oldPosition) {
 
-            if (oldPosition._y < 0) {
+            if (oldPosition._y < borderThick) {
                 this.y = 0;
                 dy = 3;
             }
-            if (oldPosition._y > height - this.h) {
+            if (oldPosition._y > height - this.h - borderThick) {
                 this.y = height - this.h;
                 dy = -3;
             }
-            if (oldPosition._x < 0) {
+            if (oldPosition._x < borderThick) {
                 this.x = 0;
                 dx = 3;
             }
-            if (oldPosition._x > width - this.w) {
+            if (oldPosition._x > width - this.w - borderThick) {
                 this.x = width - this.w;
                 dx = -3;
             }
