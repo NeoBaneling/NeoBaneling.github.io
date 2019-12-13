@@ -6,7 +6,7 @@ Crafty.init(width, height, document.getElementById("game"));
 Crafty.defineScene("start", function(attributes) {
     Crafty.background("#7820A8");
 
-    var unneeded = Crafty.e("Bind")
+    var keyBinding = Crafty.e("Bind")
         .bind("KeyDown", function(e) {
 
             if (e.key == Crafty.keys.ENTER) {
@@ -33,6 +33,10 @@ Crafty.defineScene("game", function(attributes) {
                     this.destroy();
                     coinsRemaining--;
                 }
+
+                if (!coinsRemaining) {
+                    Crafty.enterScene("win");
+                }
             });
     }
 
@@ -46,7 +50,7 @@ Crafty.defineScene("game", function(attributes) {
 
             if ((hitData = this.hit("Blarp")) || (hitData = this.hit("Blop"))) {
 
-                console.log("I've been hit!");
+                Crafty.enterScene("lose");
             }
         })
         .bind("Move", function(oldPosition) {
@@ -145,6 +149,30 @@ Crafty.defineScene("game", function(attributes) {
             if (oldPosition._x > width - this.w) {
                 this.x = width - this.w;
                 dx = -3;
+            }
+        });
+});
+
+Crafty.defineScene("win", function (attributes) {
+    Crafty.background("#0F0");
+
+    var keyBinding = Crafty.e("Bind")
+        .bind("KeyDown", function(e) {
+
+            if (e.key == Crafty.keys.ENTER) {
+                Crafty.enterScene("start");
+            }
+        });
+});
+
+Crafty.defineScene("lose", function (attributes) {
+    Crafty.background("#000");
+
+    var keyBinding = Crafty.e("Bind")
+        .bind("KeyDown", function(e) {
+
+            if (e.key == Crafty.keys.ENTER) {
+                Crafty.enterScene("start");
             }
         });
 });
