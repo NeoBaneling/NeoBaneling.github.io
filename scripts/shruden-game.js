@@ -187,14 +187,14 @@ Crafty.defineScene("win", function (attributes) {
 Crafty.defineScene("lose", function (attributes) {
     Crafty.background("#000");
 
-    console.log(attributes);
+    var oldBlip = attributes;
 
-    var blip = attributes;
+    console.log(oldBlip.x, oldBlip.y, oldBlip.w, oldBlip.h);
 
-    console.log(blip);
+    var blip = Crafty.e("2D, DOM, Color")
+        .attr({x: oldBlip.x, y: oldBlip.y, w: oldBlip.w, h: oldBlip.h})
+        .color("#FFF");
 
-    blip.color("#FFF");
-    blip.fourway(0);
 
     var keyBinding = Crafty.e("Bind")
         .bind("KeyDown", function(e) {
