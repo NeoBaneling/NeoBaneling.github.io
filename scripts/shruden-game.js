@@ -170,6 +170,8 @@ Crafty.defineScene("game", function(attributes) {
 Crafty.defineScene("win", function (attributes) {
     Crafty.background("#0F0");
 
+    var blip = attributes[0];
+
     blip.color("#FFF");
     blip.fourway(0);
 
@@ -184,6 +186,8 @@ Crafty.defineScene("win", function (attributes) {
 
 Crafty.defineScene("lose", function (attributes) {
     Crafty.background("#000");
+
+    var blip = attributes[0];
 
     blip.color("#FFF");
     blip.fourway(0);
