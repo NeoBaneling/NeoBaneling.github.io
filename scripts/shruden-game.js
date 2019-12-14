@@ -170,10 +170,11 @@ Crafty.defineScene("game", function(attributes) {
 Crafty.defineScene("win", function (attributes) {
     Crafty.background("#0F0");
 
-    var blip = attributes;
+    var oldBlip = attributes;
 
-    blip.color("#FFF");
-    blip.fourway(0);
+    var blip = Crafty.e("2D, DOM, Color")
+        .attr({x: oldBlip.x, y: oldBlip.y, w: oldBlip.w, h: oldBlip.h})
+        .color("#FFF");
 
     var keyBinding = Crafty.e("Bind")
         .bind("KeyDown", function(e) {
@@ -188,8 +189,6 @@ Crafty.defineScene("lose", function (attributes) {
     Crafty.background("#000");
 
     var oldBlip = attributes;
-
-    console.log(oldBlip.x, oldBlip.y, oldBlip.w, oldBlip.h);
 
     var blip = Crafty.e("2D, DOM, Color")
         .attr({x: oldBlip.x, y: oldBlip.y, w: oldBlip.w, h: oldBlip.h})
