@@ -3,19 +3,20 @@
 
 html {
     font-family: 'Sulphur Point', sans-serif;
+    background-color: #E6E6E6;
 }
 
 h1 {
     font-size: 60px;
     padding-left: 20px;
-    color: #FFFFFF;
+    color: #E6E6E6;
 }
 
 h2 {
     font-size: 32px;
     padding-left: 80px;
     padding-right: 80px;
-    color: #5C6C8F;
+    color: #333333;
 }
 
 p, li {
@@ -23,19 +24,19 @@ p, li {
     line-height: 20px;
     padding-left: 80px;
     padding-right: 80px;
-    color: #1D509D;
+    color: #000000;
 }
 
 .footer {
     margin-top: 24px;
-    background-color: #121476;
+    background-color: #339933;
     padding: 10px;
     text-align: center;
 }
 
 p.footer {
     font-size: 20px;
-    color: #FFFFFF;
+    color: #E6E6E6;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -56,12 +57,12 @@ p.column {
     padding-right: 12px;
     line-height: 28px;
     text-align: center;
-    color: #5C6C8F;
+    color: #8f5c5e;
 }
 
 .rectangle {
     height: 165px;
-    background-color: #121476;
+    background-color: #339933;
 }
 
 .rectangle.divide {
@@ -70,7 +71,7 @@ p.column {
     margin: 20px;
     text-align: center;
     overflow: hidden;
-    background-color: #D6DAE5;
+    background-color: #339933;
 }
 
 .column {
@@ -99,7 +100,7 @@ p.column {
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #D6DAE5;
+    background-color: #8DC38D;
     overflow: hidden;
     position: relative;
     top: 0;
@@ -110,7 +111,7 @@ p.column {
 .topnav a {
     float: left;
     display: block;
-    color: #5C6C8F;
+    color: #405240;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -119,8 +120,8 @@ p.column {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #FFFFFF;
-    color: #121476;
+    background-color: #339933;
+    color: #E6E6E6;
 }
 
 /* Add an active class to highlight the current page */
