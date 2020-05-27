@@ -92,10 +92,14 @@ p.column {
     clear: both;
 }
 
-.break-bar {
+.break-bar-container {
     margin-bottom: 5%;
+    margin-top: 5%;
     width: 95%;
     height: auto;
+}
+
+.break-bar {
     background-color: #D6DAE5;
     padding: 1px;
     text-align: center;
@@ -105,9 +109,7 @@ p.column {
 }
 
 .break-bar-gradient {
-    height: 5px;
-    width: 95%;
-    margin-top: 5%;
+    height: 10px;
     background-image: linear-gradient(rgba(0,0,0,0), #D6DAE5FF);
 }
 
