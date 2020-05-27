@@ -30,6 +30,10 @@ p, li {
     color: #B467F4;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 p a:link {
     text-decoration: none;
     color: #BF8EE9;
@@ -152,18 +156,18 @@ p.column {
 }
 
 .break-bar {
-    background-color: #D6DAE5;
+    background-color: #000000;
     padding: 1px;
     padding-left: 12px;
     text-align: center;
     font-style: italic;
     border-bottom-style: solid;
-    border-color: #121476;
+    border-color: #E74B89;
 }
 
 .break-bar-gradient {
     height: 10px;
-    background-image: linear-gradient(rgba(214, 218, 229, 0), rgba(214, 218, 229, 1));
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
 /* Add a black background color to the top navigation */

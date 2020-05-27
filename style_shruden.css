@@ -110,18 +110,18 @@ p.column {
 }
 
 .break-bar {
-    background-color: #D6DAE5;
+    background-color: #E5D5E6;
     padding: 1px;
     padding-left: 12px;
     text-align: center;
     font-style: italic;
     border-bottom-style: solid;
-    border-color: #121476;
+    border-color: #7820A8;
 }
 
 .break-bar-gradient {
     height: 10px;
-    background-image: linear-gradient(rgba(214, 218, 229, 0), rgba(214, 218, 229, 1));
+    background-image: linear-gradient(rgba(229, 213, 230, 0), rgba(229, 213, 230, 1));
 }
 
 /* Add a black background color to the top navigation */
