@@ -26,6 +26,10 @@ p, li {
     color: #1D509D;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 .footer {
     margin-top: 24px;
     background-color: #121476;
@@ -95,6 +99,30 @@ p.column {
     content: "";
     display: table;
     clear: both;
+}
+
+.break-bar-container {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: auto;
+    height: auto;
+}
+
+.break-bar {
+    background-color: #D6DAE5;
+    padding: 1px;
+    padding-left: 12px;
+    text-align: center;
+    font-style: italic;
+    border-bottom-style: solid;
+    border-color: #121476;
+}
+
+.break-bar-gradient {
+    height: 10px;
+    background-image: linear-gradient(rgba(214, 218, 229, 0), rgba(214, 218, 229, 1));
 }
 
 /* Add a black background color to the top navigation */
