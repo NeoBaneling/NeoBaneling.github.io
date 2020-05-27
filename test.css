@@ -105,13 +105,10 @@ p.column {
     background-color: #D6DAE5;
     padding: 1px;
     padding-left: 12px;
-    border-bottom-style: solid;
-    border-color: #121476;
-}
-
-p.break-bar {
     text-align: center;
     font-style: italic;
+    border-bottom-style: solid;
+    border-color: #121476;
 }
 
 .break-bar-gradient {
