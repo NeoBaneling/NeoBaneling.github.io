@@ -184,6 +184,7 @@ first one ("Home"). Show the link that contains should open and close the topnav
     }
 
     h2, p, li {
+        font-size: 30px;
         padding-left: 20px;
         padding-right: 20px;
     }
