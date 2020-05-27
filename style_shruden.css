@@ -11,15 +11,15 @@ h1 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 46px;
     padding-left: 80px;
     padding-right: 80px;
     color: #A980BE;
 }
 
 p, li {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 30px;
+    line-height: 50px;
     padding-left: 80px;
     padding-right: 80px;
     color: #98849F;
