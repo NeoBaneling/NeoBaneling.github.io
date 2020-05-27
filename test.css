@@ -93,9 +93,8 @@ p.column {
 }
 
 .break-bar {
-    margin-top: 5%;
     margin-bottom: 5%;
-    width: 80%;
+    width: 95%;
     height: auto;
     background-color: #D6DAE5;
     padding: 1px;
@@ -107,6 +106,8 @@ p.column {
 
 .break-bar-gradient {
     height: 5px;
+    width: 95%;
+    margin-top: 5%;
     background-image: linear-gradient(rgba(0,0,0,0), #D6DAE5FF);
 }
 
