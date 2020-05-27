@@ -98,10 +98,16 @@ p.column {
     width: 80%;
     height: auto;
     background-color: #D6DAE5;
+    padding: 1px;
     text-align: center;
     font-style: italic;
     border-bottom-style: solid;
     border-color: #121476;
+}
+
+.break-bar-gradient {
+    height: 5px;
+    background-image: linear-gradient(rgba(0,0,0,0), #D6DAE5FF);
 }
 
 /* Add a black background color to the top navigation */
