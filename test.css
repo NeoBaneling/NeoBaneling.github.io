@@ -92,6 +92,18 @@ p.column {
     clear: both;
 }
 
+.break-bar {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 80%;
+    height: auto;
+    background-color: #D6DAE5;
+    text-align: center;
+    font-style: italic;
+    border-bottom-style: solid;
+    border-color: #121476;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #D6DAE5;
