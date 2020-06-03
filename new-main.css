@@ -1,0 +1,20 @@
+:root
+{
+    --night-black: rgb(0, 0, 0);
+    --blinding-white: rgb(255, 255, 255);
+}
+
+.impression
+{
+    background: var(--night-black);
+}
+
+.programming
+{
+    background: var(--night-black);
+}
+
+.design
+{
+    background: var(--blinding-white);
+}
