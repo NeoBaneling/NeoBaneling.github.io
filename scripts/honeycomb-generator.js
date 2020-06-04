@@ -45,12 +45,12 @@ animate(
     },
     draw(progress)
     {
-        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
-        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
-        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
-        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
-        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
-        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
+        drawHexagon(progress, 60, 90, 0);
+        drawHexagon(progress, canvas.width - 60, canvas.height - 90, 0);
+        drawHexagon(progress, 140, 300, 0);
+        drawHexagon(progress, canvas.width - 300, canvas.height - 120, 0);
+        drawHexagon(progress, 120, canvas.height - 70, 0);
+        drawHexagon(progress, canvas.width - 120, 240, 0);
     }
 });
 
