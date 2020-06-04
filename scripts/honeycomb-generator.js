@@ -47,31 +47,31 @@ animate(
 
         ctx.beginPath();
         ctx.strokeStyle = "rgb(0,0,0)";
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 5;
         if (progress >= 0)
         {
             ctx.moveTo(50, 50);
-            ctx.lineTo(50 + 12.5 * interval, 50 - 5 * interval);
+            ctx.lineTo(50 + 12.5 * interval * 6, 50 - 5 * interval * 6);
         }
         if (progress >= 1000)
         {
-            ctx.lineTo(62.5, 45 - 15 * interval);
+            ctx.lineTo(62.5, 45 - 15 * interval * 6);
         }
         if (progress >= 2000)
         {
-            ctx.lineTo(62.5 - 12.5 * interval, 30 - 5 * interval);
+            ctx.lineTo(62.5 - 12.5 * interval * 6, 30 - 5 * interval * 6);
         }
         if (progress >= 3000)
         {
-            ctx.lineTo(50 - 12.5 * interval, 25 + 5 * interval);
+            ctx.lineTo(50 - 12.5 * interval * 6, 25 + 5 * interval * 6);
         }
         if (progress >= 4000)
         {
-            ctx.lineTo(37.5, 30 + 15 * interval);
+            ctx.lineTo(37.5, 30 + 15 * interval * 6);
         }
         if (progress >= 5000)
         {
-            ctx.lineTo(37.5 + 12.5 * interval, 45 + 5 * interval);
+            ctx.lineTo(37.5 + 12.5 * interval * 6, 45 + 5 * interval * 6);
         }
         ctx.stroke();
     }
