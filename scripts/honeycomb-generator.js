@@ -1,6 +1,9 @@
 var canvas = document.getElementById("honeycomb");
 var padding = 10;
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
 if (canvas.getContext)
 {
     var ctx = canvas.getContext("2d");

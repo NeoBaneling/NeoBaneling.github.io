@@ -5,6 +5,11 @@
     --honeycomb-yellow: rgb(250, 210, 57);
 }
 
+body
+{
+    background: var(--honeycomb-yellow);
+}
+
 .impression
 {
     background: var(--honeycomb-yellow);
@@ -18,6 +23,15 @@
 .design
 {
     background: var(--blinding-white);
+}
+
+.honeycomb
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .center
