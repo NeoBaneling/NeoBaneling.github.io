@@ -43,6 +43,8 @@ animate(
     draw(progress)
     {
         drawHexagon(progress, 60, 100, 0);
+        drawHexagon(progress, 270, 130, 0);
+        drawHexagon(progress, 160, 60, 0);
     }
 });
 
