@@ -42,37 +42,80 @@ animate(
     },
     draw(progress)
     {
-        var length = 10;
-        var interval = (progress/ 1000) % 1;
-
-        ctx.beginPath();
-        ctx.strokeStyle = "rgb(0,0,0)";
-        ctx.lineWidth = 5;
-        if (progress >= 0)
-        {
-            ctx.moveTo(50, 50);
-            ctx.lineTo(50 + 12.5 * interval * 6, 50 - 5 * interval * 6);
-        }
-        if (progress >= 1000)
-        {
-            ctx.lineTo(62.5, 45 - 15 * interval * 6);
-        }
-        if (progress >= 2000)
-        {
-            ctx.lineTo(62.5 - 12.5 * interval * 6, 30 - 5 * interval * 6);
-        }
-        if (progress >= 3000)
-        {
-            ctx.lineTo(50 - 12.5 * interval * 6, 25 + 5 * interval * 6);
-        }
-        if (progress >= 4000)
-        {
-            ctx.lineTo(37.5, 30 + 15 * interval * 6);
-        }
-        if (progress >= 5000)
-        {
-            ctx.lineTo(37.5 + 12.5 * interval * 6, 45 + 5 * interval * 6);
-        }
-        ctx.stroke();
+        drawHexagon(progress, 60, 100, 0);
     }
-})
+});
+
+function drawHexagon(progress, x, y, offset)
+{
+    var length = 2;
+    var interval = length;
+
+    var modProgress = progress + offset;
+
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(188,144,64)";
+    ctx.lineWidth = 0.4;
+    ctx.moveTo(x, y);
+
+    var diff = (modProgress * 6) % 1;
+    interval = length * diff;
+
+    if (modProgress >= 0 && modProgress < 1/6)
+    {
+        ctx.lineTo(x += 12.5 * interval, y -= 5 * interval);
+    }
+    if (modProgress >= 1/6 && modProgress < 2/6)
+    {
+        ctx.lineTo(x += 12.5 * length, y -= 5 * length);
+        ctx.lineTo(x, y -= 15 * interval);
+    }
+    if (modProgress >= 2/6 && modProgress < 3/6)
+    {
+        ctx.lineTo(x += 12.5 * length, y -= 5 * length);
+        ctx.lineTo(x, y -= 15 * length);
+        ctx.lineTo(x -= 12.5 * interval, y -= 5 * interval);
+    }
+    if (modProgress >= 3/6 && modProgress < 4/6)
+    {
+        ctx.lineTo(x += 12.5 * length, y -= 5 * length);
+        ctx.lineTo(x, y -= 15 * length);
+        ctx.lineTo(x -= 12.5 * length, y -= 5 * length);
+        ctx.lineTo(x -= 12.5 * interval, y += 5 * interval);
+    }
+    if (modProgress >= 4/6 && modProgress < 5/6)
+    {
+        ctx.lineTo(x += 12.5 * length, y -= 5 * length);
+        ctx.lineTo(x, y -= 15 * length);
+        ctx.lineTo(x -= 12.5 * length, y -= 5 * length);
+        ctx.lineTo(x -= 12.5 * length, y += 5 * length);
+        ctx.lineTo(x, y += 15 * interval);
+    }
+    if (modProgress >= 5/6)
+    {
+        ctx.lineTo(x += 12.5 * length, y -= 5 * length);
+        ctx.lineTo(x, y -= 15 * length);
+        ctx.lineTo(x -= 12.5 * length, y -= 5 * length);
+        ctx.lineTo(x -= 12.5 * length, y += 5 * length);
+        ctx.lineTo(x, y += 15 * length);
+        ctx.lineTo(x += 12.5 * interval, y += 5 * interval);
+    }
+
+    if (progress >= 2/6 - 0.002 && progress <= 2/6 + 0.002)
+    {
+        animate(
+        {
+            duration: 6000,
+            timing(timeFraction)
+            {
+                return timeFraction;
+            },
+            draw(progress)
+            {
+                drawHexagon(progress, x, y, 0);
+            }
+        });
+    }
+
+    ctx.stroke();
+}
