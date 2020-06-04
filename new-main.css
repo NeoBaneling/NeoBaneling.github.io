@@ -13,6 +13,7 @@ body
 .impression
 {
     background: var(--honeycomb-yellow);
+    z-index: -2;
 }
 
 .programming
@@ -46,6 +47,7 @@ p.design
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 .center
