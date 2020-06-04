@@ -45,12 +45,12 @@ animate(
     },
     draw(progress)
     {
-        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
-        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
-        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
-        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
-        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
-        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
+        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
+        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
+        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
+        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
+        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
+        drawHexagon(progress, Math.random(canvas.width - 120) + 60, Math.random(canvas.height - 180) + 90, 0);
     }
 });
 
