@@ -21,10 +21,22 @@ body
     padding: 60px;
 }
 
+p.programming
+{
+    background-color: var(--night-black);
+    color: var(--blinding-white);
+}
+
 .design
 {
     background: var(--blinding-white);
     padding: 60px;
+}
+
+p.design
+{
+    background-color: var(--blinding-white);
+    color: var(--night-black);
 }
 
 .honeycomb
