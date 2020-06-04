@@ -2,11 +2,12 @@
 {
     --night-black: rgb(0, 0, 0);
     --blinding-white: rgb(255, 255, 255);
+    --honeycomb-yellow: rgb(250, 210, 57);
 }
 
 .impression
 {
-    background: var(--night-black);
+    background: var(--honeycomb-yellow);
 }
 
 .programming
