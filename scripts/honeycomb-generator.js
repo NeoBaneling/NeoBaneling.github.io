@@ -45,9 +45,12 @@ animate(
     },
     draw(progress)
     {
-        drawHexagon(progress, 60, 100, 0);
-        drawHexagon(progress, 270, 130, 0);
-        drawHexagon(progress, 160, 60, 0);
+        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
+        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
+        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
+        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
+        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
+        drawHexagon(progress, Math.Random(60, canvas.width - 120), Math.Random(90, canvas.height - 180), 0);
     }
 });
 
