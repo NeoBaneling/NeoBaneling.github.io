@@ -1,4 +1,4 @@
-var canvas = document.getElementByID("honeycomb");
+var canvas = document.getElementById("honeycomb");
 var padding = 10;
 
 if (canvas.getContext)
