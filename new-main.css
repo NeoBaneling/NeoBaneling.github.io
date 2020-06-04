@@ -18,11 +18,13 @@ body
 .programming
 {
     background: var(--night-black);
+    padding: 60px;
 }
 
 .design
 {
     background: var(--blinding-white);
+    padding: 60px;
 }
 
 .honeycomb
