@@ -52,6 +52,9 @@ p.programming
 {
     background-color: var(--night-black);
     color: var(--midnight-grey);
+    font-size: 180%;
+    text-align: right;
+    line-height: 30px;
 }
 
 .design
@@ -64,6 +67,9 @@ p.design
 {
     background-color: var(--blinding-white);
     color: var(--cloud-grey);
+    font-size: 180%;
+    text-align: right;
+    line-height: 30px;
 }
 
 .honeycomb
