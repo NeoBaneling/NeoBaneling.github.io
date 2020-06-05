@@ -49,7 +49,7 @@ animate(
         drawHexagon(progress, canvas.width/2, canvas.height - 90, 0);
         drawHexagon(progress, 260, 300, 0);
         drawHexagon(progress, canvas.width - 300, canvas.height - 120, 2);
-        drawHexagon(progress, 260, canvas.height - 20, 0);
+        drawHexagon(progress, 300, canvas.height - 80, 0);
         drawHexagon(progress, 120, 240, 4);
     }
 });
