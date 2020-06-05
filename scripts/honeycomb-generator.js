@@ -54,7 +54,7 @@ animate(
     }
 });
 
-function drawHexagon(progress, x, y, offset)
+function drawHexagon(progress, x, y, side)
 {
     var length = 2;
     var interval = length;
@@ -64,11 +64,14 @@ function drawHexagon(progress, x, y, offset)
     ctx.beginPath();
     ctx.strokeStyle = "rgb(188,144,64)";
     ctx.lineWidth = 0.4;
-    ctx.moveTo(x, y);
+    ctx.moveTo(x + length * Math.cos(side), y + length * Math.sin(side));
 
     var diff = (modProgress * 6) % 1;
     interval = length * diff;
 
+    ctx.lineTo(x + length * Math.cos(side * 2 * Math.PI / 6), y + length * Math.sin(side * 2 * Math.PI / 6));
+
+    /*
     if (modProgress >= 0 && modProgress < 1/6)
     {
         ctx.lineTo(x += 12.5 * interval, y -= 5 * interval);
@@ -124,6 +127,7 @@ function drawHexagon(progress, x, y, offset)
             }
         });
     }
+    */
 
     ctx.stroke();
 }

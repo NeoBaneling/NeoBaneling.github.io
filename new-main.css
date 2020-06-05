@@ -99,7 +99,7 @@ ul.dark
     padding-left: 90px;
     padding-top: 0px;
     padding-bottom: 0px;
-    list-style-image: "img/hex-grey.png";
+    list-style-image: url("img/hex-grey.png");
     list-style-position: outside;
 }
 
