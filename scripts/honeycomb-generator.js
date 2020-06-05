@@ -38,7 +38,7 @@ function animate({duration, draw, timing})
 // Animates hexagon
 animate(
 {
-    duration: 6000,
+    duration: 3000,
     timing(timeFraction)
     {
         return timeFraction;
@@ -50,7 +50,7 @@ animate(
         drawHexagon(progress, 140, 300, 0);
         drawHexagon(progress, canvas.width - 300, canvas.height - 90, 0);
         drawHexagon(progress, 120, canvas.height - 70, 0);
-        drawHexagon(progress, canvas.width - 120, 240, 0);
+        drawHexagon(progress, 120, 240, 0);
     }
 });
 
