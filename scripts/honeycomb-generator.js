@@ -72,11 +72,11 @@ function drawHexagon(progress, x, y, side)
 
     for (i = 0; i < z; i++)
     {
-        ctx.lineTo(x + length * Math.sin((side + i) * 2 * Math.PI / 6), y + length * Math.cos((side + i) * 2 * Math.PI / 6) );
+        ctx.lineTo(x + length * Math.sin((side + i) * 2 * Math.PI / 6), y + length * Math.cos((side + i) * 2 * Math.PI / 6));
     }
 
-    var diff = z - (i / 6);
-    ctx.lineTo(x + length * Math.sin((side + i - diff) * 2 * Math.PI / 6), y + length * Math.cos((side + i - diff) * 2 * Math.PI / 6) );
+    var diff = progress - (i / 6);
+    ctx.lineTo(x + length * Math.sin((side + i) * 2 * Math.PI / 6), y + length * Math.cos((side + i) * 2 * Math.PI / 6));
     /*
     var length = 2;
     var interval = length;
