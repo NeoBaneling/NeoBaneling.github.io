@@ -3,6 +3,7 @@
     --night-black: rgb(0, 0, 0);
     --blinding-white: rgb(255, 255, 255);
     --honeycomb-yellow: rgb(250, 210, 57);
+    --quicksand: "Quicksand", sans-serif;
 }
 
 html
@@ -25,7 +26,7 @@ body
 p.impression
 {
     background-color: rgba(0,0,0,0);
-    font-family: 'Manrope';
+    font-family: var(--quicksand);
     font-size: 350%;
     font-weight: bold;
     text-align: center;
