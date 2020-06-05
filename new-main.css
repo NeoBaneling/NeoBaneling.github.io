@@ -1,11 +1,11 @@
-font-family: 'Manrope', sans-serif;
-
 :root
 {
     --night-black: rgb(0, 0, 0);
     --blinding-white: rgb(255, 255, 255);
     --honeycomb-yellow: rgb(250, 210, 57);
 }
+
+font-family: 'Manrope', sans-serif;
 
 body
 {
