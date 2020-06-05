@@ -56,10 +56,32 @@ animate(
 
 function drawHexagon(progress, x, y, side)
 {
+    var length = 28;
+
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(188,144,64)";
+    ctx.lineWidth = 0.5;
+    ctx.moveTo(x + length * Math.sin(side), y + length * Math.cos(side));
+
+    var z = progress * 7;
+    var i = 0;
+    /*
+    var diff = (progress * 6) % 1;
+    var interval = length - diff;
+    */
+
+    for (i = 0; i < z; i++)
+    {
+        ctx.lineTo(x + length * Math.sin((side + i) * 2 * Math.PI / 6), y + length * Math.cos((side + i) * 2 * Math.PI / 6) );
+    }
+
+    var diff = z - (i / 6);
+    ctx.lineTo(x + length * Math.sin((side + i - diff) * 2 * Math.PI / 6), y + length * Math.cos((side + i - diff) * 2 * Math.PI / 6) );
+    /*
     var length = 2;
     var interval = length;
 
-    var modProgress = progress + offset;
+    var modProgress = progress + side;
 
     ctx.beginPath();
     ctx.strokeStyle = "rgb(188,144,64)";
@@ -70,6 +92,7 @@ function drawHexagon(progress, x, y, side)
     interval = length * diff;
 
     ctx.lineTo(x + length * Math.cos(side * 2 * Math.PI / 6), y + length * Math.sin(side * 2 * Math.PI / 6));
+    */
 
     /*
     if (modProgress >= 0 && modProgress < 1/6)
