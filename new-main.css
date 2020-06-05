@@ -1,7 +1,7 @@
 :root
 {
-    --night-black: rgb(0, 0, 0);
-    --midnight-grey: rgb(95, 95, 95);
+    --midnight-black: rgb(0, 0, 0);
+    --night-grey: rgb(95, 95, 95);
     --blinding-white: rgb(255, 255, 255);
     --cloud-grey: rgb(160, 160, 160);
     --honeycomb-yellow: rgb(250, 210, 57);
@@ -42,28 +42,48 @@ p.impression
     color: var(--blinding-white);
 }
 
-.programming
+.dark
 {
-    background: var(--night-black);
+    background: var(--midnight-black);
     padding: 60px;
 }
 
-p.programming
+h1.dark
 {
-    background-color: var(--night-black);
-    color: var(--midnight-grey);
-    font-size: 180%;
-    text-align: right;
+    background-color: var(--midnight-black);
+    color: var(--honeycomb-yellow);
+    font-size: 220%;
+    font-weight: bold;
+    text-align: left;
     line-height: 30px;
 }
 
-.design
+p.dark
+{
+    background-color: var(--midnight-black);
+    color: var(--night-grey);
+    font-size: 180%;
+    text-align: left;
+    line-height: 30px;
+}
+
+p.dark-bold
+{
+    background-color: var(--midnight-black);
+    color: var(--night-grey);
+    font-size: 180%;
+    font-weight: bold;
+    text-align: left;
+    line-height: 30px;
+}
+
+.light
 {
     background: var(--blinding-white);
     padding: 60px;
 }
 
-p.design
+p.light
 {
     background-color: var(--blinding-white);
     color: var(--cloud-grey);
