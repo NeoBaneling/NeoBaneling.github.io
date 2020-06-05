@@ -5,7 +5,10 @@
     --honeycomb-yellow: rgb(250, 210, 57);
 }
 
-font-family: 'Manrope', sans-serif;
+html
+{
+    font-family: 'Manrope', sans-serif;
+}
 
 body
 {
