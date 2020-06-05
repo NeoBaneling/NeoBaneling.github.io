@@ -89,7 +89,7 @@ p.dark
     padding-bottom: 0px;
 }
 
-p.dark-indent
+p.dark-indented
 {
     background-color: var(--midnight-black);
     color: var(--night-grey);
