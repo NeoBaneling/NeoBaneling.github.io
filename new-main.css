@@ -29,14 +29,14 @@ h1.impression
     font-size: 350%;
     font-weight: bold;
     text-align: center;
-    padding: 40px;
+    padding: 0px 40px 40px 40px;
     color: var(--blinding-white);
 }
 
 p.impression
 {
     background-color: rgba(0,0,0,0);
-    font-size: 100%;
+    font-size: 200%;
     text-align: center;
     padding: 10px;
     color: var(--blinding-white);
