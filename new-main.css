@@ -4,13 +4,13 @@
     --blinding-white: rgb(255, 255, 255);
     --honeycomb-yellow: rgb(250, 210, 57);
     --quicksand: "Quicksand", sans-serif;
+    --manrope: "Manrope", sans-serif;
+    --economica: "Economica", sans-serif;
 }
 
 html
 {
-    font-family: 'Manrope', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Economica', sans-serif;
+    font-family: var(--quicksand);
 }
 
 body
@@ -26,7 +26,6 @@ body
 p.impression
 {
     background-color: rgba(0,0,0,0);
-    font-family: var(--quicksand);
     font-size: 350%;
     font-weight: bold;
     text-align: center;
