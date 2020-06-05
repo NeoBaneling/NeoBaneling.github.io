@@ -23,13 +23,22 @@ body
 
 }
 
-p.impression
+h1.impression
 {
     background-color: rgba(0,0,0,0);
     font-size: 350%;
     font-weight: bold;
     text-align: center;
     padding: 40px;
+    color: var(--blinding-white);
+}
+
+p.impression
+{
+    background-color: rgba(0,0,0,0);
+    font-size: 100%;
+    text-align: center;
+    padding: 10px;
     color: var(--blinding-white);
 }
 
