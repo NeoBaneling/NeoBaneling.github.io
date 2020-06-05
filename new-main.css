@@ -23,8 +23,9 @@ body
 p.impression
 {
     background-color: rgba(0,0,0,0);
-    font-size: 96px;
+    font-size: 80%;
     text-align: center;
+    padding: 30px;
     color: var(--night-black);
 }
 
