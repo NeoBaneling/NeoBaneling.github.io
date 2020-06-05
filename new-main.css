@@ -1,7 +1,9 @@
 :root
 {
     --night-black: rgb(0, 0, 0);
+    --midnight-grey: rgb(95, 95, 95);
     --blinding-white: rgb(255, 255, 255);
+    --cloud-grey: rgb(160, 160, 160);
     --honeycomb-yellow: rgb(250, 210, 57);
     --quicksand: "Quicksand", sans-serif;
     --manrope: "Manrope", sans-serif;
@@ -49,7 +51,7 @@ p.impression
 p.programming
 {
     background-color: var(--night-black);
-    color: var(--blinding-white);
+    color: var(--midnight-grey);
 }
 
 .design
@@ -61,7 +63,7 @@ p.programming
 p.design
 {
     background-color: var(--blinding-white);
-    color: var(--night-black);
+    color: var(--cloud-grey);
 }
 
 .honeycomb
