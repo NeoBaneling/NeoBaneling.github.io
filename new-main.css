@@ -21,6 +21,7 @@ p.impression
 {
     background-color: rgba(0,0,0,0);
     font-size: 96px;
+    text-align: center;
     color: var(--night-black);
 }
 
