@@ -76,7 +76,7 @@ function drawHexagon(progress, x, y, side)
         ctx.lineTo(x, y);
 
         // 20% chance of spawning a new honeycomb
-        if (Math.floor(Math.random() * 100) < 20)
+        if (x > length * -2 && x < canvas.width + length * 2 && y > length * -2 && y < canvas.height + length * 2 && Math.floor(Math.random() * 100) < 20)
         {
             animate(
             {
