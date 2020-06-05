@@ -52,29 +52,29 @@ h1.dark
 {
     background-color: var(--midnight-black);
     color: var(--honeycomb-yellow);
-    font-size: 220%;
+    font-size: 76px;
     font-weight: bold;
     text-align: left;
-    line-height: 30px;
+    line-height: 96px;
+}
+
+h2.dark
+{
+    background-color: var(--midnight-black);
+    color: var(--night-grey);
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 52px;
 }
 
 p.dark
 {
     background-color: var(--midnight-black);
     color: var(--night-grey);
-    font-size: 180%;
+    font-size: 24px;
     text-align: left;
-    line-height: 30px;
-}
-
-p.dark-bold
-{
-    background-color: var(--midnight-black);
-    color: var(--night-grey);
-    font-size: 180%;
-    font-weight: bold;
-    text-align: left;
-    line-height: 30px;
+    line-height: 36px;
 }
 
 .light
