@@ -89,7 +89,7 @@ p.dark
     padding-bottom: 0px;
 }
 
-p.dark-indented
+ul.dark
 {
     background-color: var(--midnight-black);
     color: var(--night-grey);
@@ -99,6 +99,8 @@ p.dark-indented
     padding-left: 90px;
     padding-top: 0px;
     padding-bottom: 0px;
+    list-style-image: "img/hex-grey.png";
+    list-style-position: outside;
 }
 
 .light
