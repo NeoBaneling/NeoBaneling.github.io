@@ -71,7 +71,26 @@ function drawHexagon(progress, x, y, side)
 
     for (var i = 1; i < z; i++)
     {
-        ctx.lineTo(x + length * Math.sin((side + i) * 2 * Math.PI / 6), y + length * Math.cos((side + i) * 2 * Math.PI / 6));
+        x = x + length * Math.sin((side + i) * 2 * Math.PI / 6);
+        y = y + length * Math.cos((side + i) * 2 * Math.PI / 6);
+        ctx.lineTo(x, y);
+
+        // 50% chance of spawning a new honeycomb
+        if (Math.floor(Math.random(100)) < 50)
+        {
+            animate(
+            {
+                duration: 6000,
+                timing(timeFraction)
+                {
+                    return timeFraction;
+                },
+                draw(progress)
+                {
+                    drawHexagon(progress, x, y, i);
+                }
+            });
+        }
     }
 
     /*
