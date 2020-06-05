@@ -75,8 +75,9 @@ function drawHexagon(progress, x, y, side)
         y = y + length * Math.cos((side + i) * 2 * Math.PI / 6);
         ctx.lineTo(x, y);
 
-        // 50% chance of spawning a new honeycomb
-        if (Math.floor(Math.random(100)) < 50)
+        /*
+        // 20% chance of spawning a new honeycomb
+        if (Math.floor(Math.random(100)) < 20)
         {
             animate(
             {
@@ -91,6 +92,7 @@ function drawHexagon(progress, x, y, side)
                 }
             });
         }
+        */
     }
 
     /*
