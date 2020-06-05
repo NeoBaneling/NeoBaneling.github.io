@@ -72,6 +72,14 @@ p.design
     line-height: 30px;
 }
 
+p.footer
+{
+    background-color: rgba(0,0,0,0);
+    font-size: 150%;
+    text-align: center;
+    color: var(--blinding-white);
+}
+
 .honeycomb
 {
     width: 100%;
