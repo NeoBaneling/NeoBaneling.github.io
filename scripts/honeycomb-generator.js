@@ -46,7 +46,7 @@ animate(
     draw(progress)
     {
         //drawHexagon(progress, canvas.width-60, 90, 3);
-        drawHexagon(progress, canvas.width/2, 200, 0);
+        drawHexagon(progress, canvas.width/2, 200, 1);
         //drawHexagon(progress, 260, 300, 1);
         //drawHexagon(progress, canvas.width - 300, canvas.height - 120, 2);
         //drawHexagon(progress, 300, canvas.height - 80, 0);
@@ -77,7 +77,7 @@ function drawHexagon(progress, x, y, side)
         ctx.lineTo(x, y);
     }
 
-    if (progress >= 1/6 - 0.002 && progress <= 1/6 + 0.002)
+    if (progress >= 2/6 - 0.002 && progress <= 2/6 + 0.002)
     {
         animate(
         {
@@ -92,7 +92,7 @@ function drawHexagon(progress, x, y, side)
             }
         });
     }
-    if (progress >= 3/6 - 0.002 && progress <= 3/6 + 0.002)
+    if (progress >= 4/6 - 0.002 && progress <= 4/6 + 0.002)
     {
         animate(
         {
@@ -107,7 +107,7 @@ function drawHexagon(progress, x, y, side)
             }
         });
     }
-    if (progress >= 5/6 - 0.002 && progress <= 5/6 + 0.002)
+    if (progress >= 6/6 - 0.002 && progress <= 6/6 + 0.002)
     {
         animate(
         {
