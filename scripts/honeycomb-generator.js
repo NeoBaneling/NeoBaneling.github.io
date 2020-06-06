@@ -80,14 +80,14 @@ function drawHexagon(progress, x, y, side)
         {
             animate(
             {
-                duration: 6000,
+                duration: 3000,
                 timing(timeFraction)
                 {
                     return timeFraction;
                 },
                 draw(progress)
                 {
-                    drawHexagon(progress, x, y, (i+4)%6);
+                    drawHexagon(progress, x, y, (i+3)%6);
                 }
             });
         }
