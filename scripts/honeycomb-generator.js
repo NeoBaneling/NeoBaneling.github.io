@@ -46,7 +46,7 @@ animate(
     draw(progress)
     {
         //drawHexagon(progress, canvas.width-60, 90, 3);
-        drawHexagon(progress, canvas.width/2, 200, 0);
+        drawHexagon(progress, canvas.width/2, 200, 4);
         //drawHexagon(progress, 260, 300, 1);
         //drawHexagon(progress, canvas.width - 300, canvas.height - 120, 2);
         //drawHexagon(progress, 300, canvas.height - 80, 0);
