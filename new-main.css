@@ -146,6 +146,13 @@ body
     display: block;
 }
 
+img .link
+{
+    padding: 32px;
+    width: 64px;
+    height: 64px;
+}
+
 .honeycomb
 {
     width: 100%;
