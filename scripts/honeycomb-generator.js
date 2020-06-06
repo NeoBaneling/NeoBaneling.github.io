@@ -75,7 +75,7 @@ function drawHexagon(progress, x, y, side)
     var length = 28;
 
     ctx.beginPath();
-    ctx.strokeStyle = "rgba(188,144,64,"+(1 - canvas.width/x)+")";
+    ctx.strokeStyle = "rgb(188,144,64)";
     ctx.lineWidth = 0.5;
     ctx.moveTo(x + length * Math.sin(side), y + length * Math.cos(side));
 
