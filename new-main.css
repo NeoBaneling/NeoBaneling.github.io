@@ -25,7 +25,7 @@ body
 
 }
 
-h1.impression
+.impression h1
 {
     background-color: rgba(0,0,0,0);
     font-size: 350%;
@@ -34,7 +34,7 @@ h1.impression
     color: var(--blinding-white);
 }
 
-p.impression
+.impression p
 {
     background-color: rgba(0,0,0,0);
     font-size: 200%;
@@ -48,7 +48,7 @@ p.impression
     padding: 60px;
 }
 
-h1.dark
+.dark h1
 {
     background-color: var(--midnight-black);
     color: var(--honeycomb-yellow);
@@ -62,7 +62,7 @@ h1.dark
     padding-bottom: 0px;
 }
 
-h2.dark
+.dark h2
 {
     background-color: var(--midnight-black);
     color: var(--night-grey);
@@ -77,7 +77,7 @@ h2.dark
     margin: 0px;
 }
 
-p.dark
+.dark p
 {
     background-color: var(--midnight-black);
     color: var(--night-grey);
@@ -89,7 +89,7 @@ p.dark
     padding-bottom: 0px;
 }
 
-ul.dark
+.dark ul
 {
     background-color: var(--midnight-black);
     color: var(--night-grey);
@@ -109,7 +109,7 @@ ul.dark
     padding: 60px;
 }
 
-p.light
+.light p
 {
     background-color: var(--blinding-white);
     color: var(--cloud-grey);
@@ -118,7 +118,7 @@ p.light
     line-height: 30px;
 }
 
-p.footer
+.footer p
 {
     background-color: rgba(0,0,0,0);
     font-size: 150%;
