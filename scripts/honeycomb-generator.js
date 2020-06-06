@@ -103,7 +103,7 @@ function drawHexagon(progress, x, y, side)
             },
             draw(progress)
             {
-                drawHexagon(progress, x, y, (1 + side) % 6);
+                drawHexagon(progress, x, y, (5 + side) % 6);
             }
         });
     }
@@ -118,7 +118,7 @@ function drawHexagon(progress, x, y, side)
             },
             draw(progress)
             {
-                drawHexagon(progress, x, y, (5 + side) % 6);
+                drawHexagon(progress, x, y, (1 + side) % 6);
             }
         });
     }
