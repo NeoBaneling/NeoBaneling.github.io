@@ -103,6 +103,16 @@ body
     list-style-position: outside;
 }
 
+.gradient-top {
+    height: 200px;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+.gradient-bottom {
+    height: 200px;
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
 .light
 {
     background: var(--blinding-white);
