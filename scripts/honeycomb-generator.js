@@ -70,7 +70,7 @@ function drawHexagon(progress, x, y, side)
     var interval = length - diff;
     */
 
-    for (var i = 0; i < z; i++)
+    for (var i = 1; i < z; i++)
     {
         x = x + length * Math.sin((side + i) * 2 * Math.PI / 6);
         y = y + length * Math.cos((side + i) * 2 * Math.PI / 6);
