@@ -183,7 +183,7 @@ body
     .impression p
     {
         background-color: rgba(0,0,0,0);
-        font-size: 8.5vw;
+        font-size: 4.5vw;
         text-align: center;
         color: var(--blinding-white);
     }
@@ -204,11 +204,12 @@ body
 
     .dark h2
     {
-        font-size: 6vw;
-        line-height: 7vw;
+        font-size: 5vw;
+        line-height: 6vw;
         padding-left: 20px;
         padding-top: 0px;
         padding-right: 20px;
+        padding-bottom: 0px;
     }
 
     .dark p
@@ -224,8 +225,13 @@ body
     {
         font-size: 4.5vw;
         line-height: 5vw;
-        padding-left: 40px;
+        padding-left: 60px;
         padding-top: 0px;
         padding-right: 20px;
+    }
+
+    .sidenav
+    {
+        padding-right: 0px;
     }
 }
