@@ -132,17 +132,18 @@ p.footer
     height: auto; /* Full-height: remove this if you want "auto" height */
     width: 60px; /* Set the width of the sidebar */
     margin-top: auto;
-    margin-right: auto;
+    margin-bottom: auto;
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 2; /* Stay on top */
     right: 0;
     background-color: rgba(0,0,0,0);
     overflow-x: hidden; /* Disable horizontal scroll */
+    padding-right: 32px;
 }
 
 .sidenav a
 {
-    padding: 30px;
+    padding: 16px;
     display: block;
 }
 
