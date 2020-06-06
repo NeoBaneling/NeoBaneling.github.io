@@ -77,7 +77,7 @@ function drawHexagon(progress, x, y, side)
         ctx.lineTo(x, y);
     }
 
-    if (progress >= 2/6 - 0.002 && progress <= 2/6 + 0.002)
+    if (progress >= (2/6 + z) - 0.002 && progress <= (2/6 + z) + 0.002)
     {
         animate(
         {
@@ -88,11 +88,11 @@ function drawHexagon(progress, x, y, side)
             },
             draw(progress)
             {
-                drawHexagon(progress, x, y, 0);
+                drawHexagon(progress, x, y, (0 + side) % 6);
             }
         });
     }
-    if (progress >= 4/6 - 0.002 && progress <= 4/6 + 0.002)
+    if (progress >= (4/6 + z) - 0.002 && progress <= (4/6 + z) + 0.002)
     {
         animate(
         {
@@ -103,11 +103,11 @@ function drawHexagon(progress, x, y, side)
             },
             draw(progress)
             {
-                drawHexagon(progress, x, y, 2);
+                drawHexagon(progress, x, y, (0 + side) % 6);
             }
         });
     }
-    if (progress >= 6/6 - 0.002 && progress <= 6/6 + 0.002)
+    if (progress >= (6/6 + z) - 0.002 && progress <= (6/6 + z) + 0.002)
     {
         animate(
         {
@@ -118,7 +118,7 @@ function drawHexagon(progress, x, y, side)
             },
             draw(progress)
             {
-                drawHexagon(progress, x, y, 4);
+                drawHexagon(progress, x, y, (0 + side) % 6);
             }
         });
     }
