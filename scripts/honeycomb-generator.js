@@ -45,12 +45,12 @@ animate(
     },
     draw(progress)
     {
-        // drawHexagon(progress, 60, 90, 3);
+        drawHexagon(progress, 60, 90, 3);
         drawHexagon(progress, canvas.width/2, canvas.height - 90, 0);
-        // drawHexagon(progress, 260, 300, 0);
-        // drawHexagon(progress, canvas.width - 300, canvas.height - 120, 2);
-        // drawHexagon(progress, 300, canvas.height - 80, 0);
-        // drawHexagon(progress, 120, 240, 4);
+        drawHexagon(progress, 260, 300, 0);
+        drawHexagon(progress, canvas.width - 300, canvas.height - 120, 2);
+        drawHexagon(progress, 300, canvas.height - 80, 0);
+        drawHexagon(progress, 120, 240, 4);
     }
 });
 
@@ -64,6 +64,7 @@ function drawHexagon(progress, x, y, side)
     ctx.moveTo(x + length * Math.sin(side), y + length * Math.cos(side));
 
     var z = progress * 7;
+
     /*
     var diff = (progress * 6) % 1;
     var interval = length - diff;
@@ -74,25 +75,6 @@ function drawHexagon(progress, x, y, side)
         x = x + length * Math.sin((side + i) * 2 * Math.PI / 6);
         y = y + length * Math.cos((side + i) * 2 * Math.PI / 6);
         ctx.lineTo(x, y);
-
-        /*
-        // 20% chance of spawning a new honeycomb
-        if (x > length * -2 && x < canvas.width + length * 2 && y > length * -2 && y < canvas.height + length * 2 && Math.floor(Math.random() * 100) < 20)
-        {
-            animate(
-            {
-                duration: 3000,
-                timing(timeFraction)
-                {
-                    return timeFraction;
-                },
-                draw(progress)
-                {
-                    drawHexagon(progress, x, y, (i+3)%6);
-                }
-            });
-        }
-        */
     }
 
     /*
