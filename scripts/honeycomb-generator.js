@@ -49,7 +49,7 @@ animate(
         drawHexagon(progress, canvas.width/2, 220, 5);
         //drawHexagon(progress, 260, 300, 1);
         //drawHexagon(progress, canvas.width - 300, canvas.height - 120, 2);
-        drawHexagon(progress, 70, canvas.height - 80, 0);
+        drawHexagon(progress, 90, canvas.height - 80, 0);
         //drawHexagon(progress, 120, 200, 4);
     }
 });
@@ -75,7 +75,7 @@ function drawHexagon(progress, x, y, side)
     var length = 28;
 
     ctx.beginPath();
-    ctx.strokeStyle = "rgba(188,144,64,"+(1 - (canvas.width/2 - (x % canvas.width/2)))+")";
+    ctx.strokeStyle = "rgba(188,144,64,"+(1 - canvas.width/x)+")";
     ctx.lineWidth = 0.5;
     ctx.moveTo(x + length * Math.sin(side), y + length * Math.cos(side));
 
