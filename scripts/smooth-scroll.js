@@ -1,3 +1,6 @@
+// Main source code found here:
+// https://css-tricks.com/snippets/jquery/smooth-scrolling/#smooth-scroll-with-jquery
+
 // Select all links with hashes
 $('a[href*="#"]')
     // Remove links that don't actually link to anything
