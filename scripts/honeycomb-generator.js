@@ -45,11 +45,11 @@ animate(
     },
     draw(progress)
     {
-        //drawHexagon(progress, canvas.width-60, 90, 3);
+        drawHexagon(progress, canvas.width-60, 90, 3);
         drawHexagon(progress, canvas.width/2, 220, 5);
         //drawHexagon(progress, 260, 300, 1);
         //drawHexagon(progress, canvas.width - 300, canvas.height - 120, 2);
-        //drawHexagon(progress, 300, canvas.height - 80, 0);
+        drawHexagon(progress, 70, canvas.height - 80, 0);
         //drawHexagon(progress, 120, 200, 4);
     }
 });
