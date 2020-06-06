@@ -45,11 +45,11 @@ animate(
     },
     draw(progress)
     {
-        drawHexagon(progress, canvas.width-60, 90, 3);
+        // drawHexagon(progress, canvas.width-60, 90, 3);
         drawHexagon(progress, canvas.width/2, 220, 5);
         //drawHexagon(progress, 260, 300, 1);
         //drawHexagon(progress, canvas.width - 300, canvas.height - 120, 2);
-        drawHexagon(progress, 90, canvas.height - 80, 0);
+        // drawHexagon(progress, 90, canvas.height - 80, 0);
         //drawHexagon(progress, 120, 200, 4);
     }
 });
@@ -101,7 +101,7 @@ function drawHexagon(progress, x, y, side)
     {
         startHexagon(x, y, (1 + side) % 6)
     }
-    if (Math.floor(Date.now() / 1000) % 10 > 5 && progress >= 3/6 - 0.002 && progress <= 3/6 + 0.002 && withinCanvas(x, y, length))
+    if (Math.floor(Date.now() / 1000) % 10 > 1 && progress >= 3/6 - 0.002 && progress <= 3/6 + 0.002 && withinCanvas(x, y, length))
     {
         startHexagon(x, y, (2 + side) % 6);
     }
