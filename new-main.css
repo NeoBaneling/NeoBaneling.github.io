@@ -149,7 +149,7 @@ body
 .link
 {
     padding: 32px;
-    width: 64px;
+    width: auto;
     height: 64px;
 }
 
