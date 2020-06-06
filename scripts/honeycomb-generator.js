@@ -46,7 +46,7 @@ animate(
     draw(progress)
     {
         //drawHexagon(progress, canvas.width-60, 90, 3);
-        drawHexagon(progress, canvas.width/2, 200, 1);
+        drawHexagon(progress, canvas.width/2, 200, 5);
         //drawHexagon(progress, 260, 300, 1);
         //drawHexagon(progress, canvas.width - 300, canvas.height - 120, 2);
         //drawHexagon(progress, 300, canvas.height - 80, 0);
@@ -88,7 +88,7 @@ function drawHexagon(progress, x, y, side)
             },
             draw(progress)
             {
-                drawHexagon(progress, x, y, (4 + side) % 6);
+                drawHexagon(progress, x, y, (3 + side) % 6);
             }
         });
     }
@@ -103,7 +103,7 @@ function drawHexagon(progress, x, y, side)
             },
             draw(progress)
             {
-                drawHexagon(progress, x, y, (0 + side) % 6);
+                drawHexagon(progress, x, y, (1 + side) % 6);
             }
         });
     }
@@ -118,7 +118,7 @@ function drawHexagon(progress, x, y, side)
             },
             draw(progress)
             {
-                drawHexagon(progress, x, y, (2 + side) % 6);
+                drawHexagon(progress, x, y, (5 + side) % 6);
             }
         });
     }
