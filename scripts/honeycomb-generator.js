@@ -113,7 +113,7 @@ function drawHexagon(progress, x, y, side)
     {
         startHexagon(x, y, (4 + side) % 6);
     }
-    if (Math.floor(Date.now() / 1000) % 10 > 7 && progress >= 6/6 - 0.002 && progress <= 6/6 + 0.002 && withinCanvas(x, y, length))
+    if (Math.floor(Date.now() / 1000) % 10 > 1 && progress >= 6/6 - 0.002 && progress <= 6/6 + 0.002 && withinCanvas(x, y, length))
     {
         startHexagon(x, y, (5 + side) % 6);
     }
