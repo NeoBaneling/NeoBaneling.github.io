@@ -77,6 +77,52 @@ function drawHexagon(progress, x, y, side)
         ctx.lineTo(x, y);
     }
 
+    if (progress >= 2/6 - 0.002 && progress <= 2/6 + 0.002)
+    {
+        animate(
+        {
+            duration: 6000,
+            timing(timeFraction)
+            {
+                return timeFraction;
+            },
+            draw(progress)
+            {
+                drawHexagon(progress, x, y, 0);
+            }
+        });
+    }
+    if (progress >= 4/6 - 0.002 && progress <= 4/6 + 0.002)
+    {
+        animate(
+        {
+            duration: 6000,
+            timing(timeFraction)
+            {
+                return timeFraction;
+            },
+            draw(progress)
+            {
+                drawHexagon(progress, x, y, 2);
+            }
+        });
+    }
+    if (progress >= 6/6 - 0.002 && progress <= 6/6 + 0.002)
+    {
+        animate(
+        {
+            duration: 6000,
+            timing(timeFraction)
+            {
+                return timeFraction;
+            },
+            draw(progress)
+            {
+                drawHexagon(progress, x, y, 4);
+            }
+        });
+    }
+
     /*
     var length = 2;
     var interval = length;
