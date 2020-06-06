@@ -234,4 +234,9 @@ body
     {
         padding-right: 0px;
     }
+
+    .footer p
+    {
+        font-size: 4.5vw;
+    }
 }
