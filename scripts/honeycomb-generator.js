@@ -72,10 +72,12 @@ function drawHexagon(progress, x, y, side)
 
     var length = 28;
 
+    /*
     if (!hexMap.has(keyOf(x, y, length, side % 6)) && progress <= 0.005)
     {
         hexMap.set(keyOf(x, y, length, 0), "occupied");
     }
+    */
 
     ctx.beginPath();
     ctx.strokeStyle = "rgb(188,144,64)";
@@ -87,11 +89,25 @@ function drawHexagon(progress, x, y, side)
         x = x + length * Math.sin((side + i) * 2 * Math.PI / 6);
         y = y + length * Math.cos((side + i) * 2 * Math.PI / 6);
         ctx.lineTo(x, y);
+
+        if (i == progress * 7 - 1 &&
+            Math.floor(Date.now() / 1000) & 10 > 3 &&
+            withinCanvas(x, y, length) &&
+            !hexMap.hasKey(keyOf(x, y, length, (side + i) % 6)))
+        {
+            hexMap.set(keyOf(x, y, length, (side + i) % 6), keyOf(x, y, length, (side + i) % 6));
+            startHexagon(x, y, (side + i) % 6);
+            console.log("We just started a new hexagon. Its coordinates are "+hexMap.get(keyOf(x, y, length, (side + i) % 6)));
+        }
     }
 
+    /*
     if (Math.floor(Date.now() / 1000) % 10 > 3 && progress >= 1/6 - 0.002 && progress <= 1/6 + 0.002 && withinCanvas(x, y, length))
     {
-        if (!hexMap.has(keyOf(x, y, length, side % 6))) startHexagon(x, y, side % 6);
+        if (!hexMap.has(keyOf(x, y, length, side % 6)))
+        {
+            startHexagon(x, y, side % 6);
+        }
     }
     if (Math.floor(Date.now() / 1000) % 10 > 2 && progress >= 2/6 - 0.002 && progress <= 2/6 + 0.002 && withinCanvas(x, y, length))
     {
@@ -113,6 +129,7 @@ function drawHexagon(progress, x, y, side)
     {
         if (!hexMap.has(keyOf(x, y, length, (5 + side) % 6))) startHexagon(x, y, (5 + side) % 6);
     }
+    */
 
     ctx.stroke();
 }
