@@ -88,14 +88,13 @@ function drawHexagon(progress, x, y, side)
         y = y + length * Math.cos((side + i) * 2 * Math.PI / 6);
         ctx.lineTo(x, y);
 
-        if (i == progress * 7 - 1 &&
+        if (i == Math.floor(progress * 7) - 1 &&
             Math.floor(Date.now() / 1000) & 10 > 3 &&
             withinCanvas(x, y, length) &&
-            !hexMap.has(keyOf(x, y, length, (side + i) % 6)))
+            !hexMap.has(keyOf(x, y, length, (side + i + 3) % 6)))
         {
-            hexMap.set(keyOf(x, y, length, (side + i) % 6), keyOf(x, y, length, (side + i) % 6));
-            startHexagon(x, y, (side + i) % 6);
-            console.log("We just started a new hexagon. Its coordinates are "+hexMap.get(keyOf(x, y, length, (side + i) % 6)));
+            hexMap.set(keyOf(x, y, length, (side + i + 3) % 6), keyOf(x, y, length, (side + i + 3) % 6));
+            startHexagon(x, y, (side + i + 3) % 6);
         }
     }
 
@@ -141,7 +140,7 @@ function keyOf(x, y, length, side)
 {
     var midX = getMidpoint(x + length * Math.sin(side % 6), x + length * Math.sin((side + 3) % 6));
     var midY = getMidpoint(y + length * Math.sin(side % 6), y + length * Math.sin((side + 3) % 6));
-    return midX + ", " + midY;
+    return Math.floor(midX) + ", " + Math.floor(midY);
 }
 
 function getMidpoint(a, b)
