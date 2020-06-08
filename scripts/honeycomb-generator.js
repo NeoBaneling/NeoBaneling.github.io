@@ -13,6 +13,8 @@ else
     // Canvas not supported :(
 }
 
+let hexMap = new Map();
+
 function animate({duration, draw, timing})
 {
 
@@ -72,21 +74,20 @@ function startHexagon(x, y, side)
 
 function drawHexagon(progress, x, y, side)
 {
+
     var length = 28;
+
+    if (progress == 0)
+    {
+        hexMap.set(keyOf(x, y, length, 0), true);
+    }
 
     ctx.beginPath();
     ctx.strokeStyle = "rgb(188,144,64)";
     ctx.lineWidth = 0.5;
     ctx.moveTo(x + length * Math.sin(side), y + length * Math.cos(side));
 
-    var z = progress * 7;
-
-    /*
-    var diff = (progress * 6) % 1;
-    var interval = length - diff;
-    */
-
-    for (var i = 0; i < z; i++)
+    for (var i = 0; i < progress * 7; i++)
     {
         x = x + length * Math.sin((side + i) * 2 * Math.PI / 6);
         y = y + length * Math.cos((side + i) * 2 * Math.PI / 6);
@@ -95,103 +96,28 @@ function drawHexagon(progress, x, y, side)
 
     if (Math.floor(Date.now() / 1000) % 10 > 3 && progress >= 1/6 - 0.002 && progress <= 1/6 + 0.002 && withinCanvas(x, y, length))
     {
-        startHexagon(x, y, side % 6);
+        if (!hexMap.has(keyOf(x, y, length, side % 6))) startHexagon(x, y, side % 6);
     }
     if (Math.floor(Date.now() / 1000) % 10 > 2 && progress >= 2/6 - 0.002 && progress <= 2/6 + 0.002 && withinCanvas(x, y, length))
     {
-        startHexagon(x, y, (1 + side) % 6)
+        if (!hexMap.has(keyOf(x, y, length, (1 + side) % 6))) startHexagon(x, y, (1 + side) % 6)
     }
     if (Math.floor(Date.now() / 1000) % 10 > 1 && progress >= 3/6 - 0.002 && progress <= 3/6 + 0.002 && withinCanvas(x, y, length))
     {
-        startHexagon(x, y, (2 + side) % 6);
+        if (!hexMap.has(keyOf(x, y, length, (2 + side) % 6))) startHexagon(x, y, (2 + side) % 6);
     }
     if (Math.floor(Date.now() / 1000) % 10 > 3 && progress >= 4/6 - 0.002 && progress <= 4/6 + 0.002 && withinCanvas(x, y, length))
     {
-        startHexagon(x, y, (3 + side) % 6);
+        if (!hexMap.has(keyOf(x, y, length, (3 + side) % 6))) startHexagon(x, y, (3 + side) % 6);
     }
     if (Math.floor(Date.now() / 1000) % 10 > 2 && progress >= 5/6 - 0.002 && progress <= 5/6 + 0.002 && withinCanvas(x, y, length))
     {
-        startHexagon(x, y, (4 + side) % 6);
+        if (!hexMap.has(keyOf(x, y, length, (4 + side) % 6))) startHexagon(x, y, (4 + side) % 6);
     }
     if (Math.floor(Date.now() / 1000) % 10 > 1 && progress >= 6/6 - 0.002 && progress <= 6/6 + 0.002 && withinCanvas(x, y, length))
     {
-        startHexagon(x, y, (5 + side) % 6);
+        if (!hexMap.has(keyOf(x, y, length, (5 + side) % 6))) startHexagon(x, y, (5 + side) % 6);
     }
-
-    /*
-    var length = 2;
-    var interval = length;
-
-    var modProgress = progress + side;
-
-    ctx.beginPath();
-    ctx.strokeStyle = "rgb(188,144,64)";
-    ctx.lineWidth = 0.4;
-    ctx.moveTo(x + length * Math.cos(side), y + length * Math.sin(side));
-
-    var diff = (modProgress * 6) % 1;
-    interval = length * diff;
-
-    ctx.lineTo(x + length * Math.cos(side * 2 * Math.PI / 6), y + length * Math.sin(side * 2 * Math.PI / 6));
-    */
-
-    /*
-    if (modProgress >= 0 && modProgress < 1/6)
-    {
-        ctx.lineTo(x += 12.5 * interval, y -= 5 * interval);
-    }
-    if (modProgress >= 1/6 && modProgress < 2/6)
-    {
-        ctx.lineTo(x += 12.5 * length, y -= 5 * length);
-        ctx.lineTo(x, y -= 15 * interval);
-    }
-    if (modProgress >= 2/6 && modProgress < 3/6)
-    {
-        ctx.lineTo(x += 12.5 * length, y -= 5 * length);
-        ctx.lineTo(x, y -= 15 * length);
-        ctx.lineTo(x -= 12.5 * interval, y -= 5 * interval);
-    }
-    if (modProgress >= 3/6 && modProgress < 4/6)
-    {
-        ctx.lineTo(x += 12.5 * length, y -= 5 * length);
-        ctx.lineTo(x, y -= 15 * length);
-        ctx.lineTo(x -= 12.5 * length, y -= 5 * length);
-        ctx.lineTo(x -= 12.5 * interval, y += 5 * interval);
-    }
-    if (modProgress >= 4/6 && modProgress < 5/6)
-    {
-        ctx.lineTo(x += 12.5 * length, y -= 5 * length);
-        ctx.lineTo(x, y -= 15 * length);
-        ctx.lineTo(x -= 12.5 * length, y -= 5 * length);
-        ctx.lineTo(x -= 12.5 * length, y += 5 * length);
-        ctx.lineTo(x, y += 15 * interval);
-    }
-    if (modProgress >= 5/6)
-    {
-        ctx.lineTo(x += 12.5 * length, y -= 5 * length);
-        ctx.lineTo(x, y -= 15 * length);
-        ctx.lineTo(x -= 12.5 * length, y -= 5 * length);
-        ctx.lineTo(x -= 12.5 * length, y += 5 * length);
-        ctx.lineTo(x, y += 15 * length);
-        ctx.lineTo(x += 12.5 * interval, y += 5 * interval);
-    }
-
-    if (progress >= 2/6 - 0.002 && progress <= 2/6 + 0.002)
-    {
-        animate(
-        {
-            duration: 6000,
-            timing(timeFraction)
-            {
-                return timeFraction;
-            },
-            draw(progress)
-            {
-                drawHexagon(progress, x, y, 0);
-            }
-        });
-    }
-    */
 
     ctx.stroke();
 }
@@ -199,4 +125,16 @@ function drawHexagon(progress, x, y, side)
 function withinCanvas(x, y, length)
 {
     return x > 0 + length*2 && x < canvas.width - length*2 && y > 0 + length*2 && y < canvas.height - length*2;
+}
+
+function keyOf(x, y, length, side)
+{
+    var midX = getMidpoint(x + length * Math.sin(side % 6), x + length * Math.sin((side + 3) % 6));
+    var midY = getMidpoint(y + length * Math.sin(side % 6), y + length * Math.sin((side + 3) % 6));
+    return midX + ", " + midY;
+}
+
+function getMidpoint(a, b)
+{
+    return (a + b) / 2;
 }
