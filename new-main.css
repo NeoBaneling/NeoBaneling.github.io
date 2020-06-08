@@ -243,4 +243,10 @@ body
     {
         font-size: 4vw;
     }
+
+    .link
+    {
+        height: 9vw;
+        padding: 2.5vw;
+    }
 }
