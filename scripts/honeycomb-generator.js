@@ -72,7 +72,7 @@ function drawHexagon(progress, x, y, side)
 
     var length = 28;
 
-    if (progress == 0)
+    if (!hexMap.has(keyOf(x, y, length, side % 6)) && progress <= 0.005)
     {
         hexMap.set(keyOf(x, y, length, 0), "occupied");
     }
