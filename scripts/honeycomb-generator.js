@@ -98,36 +98,6 @@ function drawHexagon(progress, x, y, side)
         }
     }
 
-    /*
-    if (Math.floor(Date.now() / 1000) % 10 > 3 && progress >= 1/6 - 0.002 && progress <= 1/6 + 0.002 && withinCanvas(x, y, length))
-    {
-        if (!hexMap.has(keyOf(x, y, length, side % 6)))
-        {
-            startHexagon(x, y, side % 6);
-        }
-    }
-    if (Math.floor(Date.now() / 1000) % 10 > 2 && progress >= 2/6 - 0.002 && progress <= 2/6 + 0.002 && withinCanvas(x, y, length))
-    {
-        if (!hexMap.has(keyOf(x, y, length, (1 + side) % 6))) startHexagon(x, y, (1 + side) % 6)
-    }
-    if (Math.floor(Date.now() / 1000) % 10 > 1 && progress >= 3/6 - 0.002 && progress <= 3/6 + 0.002 && withinCanvas(x, y, length))
-    {
-        if (!hexMap.has(keyOf(x, y, length, (2 + side) % 6))) startHexagon(x, y, (2 + side) % 6);
-    }
-    if (Math.floor(Date.now() / 1000) % 10 > 3 && progress >= 4/6 - 0.002 && progress <= 4/6 + 0.002 && withinCanvas(x, y, length))
-    {
-        if (!hexMap.has(keyOf(x, y, length, (3 + side) % 6))) startHexagon(x, y, (3 + side) % 6);
-    }
-    if (Math.floor(Date.now() / 1000) % 10 > 2 && progress >= 5/6 - 0.002 && progress <= 5/6 + 0.002 && withinCanvas(x, y, length))
-    {
-        if (!hexMap.has(keyOf(x, y, length, (4 + side) % 6))) startHexagon(x, y, (4 + side) % 6);
-    }
-    if (Math.floor(Date.now() / 1000) % 10 > 1 && progress >= 6/6 - 0.002 && progress <= 6/6 + 0.002 && withinCanvas(x, y, length))
-    {
-        if (!hexMap.has(keyOf(x, y, length, (5 + side) % 6))) startHexagon(x, y, (5 + side) % 6);
-    }
-    */
-
     ctx.stroke();
 }
 
