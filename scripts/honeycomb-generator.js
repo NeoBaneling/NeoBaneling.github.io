@@ -91,7 +91,7 @@ function drawHexagon(progress, x, y, side)
         if (i == progress * 7 - 1 &&
             Math.floor(Date.now() / 1000) & 10 > 3 &&
             withinCanvas(x, y, length) &&
-            !hexMap.hasKey(keyOf(x, y, length, (side + i) % 6)))
+            !hexMap.has(keyOf(x, y, length, (side + i) % 6)))
         {
             hexMap.set(keyOf(x, y, length, (side + i) % 6), keyOf(x, y, length, (side + i) % 6));
             startHexagon(x, y, (side + i) % 6);
