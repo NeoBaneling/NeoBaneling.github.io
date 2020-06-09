@@ -150,22 +150,6 @@ body
     display: block;
 }
 
-.row {
-    margin-left: 48px;
-    margin-right: -48px;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column {
-    float: left;
-    padding: 10px;
-}
-
 .link
 {
     padding: 32px;
