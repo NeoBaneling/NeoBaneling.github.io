@@ -1,0 +1,9 @@
+@import "new-main.css";
+
+.impression p
+{
+    background-color: rgba(0,0,0,0);
+    font-size: 180%;
+    text-align: center;
+    color: var(--blinding-white);
+}
