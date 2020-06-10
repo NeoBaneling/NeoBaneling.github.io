@@ -130,7 +130,7 @@ body
     list-style-position: outside;
 }
 
-.dark a:link, a:visited
+.dark a.text:link, a.text:visited
 {
     background-color: var(--midnight-black);
     color: var(--night-grey);
@@ -144,7 +144,7 @@ body
     padding-bottom: 0px;
 }
 
-.dark a:hover, a:active
+.dark a.text:hover, a.text:active
 {
     background-color: var(--honeycomb-yellow);
     color: var(--blinding-white);
