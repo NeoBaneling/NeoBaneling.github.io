@@ -91,6 +91,14 @@ body
     padding-bottom: 0px;
 }
 
+.dark p img
+{
+    float: left;
+    width: 30%;
+    height: auto;
+    margin-right: 20px;
+}
+
 .dark ul
 {
     background-color: var(--midnight-black);
