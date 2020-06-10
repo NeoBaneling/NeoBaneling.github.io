@@ -6,9 +6,9 @@
     --cloud-grey: rgb(160, 160, 160);
     --honeycomb-yellow: rgb(250, 210, 57);
     --quicksand: "Quicksand", sans-serif;
-    --manrope: "Manrope", sans-serif;
-    --economica: "Economica", sans-serif;
 }
+
+@import "topNav.css";
 
 html
 {
