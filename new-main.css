@@ -1,7 +1,7 @@
 :root
 {
     --midnight-black: rgb(0, 0, 0);
-    --night-grey: rgb(95, 95, 95);
+    --night-grey: rgb(100, 100, 100);
     --blinding-white: rgb(255, 255, 255);
     --cloud-grey: rgb(160, 160, 160);
     --honeycomb-yellow: rgb(250, 210, 57);
@@ -40,6 +40,22 @@ body
     font-size: 200%;
     text-align: center;
     color: var(--blinding-white);
+}
+
+.impression a:link, a:visited
+{
+    text-align: center;
+    text-decoration: none;
+    color: var(--blinding-white);
+}
+
+.impression a:hover, a:active
+{
+    background-color: var(--blinding-white);
+    padding: 10px;
+    text-align: center;
+    color: var(--honeycomb-yellow);
+    border-radius: 10px;
 }
 
 .dark
