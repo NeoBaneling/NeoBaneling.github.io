@@ -8,3 +8,19 @@
     text-align: center;
     color: var(--blinding-white);
 }
+
+.impression a.text:link, a.text:visited
+{
+    text-align: center;
+    text-decoration: none;
+    color: var(--midnight-grey);
+}
+
+.impression a.text:hover, a.text:active
+{
+    background-color: var(--blinding-white);
+    padding: 10px;
+    text-align: center;
+    color: var(--honeycomb-yellow);
+    border-radius: 10px;
+}
