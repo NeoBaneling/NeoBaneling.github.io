@@ -9,17 +9,18 @@
     color: var(--blinding-white);
 }
 
-.dark p img
-{
-    width: 27vw;
-}
-
-.dark .large img
+.dark img
 {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-    padding: 3vw;
+    width: 90%;
+    padding: 5vw;
+}
+
+.dark p img
+{
+    width: 27vw;
+    padding: 0vw;
 }
 
 @media screen and (max-width: 700px)
