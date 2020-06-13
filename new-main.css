@@ -42,14 +42,14 @@ body
     color: var(--blinding-white);
 }
 
-.impression a.text:link, a.text:visited
+.impression p a.text:link, p a.text:visited
 {
     text-align: center;
     text-decoration: none;
     color: var(--blinding-white);
 }
 
-.impression a.text:hover, a.text:active
+.impression p a.text:hover, p a.text:active
 {
     background-color: var(--blinding-white);
     padding: 10px;
