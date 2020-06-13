@@ -1,7 +1,7 @@
 :root
 {
     --midnight-black: rgb(0, 0, 0);
-    --night-grey: rgb(100, 100, 100);
+    --stinger-grey: rgb(120, 120, 130);
     --blinding-white: rgb(255, 255, 255);
     --cloud-grey: rgb(160, 160, 160);
     --honeycomb-yellow: rgb(250, 210, 57);
@@ -81,7 +81,7 @@ body
 .dark h2
 {
     background-color: var(--midnight-black);
-    color: var(--night-grey);
+    color: var(--stinger-grey);
     font-size: 32px;
     font-weight: bold;
     text-align: left;
@@ -97,7 +97,7 @@ body
 .dark p
 {
     background-color: var(--midnight-black);
-    color: var(--night-grey);
+    color: var(--stinger-grey);
     font-size: 24px;
     text-align: left;
     line-height: 36px;
@@ -118,7 +118,7 @@ body
 .dark ul
 {
     background-color: var(--midnight-black);
-    color: var(--night-grey);
+    color: var(--stinger-grey);
     font-size: 24px;
     text-align: left;
     line-height: 36px;
@@ -133,7 +133,7 @@ body
 .dark a.text:link, a.text:visited
 {
     background-color: var(--midnight-black);
-    color: var(--night-grey);
+    color: var(--stinger-grey);
     font-size: 24px;
     text-align: left;
     text-decoration: none;
