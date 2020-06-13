@@ -13,7 +13,7 @@
 {
     float: left;
     display: block;
-    color: var(--blinding-white);
+    color: var(--pollen-yellow);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -23,8 +23,7 @@
 /* Change the color of links on hover */
 .topnav a:hover
 {
-    background-color: var(--blinding-white);
-    color: var(--honeycomb-yellow);
+    color: var(--blinding-white);
 }
 
 /* Add an active class to highlight the current page */
