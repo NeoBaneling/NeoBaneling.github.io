@@ -54,6 +54,7 @@ body
 {
     margin-bottom: 10vw;
     vertical-align: middle;
+    position: relative;
 }
 
 .middle
