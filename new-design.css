@@ -83,6 +83,7 @@ body
     background-color: var(--blinding-white);
     border-radius: 10px;
     padding: 10px;
+    text-decoration: none;
     color: var(--midnight-black);
 }
 
