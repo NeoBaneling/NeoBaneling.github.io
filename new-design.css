@@ -49,6 +49,22 @@ body
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.7);
 }
 
+.middle
+{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.column:hover .middle
+{
+    opacity: 1;
+}
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px)
 {
