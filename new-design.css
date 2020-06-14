@@ -49,14 +49,6 @@ body
     transition: .5s ease;
 }
 
-/* Just a wrapper thing to support mouse hovering */
-.canvas
-{
-    margin-bottom: 10vw;
-    vertical-align: middle;
-    position: relative;
-}
-
 .middle
 {
     transition: .5s ease;
@@ -68,6 +60,14 @@ body
     -ms-transform: translate(-50%, -50%);
 }
 
+/* Just a wrapper thing to support mouse hovering */
+.canvas
+{
+    margin-bottom: 10vw;
+    vertical-align: middle;
+    position: relative;
+}
+
 .canvas:hover img
 {
     opacity: 0.3;
@@ -76,6 +76,14 @@ body
 .canvas:hover .middle
 {
     opacity: 1;
+}
+
+.canvas a
+{
+    background-color: var(--blinding-white);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--midnight-black);
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
