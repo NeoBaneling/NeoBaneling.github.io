@@ -13,25 +13,26 @@ body
 
 .row
 {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10vw 2vw;
+    height: 100%;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
 }
 
-/* Create four equal columns that sits next to each other */
 .column
 {
-    flex: 20%;
-    max-width: 45%;
-    padding: 0 4vw;
+    max-width: 100%;
+    margin: auto;
+}
+
+.column img
+{
+    max-height: 90vh;
+    max-width: 100%;
+    margin: auto;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px)
 {
-    .column
-    {
-        flex: 100%;
-        max-width: 100%;
-    }
+
 }
