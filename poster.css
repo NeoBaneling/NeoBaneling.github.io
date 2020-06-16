@@ -1,0 +1,8 @@
+@import "new-main.css";
+@import "topNav.css";
+
+body
+{
+    background-color: var(--midnight-black);
+}
+
