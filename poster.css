@@ -16,23 +16,32 @@ body
     height: 100%;
     padding-top: 5vw;
     padding-bottom: 5vw;
+    justify-content: center;
+    display: flex;
 }
 
 .column
 {
-    max-width: 100%;
-    margin: auto;
+    padding-left: 3vw;
+    padding-right: 3vw;
 }
 
 .column img
 {
     max-height: 90vh;
-    max-width: 100%;
+    display: block;
     margin: auto;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px)
 {
-
+    .row
+    {
+        display: block;
+    }
+    .column
+    {
+        padding: 3vw;
+    }
 }
