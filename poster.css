@@ -18,6 +18,7 @@ body
     padding-bottom: 5vw;
     justify-content: center;
     display: flex;
+    background-image: linear-gradient(var(--stinger-grey), var(--midnight-black) 40%);
 }
 
 .column
