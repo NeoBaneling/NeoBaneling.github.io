@@ -75,15 +75,6 @@ body
     opacity: 1;
 }
 
-.canvas a
-{
-    background-color: var(--blinding-white);
-    border-radius: 10px;
-    padding: 10px;
-    text-decoration: none;
-    color: var(--midnight-black);
-}
-
 .footer
 {
     background-color: var(--honeycomb-yellow);
