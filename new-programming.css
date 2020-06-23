@@ -28,6 +28,7 @@ body
     opacity: 1;
     border-radius: 10px;
     border-width: 5px;
+    border-style: solid;
     border-color: var(--stinger-grey);
     transition: .5s ease;
 }
