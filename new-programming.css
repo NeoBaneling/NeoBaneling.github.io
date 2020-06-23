@@ -97,4 +97,9 @@ body
         flex: 100%;
         max-width: 100%;
     }
+
+    .middle p
+    {
+        font-size: 4.5vw;
+    }
 }
