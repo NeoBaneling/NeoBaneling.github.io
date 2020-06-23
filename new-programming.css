@@ -43,7 +43,7 @@ body
 
 .canvas:hover img
 {
-    opacity: 0.3;
+    width: 120%;
     border-color: var(--honeycomb-yellow);
 }
 
