@@ -5,6 +5,7 @@
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- Hack from here: https://github.com/source-foundry/Hack#web-font-usage-->
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -34,7 +35,7 @@
                 the hexagon below to filter specific languages and applications!
             </h2>
             <a id="filter"><img src="img/hex/grey.png" class="image-link"></a>
-            <div class="column">
+            <div class="column" id="buttonContainer">
                 <button class="button language" onclick="filterSelection('c_sharp')">C#</button>
                 <button class="button language" onclick="filterSelection('java')">Java</button>
                 <button class="button language" onclick="filterSelection('javascript')">JavaScript</button>
