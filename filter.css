@@ -1,0 +1,36 @@
+:root
+{
+    --language: rgb();
+    --type: rgb();
+    --program: rgb();
+    --client: rgb();
+    --hack: "Hack", monospace;
+}
+
+.button
+{
+    font-size: 2vw;
+    padding: 1vw;
+    font-family: var(--hack);
+}
+
+.language
+{
+    font-style: italic;
+    color: var(--language);
+}
+
+.type
+{
+    color: var(--type);
+}
+
+.program
+{
+    color: var(--program);
+}
+
+.client
+{
+    color: var(--client);
+}

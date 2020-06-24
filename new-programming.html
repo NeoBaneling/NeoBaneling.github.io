@@ -5,10 +5,8 @@
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
-        <!--
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-        -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+
         <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
         <link href="new-programming.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,10 +34,24 @@
                 the hexagon below to filter specific languages and applications!
             </h2>
             <a id="filter"><img src="img/hex/grey.png" class="image-link"></a>
+            <div class="column">
+                <button class="button language" onclick="filterSelection('c_sharp')">C#</button>
+                <button class="button language" onclick="filterSelection('java')">Java</button>
+                <button class="button language" onclick="filterSelection('javascript')">JavaScript</button>
+                <button class="button language" onclick="filterSelection('html/css')">HTML/CSS</button>
+                <button class="button type" onclick="filterSelection('game')">Games</button>
+                <button class="button type" onclick="filterSelection('mobile')">Mobile Apps</button>
+                <button class="button program" onclick="filterSelection('unity')">Unity</button>
+                <button class="button program" onclick="filterSelection('android_studio')">Android Studio</button>
+                <button class="button program" onclick="filterSelection('processing')">Processing</button>
+                <button class="button client" onclick="filterSelection('school')">School</button>
+                <button class="button client" onclick="filterSelection('work')">Work</button>
+                <button class="button client" onclick="filterSelection('personal')">Personal</button>
+            </div>
         </div>
         <div class="column">
             <div class="row">
-                <div class="canvas">
+                <div class="canvas c_sharp unity school game">
                     <a href="princess-duchess's-excellent-adventure.html">
                         <img src="img/thumbnail/princess-duchess.png">
                         <div class="middle">
@@ -49,7 +61,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="canvas">
+                <div class="canvas c school game">
                     <a href="shruden.html">
                         <img src="img/thumbnail/shruden.png">
                         <div class="middle">
@@ -59,7 +71,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="canvas">
+                <div class="canvas c_sharp unity mobile school game">
                     <a href="new-about.html#BeeSnap">
                         <img src="img/thumbnail/beekeepergo.png">
                         <div class="middle">
@@ -71,17 +83,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="canvas">
+                <div class="canvas html/css javascript personal">
                     <a href="new-index.html">
                         <img src="img/thumbnail/webpage.png">
                         <div class="middle">
                             <p>{ Programmed by Design }</p>
                             <p>Web Development, Web Design</p>
-                            <p>HTML/CSS/JS | Fun</p>
+                            <p>HTML/CSS/JS | Personal</p>
                         </div>
                     </a>
                 </div>
-                <div class="canvas">
+                <div class="canvas java mobile android_studio work">
                     <a href="aweventure-android.html">
                         <img src="img/thumbnail/aweventure.png">
                         <div class="middle">
@@ -91,7 +103,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="canvas">
+                <div class="canvas javascript school">
                     <a href="badmoviebot.html">
                         <img src="img/thumbnail/badmoviebot.png">
                         <div class="middle">
@@ -103,7 +115,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="canvas">
+                <div class="canvas java processing school game">
                     <a href="gamblin-for-gold.html">
                         <img src="img/thumbnail/gamblin-for-gold.png">
                         <div class="middle">
@@ -122,5 +134,6 @@
             watch out for facehuggers }</p>
         </div>
         <script src="scripts/smooth-scroll.js"></script>
+        <script src="scripts/card-filterer.js"></script>
     </body>
 </html>
