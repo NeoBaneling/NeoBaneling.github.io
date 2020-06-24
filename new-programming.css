@@ -80,6 +80,17 @@ body
     opacity: 1;
 }
 
+.show
+{
+    margin-bottom: 8vw;
+    vertical-align: middle;
+    position: relative;
+    width: 33%;
+    height: auto;
+    display: block;
+}
+
+
 .footer
 {
     background-color: var(--honeycomb-yellow);
