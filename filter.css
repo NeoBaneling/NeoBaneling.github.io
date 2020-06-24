@@ -22,6 +22,11 @@
     border-radius: 10px;
 }
 
+.show
+{
+    display: block;
+}
+
 .language
 {
     font-style: italic;

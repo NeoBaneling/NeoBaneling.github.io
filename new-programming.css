@@ -65,6 +65,7 @@ body
     position: relative;
     width: 33%;
     height: auto;
+    display: none;
 }
 
 .canvas:hover img
