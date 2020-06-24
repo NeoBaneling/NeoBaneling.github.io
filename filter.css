@@ -27,6 +27,11 @@
     display: block;
 }
 
+.dark ul
+{
+    list-style: none;
+}
+
 .language
 {
     font-style: italic;
