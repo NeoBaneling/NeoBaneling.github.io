@@ -16,6 +16,12 @@
     border-style: none;
 }
 
+.button:hover
+{
+    background-color: var(--stinger-grey);
+    border-radius: 10px;
+}
+
 .language
 {
     font-style: italic;
