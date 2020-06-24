@@ -7,7 +7,7 @@ filterSelection("all")
 function filterSelection(c) {
     var x, i;
     x = document.getElementsByClassName("canvas");
-    Console.log(x);
+    console.log(x);
     if (c == "all") c = "";
     // Add the "show" class (display:block) to the filtered elements,
     // and remove the "show" class from the elements that are not selected
@@ -27,6 +27,7 @@ function w3AddClass(element, name) {
         element.className += " " + arr2[i];
         }
     }
+    console.log(element);
 }
 
 // Hide elements that are not selected
@@ -40,6 +41,7 @@ function w3RemoveClass(element, name) {
         }
       }
     element.className = arr1.join(" ");
+    console.log(element);
 }
 
 // Add active class to the current control button (highlight it)
