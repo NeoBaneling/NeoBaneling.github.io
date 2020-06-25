@@ -3,6 +3,9 @@
  * https://www.w3schools.com/howto/howto_js_filter_elements.asp
  **/
 
+var dropdownActive;
+hideDropdown();
+
 filterSelection("all")
 function filterSelection(c)
 {
@@ -47,6 +50,49 @@ function w3RemoveClass(element, name)
         }
       }
     element.className = arr1.join(" ");
+}
+
+function showDropdown()
+{
+    var btnContainer = document.getElementById("buttonContainer");
+    var btns = btnContainer.getElementsByClassName("button");
+    for (var i = 0; i < btns.length; i++)
+    {
+        btns[i].className = btns[i].className.replace(" invisible", "");
+        btns[i].className = btns[i].className.replace(" visible", "");
+        btns[i].className += " visible";
+    }
+    var filterHex = document.getElementById("filterHex");
+    filterHex.style = 'transform:rotate(30deg)';
+    dropdownActive = true;
+}
+
+function hideDropdown()
+{
+    var btnContainer = document.getElementById("buttonContainer");
+    var btns = btnContainer.getElementsByClassName("button");
+    for (var i = 0; i < btns.length; i++)
+    {
+        btns[i].className = btns[i].className.replace(" invisible", "");
+        btns[i].className = btns[i].className.replace(" visible", "");
+        btns[i].className += " invisible";
+    }
+    var filterHex = document.getElementById("filterHex");
+    filterHex.style = 'transform:rotate(0deg)';
+    dropdownActive = false;
+}
+
+function toggleDropdown()
+{
+    dropdownActive = !dropdownActive;
+    if (dropdownActive)
+    {
+        showDropdown();
+    }
+    else
+    {
+        hideDropdown();
+    }
 }
 
 // Add active class to the current control button (highlight it)

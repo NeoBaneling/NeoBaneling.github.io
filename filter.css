@@ -16,10 +16,20 @@
     border-style: none;
 }
 
-.button:hover
+ul .button:hover
 {
     background-color: var(--stinger-grey);
     border-radius: 10px;
+}
+
+.visible
+{
+    diplay: block;
+}
+
+.invisible
+{
+    display: none;
 }
 
 .dark ul
