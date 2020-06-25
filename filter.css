@@ -16,7 +16,7 @@
     border-style: none;
 }
 
-ul .button:hover, ul .button:active
+ul .button:hover
 {
     background-color: var(--stinger-grey);
     border-radius: 10px;
