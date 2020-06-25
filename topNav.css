@@ -40,6 +40,11 @@
     width: 32px;
 }
 
+.topnav a.homeText
+{
+    display: none;
+}
+
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
@@ -64,14 +69,7 @@ clicks on the icon. This class makes the topnav look good on small screens
         border-radius: 10px;
     }
 
-    .topnav.responsive a:not(a.active)
-    {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    .topnav.responsive a
+    .topnav.responsive a:not(a.homeIcon)
     {
         float: none;
         display: block;
