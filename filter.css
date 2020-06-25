@@ -58,3 +58,12 @@ ul .button:hover, ul .button:active
     font-style: italic;
     color: var(--client);
 }
+
+@media screen and (max-width: 700px)
+{
+    .button
+    {
+        font-size: 4vw;
+        padding: 2vw;
+    }
+}
