@@ -32,6 +32,7 @@
 
     background-color: var(--midnight-black);
     color: var(--honeycomb-yellow);
+    border-radius: 10px 10px 0px 0px;
 }
 
 .topnav a img
