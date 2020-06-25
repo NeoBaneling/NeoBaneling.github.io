@@ -58,12 +58,19 @@ clicks on the icon. This class makes the topnav look good on small screens
         right: 0;
         top: 0;
     }
+
+    .topnav.responsive a.active
+    {
+        border-radius: 10px;
+    }
+
     .topnav.responsive a:not(a.active)
     {
         float: none;
         display: block;
         text-align: left;
     }
+
     .topnav.responsive a
     {
         float: none;
@@ -77,5 +84,10 @@ clicks on the icon. This class makes the topnav look good on small screens
     {
         float: right;
         display: block;
+    }
+
+    .topnav a.active
+    {
+        border-radius: 0px 10px 0px 0px;
     }
 }
