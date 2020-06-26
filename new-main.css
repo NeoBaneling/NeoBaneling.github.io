@@ -297,7 +297,7 @@ body
 
     .sidenav
     {
-        padding-right: 0px;
+        display: none;
     }
 
     .footer p
