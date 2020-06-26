@@ -233,6 +233,11 @@ body
     padding: 40px;
 }
 
+.center.links
+{
+    width: 680px;
+}
+
 .stack-top
 {
     z-index: 1;
@@ -304,5 +309,18 @@ body
     {
         height: 9vw;
         padding: 2.5vw;
+    }
+
+    .center.links
+    {
+        width: 100%;
+        height: 3vw;
+        padding-bottom: 20vw;
+    }
+
+    .image-link
+    {
+        padding: 2vw;
+        height: 10vw;
     }
 }
