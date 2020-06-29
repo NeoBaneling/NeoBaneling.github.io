@@ -54,13 +54,11 @@ function w3RemoveClass(element, name)
 
 function showDropdown()
 {
-    var btnContainer = document.getElementById("buttonContainer");
+    var btnContainer = document.getElementById("filterContainer");
     var btns = btnContainer.getElementsByClassName("button");
     for (var i = 0; i < btns.length; i++)
     {
-        btns[i].className = btns[i].className.replace(" invisible", "");
-        btns[i].className = btns[i].className.replace(" visible", "");
-        btns[i].className += " visible";
+        showButton(btns[i]);
     }
     var filterHex = document.getElementById("filterHex");
     filterHex.style = 'transform:rotate(30deg)';
@@ -69,13 +67,11 @@ function showDropdown()
 
 function hideDropdown()
 {
-    var btnContainer = document.getElementById("buttonContainer");
+    var btnContainer = document.getElementById("filterContainer");
     var btns = btnContainer.getElementsByClassName("button");
     for (var i = 0; i < btns.length; i++)
     {
-        btns[i].className = btns[i].className.replace(" invisible", "");
-        btns[i].className = btns[i].className.replace(" visible", "");
-        btns[i].className += " invisible";
+        hideButton(btns[i]);
     }
     var filterHex = document.getElementById("filterHex");
     filterHex.style = 'transform:rotate(0deg)';
@@ -95,8 +91,22 @@ function toggleDropdown()
     }
 }
 
+function showButton(button)
+{
+    button.className = button.className.replace(" invisible", "");
+    button.className = button.className.replace(" visible", "");
+    button.className += " visible";
+}
+
+function hideButton(button)
+{
+    button.className = button.className.replace(" invisible", "");
+    button.className = button.className.replace(" visible", "");
+    button.className += " invisible";
+}
+
 // Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("buttonContainer");
+var btnContainer = document.getElementById("filterContainer");
 var btns = btnContainer.getElementsByClassName("button");
 for (var i = 0; i < btns.length; i++)
 {
@@ -105,5 +115,30 @@ for (var i = 0; i < btns.length; i++)
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
+        hideButton(current[0]);
+
+        var selectedBtnContainer = document.getElementById("selectedFilterContainer");
+        var selectedBtns = selectedBtnContainer.getElementsByClassName("button");
+        selectedBtns[0].className = selectedBtns[0].className.replace(" active", "");
+        selectedBtns[0].className += " active";
+        showButton(selectedBtns[i]);
     });
+}
+
+var selectedBtnContainer = document.getElementById("selectedFilterContainer");
+var selectedBtns = btnContainer.getElementsByClassName("button");
+for (var i = 0; i < btns.length; i++)
+{
+    btns[i].addEventListener("click", function()
+    {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        hideButton(current[0]);
+
+        var dropdownBtnContainer = document.getElementById("filterContainer");
+        var dropdownBtns = dropdownBtnContainer.getElementsByClassName("button");
+        dropdownBtns[0].className = dropdownBtns[0].className.replace(" active", "");
+        dropdownBtns[0].className += " active";
+        showButton(dropdownBtns[i]);
+    })
 }
