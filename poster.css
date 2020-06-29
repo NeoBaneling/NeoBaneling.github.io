@@ -29,7 +29,7 @@ body
 
 .column img
 {
-    max-height: 90vh;
+    height: 90vh;
     display: block;
     margin: auto;
 }
@@ -40,12 +40,16 @@ body
     .row
     {
         display: block;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
     }
+
     .column
     {
         padding: 3vw;
+    }
+
+    .column img
+    {
+        height: auto;
+        width: 90vw;
     }
 }
