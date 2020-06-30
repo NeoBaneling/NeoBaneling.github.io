@@ -126,10 +126,10 @@ for (var i = 0; i < btns.length; i++)
 }
 
 var selectedBtnContainer = document.getElementById("selectedFilterContainer");
-var selectedBtns = btnContainer.getElementsByClassName("button");
-for (var i = 0; i < btns.length; i++)
+var selectedBtns = selectedBtnContainer.getElementsByClassName("button");
+for (var i = 0; i < selectedBtns.length; i++)
 {
-    btns[i].addEventListener("click", function()
+    selectedBtns[i].addEventListener("click", function()
     {
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
