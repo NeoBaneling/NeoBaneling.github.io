@@ -1,2 +1,62 @@
-@import "poster.css";
+@import "new-main.css";
+@import "topNav.css";
 
+body
+{
+    background-color: var(--midnight-black);
+}
+
+.footer
+{
+    background-color: var(--honeycomb-yellow);
+}
+
+.display
+{
+    background-image: linear-gradient(var(--blinding-white), var(--stinger-grey) 35%, var(--midnight-black) 90%);
+}
+
+.row
+{
+    height: 100%;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    justify-content: center;
+    display: flex;
+}
+
+.column1
+{
+    width: 30%;
+}
+
+.column2
+{
+    width: 40%;
+}
+
+.column3
+{
+    width: 30%;
+}
+
+.column1 img
+{
+    height: 90vh;
+    display: block;
+    margin: auto;
+}
+
+.column2 img
+{
+    height: 90vh;
+    display: block;
+    margin: auto;
+}
+
+.column3 img
+{
+    height: 90vh;
+    display: block;
+    margin: auto;
+}
