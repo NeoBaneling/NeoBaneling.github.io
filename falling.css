@@ -17,47 +17,25 @@ body
     background-image: linear-gradient(var(--blinding-white), var(--stinger-grey) 35%, var(--midnight-black) 90%);
 }
 
-.row
+.display img
 {
-    height: 100%;
-    padding-top: 5vw;
-    padding-bottom: 5vw;
-    justify-content: center;
-    display: flex;
-}
-
-.column1
-{
-    width: 30%;
-}
-
-.column2
-{
-    width: 40%;
-}
-
-.column3
-{
-    width: 30%;
-}
-
-.column1 img
-{
-    height: 90vh;
+    width: auto;
+    height: auto;
+    max-height: 90vh;
+    max-width: 40vw;
     display: block;
     margin: auto;
+    padding: 5vw 1vw 5vw 1vw;
 }
 
-.column2 img
+@media screen and (max-width: 700px)
 {
-    height: 90vh;
-    display: block;
-    margin: auto;
-}
-
-.column3 img
-{
-    height: 90vh;
-    display: block;
-    margin: auto;
+    .display img
+    {
+        height: auto;
+        width: 90vw;
+        max-height: none;
+        max-width: none;
+        padding-bottom: 40vw;
+    }
 }
