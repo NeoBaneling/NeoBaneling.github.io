@@ -25,7 +25,7 @@ body
     max-width: 40vw;
     display: block;
     margin: auto;
-    padding: 5vw 1vw 5vw 1vw;
+    padding: 0vw 1vw 18vw 1vw;
 }
 
 @media screen and (max-width: 700px)
