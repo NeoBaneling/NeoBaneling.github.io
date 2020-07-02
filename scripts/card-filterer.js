@@ -6,6 +6,8 @@
 // var dropdownActive;
 // hideDropdown();
 
+var initialized = false;
+
 filterSelection("all")
 function filterSelection(c)
 {
@@ -18,6 +20,15 @@ function filterSelection(c)
     {
         w3RemoveClass(x[i], "show");
         if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+    var prevSelectedBtn = document.getElementsByClassName("selected")[0];
+    if (prevSelectedBtn != undefined && initialized)
+    {
+        prevSelectedBtn.className = prevSelectedBtn.className.replace(" selected", "");
+    }
+    if (!initialized)
+    {
+        initialized = true;
     }
 }
 
@@ -115,5 +126,6 @@ for (var i = 0; i < btns.length; i++)
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
+        this.className += " selected";
     });
 }
