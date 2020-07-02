@@ -13,6 +13,7 @@ body
 
 .display
 {
+    padding-top: 5vw;
     background-image: linear-gradient(var(--blinding-white), var(--stinger-grey) 35%, var(--midnight-black) 90%);
 }
 
