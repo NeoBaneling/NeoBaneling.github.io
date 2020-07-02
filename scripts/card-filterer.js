@@ -91,20 +91,6 @@ function toggleDropdown()
     }
 }
 
-function showButton(button)
-{
-    button.className = button.className.replace(" invisible", "");
-    button.className = button.className.replace(" visible", "");
-    button.className += " visible";
-}
-
-function hideButton(button)
-{
-    button.className = button.className.replace(" invisible", "");
-    button.className = button.className.replace(" visible", "");
-    button.className += " invisible";
-}
-
 // Add active class to the current control button (highlight it)
 var btnContainer = document.getElementById("filterContainer");
 var btns = btnContainer.getElementsByClassName("button");
@@ -115,30 +101,5 @@ for (var i = 0; i < btns.length; i++)
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
-        hideButton(current[0]);
-
-        var selectedBtnContainer = document.getElementById("selectedFilterContainer");
-        var selectedBtns = selectedBtnContainer.getElementsByClassName("button");
-        selectedBtns[0].className = selectedBtns[0].className.replace(" active", "");
-        selectedBtns[0].className += " active";
-        showButton(selectedBtns[i]);
     });
-}
-
-var selectedBtnContainer = document.getElementById("selectedFilterContainer");
-var selectedBtns = selectedBtnContainer.getElementsByClassName("button");
-for (var i = 0; i < selectedBtns.length; i++)
-{
-    selectedBtns[i].addEventListener("click", function()
-    {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        hideButton(current[0]);
-
-        var dropdownBtnContainer = document.getElementById("filterContainer");
-        var dropdownBtns = dropdownBtnContainer.getElementsByClassName("button");
-        dropdownBtns[0].className = dropdownBtns[0].className.replace(" active", "");
-        dropdownBtns[0].className += " active";
-        showButton(dropdownBtns[i]);
-    })
 }
