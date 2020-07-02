@@ -91,6 +91,20 @@ function toggleDropdown()
     }
 }
 
+function showButton(button)
+{
+    button.className = button.className.replace(" invisible", "");
+    button.className = button.className.replace(" visible", "");
+    button.className += " visible";
+}
+
+function hideButton(button)
+{
+    button.className = button.className.replace(" invisible", "");
+    button.className = button.className.replace(" visible", "");
+    button.className += " invisible";
+}
+
 // Add active class to the current control button (highlight it)
 var btnContainer = document.getElementById("filterContainer");
 var btns = btnContainer.getElementsByClassName("button");
