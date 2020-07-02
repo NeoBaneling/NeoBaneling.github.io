@@ -28,12 +28,6 @@ ul .button:hover
     border-radius: 10px;
 }
 
-.selected
-{
-    color: var(--midnight-black);
-    border-radius: 10px;
-}
-
 .visible
 {
     diplay: block;
@@ -56,19 +50,9 @@ ul .button:hover
     color: var(--language);
 }
 
-.selected.language
-{
-    background-color: var(--language);
-}
-
 .type
 {
     color: var(--type);
-}
-
-.selected.type
-{
-    background-color: var(--type);
 }
 
 .program
@@ -76,15 +60,31 @@ ul .button:hover
     color: var(--program);
 }
 
-.selected.program
-{
-    background-color: var(--program);
-}
-
 .client
 {
     font-style: italic;
     color: var(--client);
+}
+
+.selected
+{
+    color: var(--midnight-black);
+    border-radius: 10px;
+}
+
+.selected.language
+{
+    background-color: var(--language);
+}
+
+.selected.type
+{
+    background-color: var(--type);
+}
+
+.selected.program
+{
+    background-color: var(--program);
 }
 
 .selected.client
