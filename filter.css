@@ -16,6 +16,11 @@
     border-style: none;
 }
 
+ul .button
+{
+    float: left;
+}
+
 ul .button:hover
 {
     background-color: var(--stinger-grey);
@@ -35,6 +40,7 @@ ul .button:hover
 .dark ul
 {
     list-style: none;
+    padding-bottom: 8vw;
 }
 
 .language
