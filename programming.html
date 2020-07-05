@@ -1,95 +1,145 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Joey Bishop/ Programming</title>
+        <title>Joey Bishop | Programming</title>
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="style_main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- Hack from here: https://github.com/source-foundry/Hack#web-font-usage-->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+        <link href="new-programming.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="https://neobaneling.github.io/favicon.png">
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+        <!--Meta information for how the website will be displayed in other places-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:site_name" content="{ Programmed By Design }"/>
+        <meta property="og:title" content="Joey Bishop | Programming"/>
+        <meta property="og:url" content="http://neobaneling.github.io/">
+        <meta property="og:image" content="img/headshot.png">
     </head>
     <body>
         <div class="topnav" id="homeTopNav">
-            <a href="index.html">Home</a>
-            <a href="programming.html" class="active">Programming</a>
+            <a href="index.html" class="homeIcon"><img src="favicon.png"></a>
+            <a href="index.html" class="homeText">Home</a>
+            <a href="programming.html" class="active">{ Programming }</a>
             <a href="design.html">Design</a>
-            <a href="shruden.html">Shruden</a>
-            <a href="mother.html">Mother</a>
             <a href="about.html">About</a>
             <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-        <div class="rectangle" id="headerRect">
-            <br><br><br><br><br>
-            <h1>Projects by the Command Line</h1>
-            <h2>A Collection of Projects and Collaborations</h2>
-            <p>
-                Since becoming a student at Georgia Tech in the fall of 2017, I have gained a thorough
-                education in Computer Science. Not only have I learned several
-                skills and concepts through my classes, but I have demonstrated
-                my knowledge by applying them to a broad range of projects for
-                school, work, and recreation.
-            </p>
-            <h2 id="shruden">Shruden</h2>
 
-            <div class="img-wrap">
-                <video class="img-img" autoplay loop muted playsinline>
-                    <source src="img/shruden-capture.mp4" type=video/mp4>
-                    Your browser does not support the video tag.
-                </video>
-                <div class="img-description-layer">
-                    <a class="img-description", href="shruden.html">
-                        This 8-bit video game application was a homework submission that
-                        demonstrated my abilty for complex graphics calculations and
-                        established me as a unique thinker that is constantly looking for
-                        solutions to implement the features I desire.
-                    </a>
-                </div>
+        <br><br><br>
+        <div class="dark" id="#Top">
+            <h2>
+                From software engineering to web development to video games and more,
+                below you should find projects that I have made independently or
+                collaborated with others on in work, school, and for fun. Click on
+                the parameters below to filter specific languages and applications!
+            </h2>
+            <!--
+            <button class="button visible" onclick="toggleDropdown()" id="filter">
+                <img src="img/hex/grey.png" class="image-link" id="filterHex">
+            </button>
+            -->
+            <ul id="filterContainer">
+                <li><button class="button type selected" onclick="filterSelection('all')">null</button></li>
+                <li><button class="button language" onclick="filterSelection('c_sharp')">C#</button></li>
+                <li><button class="button language" onclick="filterSelection('java')">Java</button></li>
+                <li><button class="button language" onclick="filterSelection('js')">JavaScript</button></li>
+                <li><button class="button language" onclick="filterSelection('html/css')">HTML/CSS</button></li>
+                <li><button class="button type" onclick="filterSelection('game')">Games</button></li>
+                <li><button class="button type" onclick="filterSelection('mobile')">Mobile_Apps</button></li>
+                <li><button class="button program" onclick="filterSelection('unity')">Unity</button></li>
+                <li><button class="button program" onclick="filterSelection('android_studio')">Android_Studio</button></li>
+                <li><button class="button program" onclick="filterSelection('processing')">Processing</button></li>
+                <li><button class="button client" onclick="filterSelection('school')">School</button></li>
+                <li><button class="button client" onclick="filterSelection('work')">Work</button></li>
+                <li><button class="button client" onclick="filterSelection('personal')">Personal</button></li>
+            </ul>
+        </div>
+        <div class="grid">
+            <div class="canvas c_sharp unity school game">
+                <a href="princess-duchess's-excellent-adventure.html">
+                    <img src="img/thumbnail/princess-duchess.png">
+                    <div class="middle">
+                        <p>Princess Duchess's Excellent Adventure</p>
+                        <p>Level Design, Object Programming, UI Design</p>
+                        <p>C# | Unity | School</p>
+                    </div>
+                </a>
             </div>
-
-            <h2 id="princess-duchess">Princess Duchess's Excellent Adventure</h2>
-            <div class="img-wrap">
-                <img class="img-img" src="img/pd-overview.png"></>
-                <div class="img-description-layer">
-                    <a class="img-description", href="princess-duchess's-excellent-adventure.html">
-                        A 3D puzzle/ action platformer with a cute style and intriguing puzzles,
-                        this collaborative video game project highlights my skills as a creative
-                        and a versatile programmer.
-                    </a>
-                </div>
+            <div class="canvas c school game">
+                <a href="shruden.html">
+                    <img src="img/thumbnail/shruden.png">
+                    <div class="middle">
+                        <p>Shruden</p>
+                        <p>Game Design, Low Level Programming</p>
+                        <p>C | School</p>
+                    </div>
+                </a>
             </div>
-
-            <h2 id="gamblin-for-gold">Gamblin' for Gold</h2>
-            <div class="img-wrap">
-                <img class="img-img" src="img/gamblin-for-gold.png"></>
-                <div class="img-description-layer">
-                    <a class="img-description", href="gamblin-for-gold.html">
-                        Gamblin' for Gold is a collaborative group project and
-                        showcases my ability in back-end development and team-based
-                        workflow.
-                    </a>
-                </div>
+            <div class="canvas c_sharp unity mobile school game">
+                <a href="about.html#BeeSnap">
+                    <img src="img/thumbnail/beekeepergo.png">
+                    <div class="middle">
+                        <p>BeeKeeperGO</p>
+                        <p>Mobile App Development, Full Stack Development, UX Design</p>
+                        <p>C# | Unity | School</p>
+                    </div>
+                </a>
             </div>
-
-            <h2 id="aweventure">AweVenture-Android</h2>
-
-            <div class="img-wrap">
-                <img class="img-img" src="img/aweventure.png"></>
-                <div class="img-description-layer">
-                    <a class="img-description", href="aweventure-android.html">
-                        This summer I had the opportunity to work with Cedowin Productions
-                        in building an Android version of their iOS app, AweVenture,
-                        which is a group-based scavenger hunt application geared towards
-                        family fun.
-                    </a>
-                </div>
+            <div class="canvas html/css js personal">
+                <a href="index.html">
+                    <img src="img/thumbnail/webpage.png">
+                    <div class="middle">
+                        <p>{ Programmed by Design }</p>
+                        <p>Web Development, Web Design</p>
+                        <p>HTML/CSS/JS | Personal</p>
+                    </div>
+                </a>
             </div>
-
-            <div class="footer">
-                <p class="footer">Be inquisitive, stay positive, always strive for success, and
-                watch out for facehuggers</p>
+            <div class="canvas java mobile android_studio work">
+                <a href="aweventure-android.html">
+                    <img src="img/thumbnail/aweventure.png">
+                    <div class="middle">
+                        <p>Aweventure</p>
+                        <p>Mobile App Development, Full Stack Development</p>
+                        <p>Java | Android Studio | Work</p>
+                    </div>
+                </a>
+            </div>
+            <div class="canvas js school">
+                <a href="badmoviebot.html">
+                    <img src="img/thumbnail/badmoviebot.png">
+                    <div class="middle">
+                        <p>Bad Movie Bot</p>
+                        <p>Front-End Development, API Communications</p>
+                        <p>JavaScript | School</p>
+                    </div>
+                </a>
+            </div>
+            <div class="canvas java processing school game">
+                <a href="gamblin-for-gold.html">
+                    <img src="img/thumbnail/gamblin-for-gold.png">
+                    <div class="middle">
+                        <p>Gamblin' For Gold</p>
+                        <p>Full Stack Development, Game Design</p>
+                        <p>Java | Processing | School</p>
+                    </div>
+                </a>
             </div>
         </div>
-        <script src="scripts/programming.js"></script>
+
+
+        <div class="footer">
+            <p>{ Be inquisitive, stay positive, always strive for success, and
+            watch out for facehuggers }</p>
+        </div>
+        <script src="scripts/smooth-scroll.js"></script>
+        <script src="scripts/card-filterer.js"></script>
+        <script src="scripts/top-nav-controller.js"></script>
     </body>
 </html>

@@ -1,96 +1,175 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Joey Bishop/ Biography</title>
+        <title>Joey Bishop | About</title>
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="style_main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="new-about.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="https://neobaneling.github.io/favicon.png">
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+        <!--Meta information for how the website will be displayed in other places-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:site_name" content="{ Programmed By Design }"/>
+        <meta property="og:title" content="Joey Bishop | About"/>
+        <meta property="og:url" content="http://neobaneling.github.io/">
+        <meta property="og:image" content="img/headshot.png">
     </head>
     <body>
         <div class="topnav" id="homeTopNav">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="homeIcon"><img src="favicon.png"></a>
+            <a href="index.html" class="homeText">Home</a>
             <a href="programming.html">Programming</a>
             <a href="design.html">Design</a>
-            <a href="shruden.html">Shruden</a>
-            <a href="mother.html">Mother</a>
-            <a href="about.html" class="active">About</a>
+            <a href="about.html" class="active">{ About }</a>
             <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-        <div class="rectangle" id="headerRect">
-            <br><br><br><br><br>
-            <h1>Coder. Artist. Writer. Musician.</h1>
-            <h2>A little bit about the person who made this website</h2>
-            <div class="row">
-                <div class="column small">
-                    <img src="img/headshot.png" class="center-fit">
-                </div>
-                <div class="column large">
-                    <p>
-                        Hello! I am a fourth year Computational Media major at the
-                        Georgia Institue of Technology. Because of my major, I
-                        have a diverse field of study spanning from low-level data
-                        structures and algorithms to game development and principles
-                        of visual design, and I am passionate about these studies
-                        and combining the two to create amazing interactive
-                        experiences.
-                    </p>
-                    <p>
-                        One of my most active hobbies is music as I am in several
-                        of the music ensembles at Tech. I play trumpet in the
-                        Georgia Tech Marching Band and Pep Band, and bass guitar
-                        in one of the school's jazz ensembles. Additionally, I am
-                        a sister of the Epsilon Theta chapter of Tau Beta Sigma,
-                        a co-ed band service sorority.
-                    </p>
-                    <p>
-                        I am also involved in Georgia Tech's Vertically Integrated
-                        Project program on the team BeeSnap, which is about
-                        collecting big data of bees in urban environments such as
-                        Atlanta. I am a member of the subteam BeeKeeperGO, where
-                        we are building a mobile bee farming and image collection
-                        app.
-                    </p>
-                </div>
-            </div>
 
-            <div class="rectangle divide">
-                <p>
-                    (423) 598 3877 |
-                    <a href="mailto:jbishop47@gatech.edu">jbishop47@gatech.edu</a> |
-                    <a href="http://www.linkedin.com/in/joey-bishop-a49b36121" target="_blank">LinkedIn</a> |
-                    <a href="resources/resume.pdf">Resume</a> |
-                    <a href="https://github.com/NeoBaneling" target="_blank">GitHub</a>
-                </p>
-            </div>
+        <div class="sidenav">
+            <a href="#Top"><img src="img/hex/yellow.png"></a>
+            <a href="#Contact"><img src="img/hex/yellow.png"></a>
+            <a href="#BeeSnap"><img src="img/hex/yellow.png"></a>
+            <a href="#Music"><img src="img/hex/yellow.png"></a>
+        </div>
 
+        <div class="dark" id="Top">
+            <h1 style="font-size:4vw;">Programmer | Artist | Writer | Musician</h1>
             <p>
-                I have an extensive breadth and depth in programming, as I am
-                very familiar with several languages and can use those languages
-                for many applications. I have experience with
-                <a href="programming.html#shruden">video game programming</a>,
-                data analysis and visualisation,
-                <a href="aweventure-android.html">android app development</a>,
-                to name a few.
+                <img src="img/headshot.png">
+                Hi, I'm Joey! I am a fourth year Computational Media major at the Georgia
+                Institute of Technology. I have a diverse field of study spanning
+                from low-level data structures and algorithms to game development
+                and visual design, and I am passionate about combining these
+                studies to create amazing interactive experiences. My experience
+                in full stack development and design prepares me for any facet of
+                programming - from software engineering to web developement to video games.
+            </p>
+        </div>
+
+        <div class="impression" id="Contact">
+            <br><br><br><br><br><br><br><br>
+            <h1>Contact Me</h1>
+            <p>
+                (423) 598 3877 |
+                <a href="mailto:jbishop47@gatech.edu" class="text">jbishop47@gatech.edu</a> |
+                <a href="http://www.linkedin.com/in/joey-bishop-a49b36121" target="_blank" class="text">LinkedIn</a> |
+                <a href="resources/resume.pdf" class="text">PDF Resume</a> |
+                <a href="https://github.com/NeoBaneling" target="_blank" class="text">GitHub</a>
+            </p>
+            <br><br><br><br><br><br><br><br>
+        </div>
+
+        <div class="dark">
+            <h1 id="BeeSnap">BeeSnap</h1>
+            <h2>Overview</h2>
+            <p>
+                I am involved in Georgia Tech's Vertically Integrated
+                Project program on the team BeeSnap. BeeSnap's focus is on
+                collecting big data of bees and other pollinators in urban
+                environments such as Atlanta to understand pollination patterns
+                and monitor bee health. I am a member of the subteam BeeKeeperGO,
+                where we are building a mobile bee farming and image collection
+                app using the game engine Unity.
             </p>
             <p>
-                My design style has been developed over several years of sketches,
-                digital art, and films, and can best be expressed as minimalism
-                in color, akin to Art Deco. I believe that less is more, and it
-                is often best to extrapolate from what is already existing than
-                to include something new. A great example of this is an
-                <a href="design.html#eclipse">excerpt from my "Planet of Dreams" series</a>
-                which features minimal color and negative space to shape a strong
+                <img src="img/beekeeperGO/garden.png">
+                BeeKeeperGO is a mobile application that gamifies data collection
+                of pollinators in urban environments. The user takes images of
+                bees and flowers and upload them, where they are processed by
+                image recognition algorithms to classify the image's subjects.
+                The user is then given in-game currency based on the value of the
                 image.
             </p>
-
-            <div class="footer">
-                <p class="footer">Be inquisitive, stay positive, always strive for success, and
-                watch out for facehuggers</p>
-            </div>
+            <p>
+                Users can use that currency to build their garden, which is the
+                game section of the app. Users can buy different species of
+                flowers and bees with the in-game currency and populate the garden.
+                Over time, the in-game bees will pollinate the garden's flowers,
+                which will earn the user more currency. As the user buys new
+                bee and flower species, they will unlock different pages in a
+                factbook, which contains detailed information about the bee and
+                flower species present in the game.
+            </p>
+            <h2>Contributions</h2>
+            <p>
+                My contributions to BeeKeeperGO are largely quality of life
+                improvements, adding elements that increase user enjoyment or
+                optimizing segments to create a more robust app.
+            </p>
+            <img src="img/beekeeperGO/menu.png">
+            <p>
+                During my first semester with BeeSnap, I researched and fully
+                implemented music and sound effects into the app. Prior to this,
+                the game contained no music and only a simple click sound effect
+                when a button was pressed, and only on some buttons. Feeling that
+                a calm folky soundtrack would liven up the garden scene and
+                increase user engagement, I explored free music options, researched
+                looping music in Unity, and implemented what I set out to do.
+            </p>
+            <p>
+                My second semester saw me as the team lead for BeeKeeperGO, which
+                meant onboarding new members with GitHub and Unity, facilitating
+                discussion in meetings, and encouraging members to tackle what
+                they want to do with the app. In addition, we also had a deadline
+                to release the app by the end of the semester. As a result, the
+                semester was largely focused on creating a minimum viable product
+                to be released. Unfortunately due to COVID-19, our work was halted
+                mid-semester and we weren't able to release BeeKeeperGo, but we
+                were able to fix several bugs, implement new features, and polish
+                gameplay.
+            </p>
+            <h1 id="Music">Music</h1>
+            <p>
+                <img src="img/band/buzz.png">
+                One of my most active hobbies is music as I have been in several
+                music ensembles at Tech. I played trumpet in the Georgia Tech
+                Marching Band and Pep Band, and bass guitar in one of the school's
+                jazz ensembles. Additionally, I am a sister of the Epsilon Theta
+                chapter of Tau Beta Sigma, a co-ed band service sorority.
+            </p>
+            <img src="img/band/investiture.png">
+            <h2>School Spirit</h2>
+            <p>
+                I have marched with the Georgia Tech Yellow Jacket Marching Band
+                for three years, performing at several sporting events, school
+                occasions, and community events. Being part of the band gave me the
+                opportunity to connect with people who shared a common interest.
+            </p>
+            <img src="img/band/trumpets.png">
+            <p>
+                In the fall of 2019 I joined the marching band's leadership and became
+                one of four Libraries Lieutenants. Our duties included creating
+                copies of music and drill for members, handling the purchase and
+                distribution of music folders and lyres, and replacing music or
+                drill when needed. Additionally, the libraries team sought to
+                digitally convert our paper music library into a google drive,
+                making it easier to find and categorize music. This was a year-long
+                process, and included help from other members of the band, including
+                the sisters of Tau Beta Sigma and brothers of Kappa Kappa Psi.
+            </p>
+            <h2>A Sister in the Bond</h2>
+            <p>
+                <img src="img/band/bigs.png">
+                Tau Beta Sigma is a co-ed band service sorority which strives to
+                serve the Georgia Tech band and the Atlanta music community. We
+                have several major service projects every year such as teaching
+                Girl Scouts about music, cleaning out and organizing rooms in the Couch
+                music building, preparing and serving lunch for the GTMB during band
+                camp, and traveling to Atlanta schools to teach children how to
+                play instruments.
+            </p>
+            <img src="img/band/chapter.png">
         </div>
-        <script src="scripts/about.js"></script>
+
+        <div class="footer">
+            <p>{ Be inquisitive, stay positive, always strive for success, and
+            watch out for facehuggers }</p>
+        </div>
+        <script src="scripts/smooth-scroll.js"></script>
+        <script src="scripts/top-nav-controller.js"></script>
     </body>
 </html>
