@@ -43,14 +43,14 @@ body
     color: var(--blinding-white);
 }
 
-.impression p a.text:link, p a.text:visited
+.impression p a.text:link, .impression p a.text:visited
 {
     text-align: center;
     text-decoration: none;
     color: var(--blinding-white);
 }
 
-.impression p a.text:hover, p a.text:active
+.impression p a.text:hover, .impression p a.text:active
 {
     background-color: var(--blinding-white);
     padding: 10px;
@@ -131,7 +131,7 @@ body
     list-style-position: outside;
 }
 
-.dark a.text:link, a.text:visited
+.dark a.text:link, .dark a.text:visited
 {
     background-color: var(--midnight-black);
     color: var(--stinger-grey);
@@ -145,7 +145,7 @@ body
     padding-bottom: 0px;
 }
 
-.dark a.text:hover, a.text:active
+.dark a.text:hover, .dark a.text:active
 {
     background-color: var(--honeycomb-yellow);
     color: var(--blinding-white);
