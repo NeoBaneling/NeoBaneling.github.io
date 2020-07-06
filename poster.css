@@ -39,6 +39,7 @@ body
 {
     .row
     {
+        height: auto;
         display: block;
     }
 
