@@ -17,6 +17,13 @@
     padding: 5vw;
 }
 
+.dark video
+{
+    float: left;
+    width: 40%;
+    padding: 3vw;
+}
+
 .dark p img
 {
     width: 27vw;
