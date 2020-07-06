@@ -1,2 +1,7 @@
 @import "about.css";
 @import "topNav.css";
+
+.dark video
+{
+    width: 100%;
+}
