@@ -2,11 +2,6 @@
 @import "topNav.css";
 @import "filter.css";
 
-body
-{
-    background-color: var(--midnight-black);
-}
-
 .grid
 {
     display: inline-grid;
