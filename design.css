@@ -1,11 +1,6 @@
 @import "main.css";
 @import "topNav.css";
 
-body
-{
-    background-color: var(--blinding-white);
-}
-
 .footer
 {
     background-color: var(--honeycomb-yellow);
@@ -23,7 +18,8 @@ body
 
 .topnav a.active
 {
-    background-color: var(--blinding-white);
+    background-color: var(--cloud-grey);
+    color: var(--blinding-white);
 }
 
 .row
@@ -31,6 +27,7 @@ body
     display: flex;
     flex-wrap: wrap;
     padding: 10vw 2vw;
+    background-color: var(--cloud-grey);
 }
 
 /* Create four equal columns that sits next to each other */
