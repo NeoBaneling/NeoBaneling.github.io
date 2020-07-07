@@ -1,11 +1,6 @@
 @import "main.css";
 @import "topNav.css";
 
-.footer
-{
-    background-color: var(--honeycomb-yellow);
-}
-
 .topnav a:hover
 {
     color: var(--blinding-white);
@@ -83,6 +78,16 @@
     padding: 10px;
     text-decoration: none;
     color: var(--midnight-black);
+}
+
+.footer
+{
+    background-color: var(--cloud-grey);
+}
+
+.footer p
+{
+    color: var(--honeycomb-yellow);
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
