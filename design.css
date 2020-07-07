@@ -28,6 +28,7 @@
     flex-wrap: wrap;
     padding: 10vw 2vw;
     background-color: var(--cloud-grey);
+    border-radius: 10px;
 }
 
 /* Create four equal columns that sits next to each other */
