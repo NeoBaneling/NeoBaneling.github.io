@@ -63,6 +63,7 @@ body
 {
     background: var(--midnight-black);
     padding: 60px;
+    border-radius: 10px;
 }
 
 .dark h1
