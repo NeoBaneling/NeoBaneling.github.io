@@ -167,10 +167,17 @@ body
     line-height: 30px;
 }
 
+.footer
+{
+    background-color: var(--pollen-yellow);
+    border-radius: 10px;
+}
+
 .footer p
 {
     background-color: rgba(0,0,0,0);
     font-size: 150%;
+    font-weight: bold;
     text-align: center;
     padding: 20px;
     color: var(--blinding-white);
