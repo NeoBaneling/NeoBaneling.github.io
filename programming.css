@@ -13,6 +13,7 @@
 .grid img
 {
     width: 70%;
+    height: auto;
     opacity: 1;
     border-radius: 10px;
     border-width: 5px;
