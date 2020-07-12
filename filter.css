@@ -41,7 +41,7 @@ ul .button:hover
 .dark ul
 {
     list-style: none;
-    padding-bottom: 8vw;
+    padding: 0vw 3vw 16vw 3vw;
 }
 
 .language
