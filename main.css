@@ -239,13 +239,12 @@ body
 {
     display: inline-grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 2vw;
-    padding-left: 5vw;
+    padding-left: 10vw;
 }
 
 .grid img
 {
-    height: 64px;
+    height: 6vw;
 }
 
 .stack-top
@@ -337,5 +336,10 @@ body
     {
         padding: 2vw;
         height: 10vw;
+    }
+
+    .grid img
+    {
+        height: 8vw;
     }
 }
