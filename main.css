@@ -35,11 +35,21 @@ body
     color: var(--blinding-white);
 }
 
+.wrapper
+{
+    background: var(--midnight-black);
+    padding: 0vw 2vw 0vw 2vw;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
 .impression p
 {
-    background-color: rgba(0,0,0,0);
     font-size: 200%;
     text-align: center;
+    padding: 1vw 0vw 1vw 0vw;
     color: var(--blinding-white);
 }
 
