@@ -33,6 +33,7 @@ body
     font-weight: bold;
     text-align: center;
     color: var(--blinding-white);
+    text-shadow: 4px 4px var(--midnight-black);
 }
 
 .wrapper
