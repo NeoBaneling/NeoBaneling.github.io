@@ -62,7 +62,7 @@ body
 
 .impression p a.text:hover, .impression p a.text:active
 {
-    background-color: var(--blinding-white);
+    background-color: var(--stinger-grey);
     padding: 10px;
     text-align: center;
     color: var(--honeycomb-yellow);
