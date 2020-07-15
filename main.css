@@ -338,8 +338,13 @@ body
         height: 10vw;
     }
 
+    .grid
+    {
+        padding-left: 20px;
+    }
+
     .grid img
     {
-        height: 8vw;
+        height: 10vw;
     }
 }
