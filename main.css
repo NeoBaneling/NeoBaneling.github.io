@@ -52,6 +52,7 @@ body
     text-align: center;
     padding: 1vw 0vw 1vw 0vw;
     color: var(--blinding-white);
+    line-height: 48px;
 }
 
 .impression p a.text:link, .impression p a.text:visited
@@ -287,6 +288,11 @@ body
         font-size: 4.5vw;
         text-align: center;
         color: var(--blinding-white);
+    }
+
+    .wrapper
+    {
+        width: 90%;
     }
 
     .dark
