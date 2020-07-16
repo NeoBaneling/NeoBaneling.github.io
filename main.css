@@ -359,19 +359,24 @@ body
         padding-bottom: 20vw;
     }
 
-    .image-link
+    .icon-link:link
     {
-        padding: 2vw;
-        height: 10vw;
+        font-size: 6vw;
+    }
+
+    .icon-link img
+    {
+        height: 70vh;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
     }
 
     .grid
     {
-        padding-left: 20px;
-    }
-
-    .grid img
-    {
-        height: 10vw;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        padding: none;
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }
