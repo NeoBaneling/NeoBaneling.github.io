@@ -146,8 +146,8 @@ body
 
 .dark a.text:link, .dark a.text:visited
 {
-    background-color: var(--midnight-black);
-    color: var(--stinger-grey);
+    background-color: none;
+    color: var(--blinding-white);
     font-size: 24px;
     text-align: left;
     text-decoration: none;
@@ -333,6 +333,15 @@ body
         font-size: 4.5vw;
         line-height: 5vw;
         padding-left: 60px;
+        padding-top: 0px;
+        padding-right: 20px;
+    }
+
+    .dark a.text:link
+    {
+        font-size: 4.5vw;
+        line-height: 5vw;
+        padding-left: 20px;
         padding-top: 0px;
         padding-right: 20px;
     }
