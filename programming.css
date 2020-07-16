@@ -37,10 +37,12 @@
 
 .middle p
 {
+    background: none;
     color: var(--honeycomb-yellow);
     padding-left: 2vw;
     padding-right: 2vw;
-    font-size: 1.75vw;
+    font-size: 1.6vw;
+    line-height: normal;
 }
 
 /* Just a wrapper thing to support mouse hovering */
@@ -98,14 +100,30 @@
     .grid
     {
         grid-template-columns: repeat(1, 1fr);
-        padding-left: 9vw;
+        padding-top: 5vw;
+        padding-left: 0vw;
+    }
+
+    .grid img
+    {
+        width: 120%;
     }
 
     .canvas
     {
-        width: 80%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .canvas:hover img
+    {
+        width: 130%;
+    }
+
+    .middle
+    {
+        width: 130%;
     }
 
     .middle p
