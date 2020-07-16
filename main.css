@@ -250,12 +250,28 @@ body
 {
     display: inline-grid;
     grid-template-columns: repeat(5, 1fr);
-    padding-left: 10vw;
+    padding: 0vw 4vw 10vw 4vw;
 }
 
-.grid img
+.icon-link:link, .icon-link:visited
 {
-    height: 6vw;
+    background-color: none;
+    color: var(--stinger-grey);
+    font-size: 2vw;
+    text-decoration: none;
+    text-align: center;
+}
+
+.icon-link:active, .icon-link:hover
+{
+    color: var(--blinding-white);
+}
+
+.icon-link img
+{
+    padding: 2vw;
+    height: 30vh;
+    width: auto;
 }
 
 .stack-top
