@@ -29,7 +29,7 @@ h2
     padding-left: 60px;
     padding-right: 20px;
     padding-top: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 140px;
     margin: 0px;
 }
 
@@ -37,7 +37,7 @@ h2
 {
     display: flex;
     flex-wrap: wrap;
-    padding: 10vw 2vw;
+    padding: 4vw 2vw 10vw 2vw;
     background-color: var(--cloud-grey);
     border-radius: 10px;
 }
@@ -116,7 +116,7 @@ h2
         padding-left: 20px;
         padding-top: 0px;
         padding-right: 20px;
-        padding-bottom: 0px;
+        padding-bottom: 30px;
     }
 
     .row
