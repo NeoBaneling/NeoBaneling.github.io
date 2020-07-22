@@ -249,7 +249,7 @@ body
 .grid
 {
     display: inline-grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     padding: 0vw 4vw 10vw 4vw;
 }
 
