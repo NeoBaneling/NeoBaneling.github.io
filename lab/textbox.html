@@ -6,11 +6,17 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="../main.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../scripts/gameManager.js"></script>
     </head>
     <body>
 
         <div class="dark">
-            <h1>Think you know the clue? Give it a shot here:</h1>
+            <h1>Think you know the clue?</h1>
+            <p>Give it a shot here:</p>
+            <input type="text" id="guess" placeholder="The Spanish Inquisition">
+            <button onclick="GetText()">Submit Guess</button>
+            <br>
+            <p id="submission"></p>
         </div>
 
         <div class="footer">
