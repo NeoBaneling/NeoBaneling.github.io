@@ -1,2 +1,4 @@
 # NeoBaneling.github.io
-A portfolio website to feature coding projects and artwork
+A self-made portfolio website that features coding projects and artwork
+
+LINK: portfolio.josephdavidbishop.com
