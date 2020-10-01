@@ -3,5 +3,8 @@ let answer = "joey";
 function GetText()
 {
     var guess = document.getElementById("guess").value;
-    document.getElementById("submission").innerHTML = guess;
+    if (guess == answer)
+    {
+        document.getElementById("submission").innerHTML = "You got it right!";
+    }
 }
