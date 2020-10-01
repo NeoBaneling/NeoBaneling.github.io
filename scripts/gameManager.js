@@ -1,9 +1,18 @@
 let answer = "joey";
-let splashText = "../scripts/splashText.json"["splashText"];
 
-function SetSplashText()
+// Loads in the Splash Text JSON and pulls a random splash text
+$(document).ready(function() {
+    $.getJSON("../scripts/splashText.json", function(data) {
+        SetSplashText(data["splashText"][GetRandomInt(data["splashText"].length)])
+    }).fail(function(){
+        console.log("Unable to load splash Text");
+        SetSplashText("Who coded this thing?!");
+    });
+});
+
+function SetSplashText(splashText)
 {
-    document.getElementById("submission").innerHTML = splashText[GetRandomInt(splashText.length)];
+    document.getElementById("guess").placeholder = splashText;
 }
 
 function GetText()
@@ -15,7 +24,13 @@ function GetText()
     }
 }
 
+ /******************
+ *                 *
+ * UTILITY METHODS *
+ *                 *
+ ******************/
+
 function GetRandomInt(max)
 {
-    return Math.Floor(Math.Random() * Math.Floor(max));
+    return Math.floor(Math.random() * Math.floor(max));
 }
