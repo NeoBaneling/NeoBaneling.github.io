@@ -1,10 +1,11 @@
 let answer = "joey";
+var step = -1;
 
 // Loads in the Splash Text JSON and pulls a random splash text
 $(document).ready(function() {
     $.getJSON("../scripts/splashText.json", function(data) {
         SetSplashText(data["splashText"][GetRandomInt(data["splashText"].length)])
-    }).fail(function(){
+    }).fail(function() {
         console.log("Unable to load splash Text");
         SetSplashText("Who coded this thing?!");
     });
