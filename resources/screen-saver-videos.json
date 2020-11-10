@@ -1,0 +1,22 @@
+{
+    "version" : 1,
+    "initialAssetCount" : 4,
+    "assets" : [
+        {
+            "id" : "shruden",
+            "url" : "https://portfolio.josephdavidbishop.com/img/shruden-capture.mp4"
+        },
+        {
+            "id" : "pd-cacti",
+            "url" : "https://portfolio.josephdavidbishop.com/img/pd-cacti.mp4"
+        },
+        {
+            "id" : "life-invaders",
+            "url" : "https://portfolio.josephdavidbishop.com/img/life-invaders-capture.mp4"
+        },
+        {
+            "id" : "shruden",
+            "url" : "https://portfolio.josephdavidbishop.com/img/mother-hacking-capture.mp4"
+        }
+    ]
+}
