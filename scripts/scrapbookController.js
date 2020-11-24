@@ -9,7 +9,7 @@ function GetAlbum()
 {
     $.ajax (
     {
-        url: ALBUM_URL;
+        url: ALBUM_URL
     }).then(function(data)
     {
         console.log(data);
