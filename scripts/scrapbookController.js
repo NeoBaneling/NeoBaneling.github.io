@@ -1,6 +1,17 @@
-window.onload = function()
+const ALBUM_URL = "https://photoslibrary.googleapis.com/v1/albums";
+
+$(document).ready(function()
 {
-    const response = await fetch("https://photoslibrary.googleapis.com/v1/albums");
-    const responseJson = await response.json();
-    console.log(responseJson);
+    GetAlbum();
+});
+
+function GetAlbum()
+{
+    $.ajax (
+    {
+        url: ALBUM_URL;
+    }).then(function(data)
+    {
+        console.log(data);
+    });
 }
