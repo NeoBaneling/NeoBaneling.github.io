@@ -1,22 +1,21 @@
-const ALBUM_URL = "https://photoslibrary.googleapis.com/v1/albums";
+// const axios = require('axios');
+const ALBUM_URL = "https://photos.app.goo.gl/KnzRQntV87agE3Fu6";
 
 $(document).ready(function()
 {
     GetAlbum();
 });
 
-function GetAlbum()
+async function GetAlbum()
 {
-    $.ajax (
+
+    try
     {
-        url: ALBUM_URL
-        auth_uri: $.getJson("../resources/credentials.json", function(data)
-        {
-            console.log(data["web"]["auth_uri"]);
-            return data["web"]["auth_uri"];
-        })
-    }).then(function(data)
+        const response = await axios.get(ALBUM_URL);
+        console.log(response.data);
+    }
+    catch (error)
     {
-        console.log(data);
-    });
+        console.error(error);
+    }
 }
