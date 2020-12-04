@@ -1,4 +1,4 @@
-var imgDir = "../img/scrapbook/images/IMG_0203.jpg";
+var imgDir = "../img/scrapbook/images/";
 var texDir = "../img/scrapbook/textures/";
 var images = [];
 var texts = [];
@@ -29,7 +29,7 @@ var MAX_TRIP_LAYOUTS = 3;
 
 $(document).ready(function()
 {
-    GetImages();
+    // GetImages();
     GetJSONData();
     $("#leftBtn").click(function()
         {
@@ -55,6 +55,20 @@ function GetJSONData()
         {
             fonts.push(data["fonts"][i]);
         }
+
+        // Load all the images
+        for (var i = 0; i < data["images"].length; i++)
+        {
+            images.push(data["images"][i]);
+        }
+
+        // Load all the textures
+        for (var i = 0; i < data["textures"].length; i++)
+        {
+            textures.push(data["textures"][i]);
+        }
+
+        GeneratePages();
     }).fail(function() {
         texts.push("Joey is great and all but he's a bad programmer.");
         console.log("We were unable to load all of the JSON data");
@@ -75,7 +89,7 @@ function GetImages()
                 }
             });
             */
-            console.log(data);
+            // console.log(data);
             images.push(data);
 
             console.log("Images Loaded");
