@@ -55,6 +55,8 @@ function GetJSONData()
         {
             fonts.push(data["fonts"][i]);
         }
+
+        console.log("JSON Loaded");
     }).fail(function() {
         texts.push("Joey is great and all but he's a bad programmer.");
         console.log("We were unable to load all of the JSON data");
@@ -67,10 +69,13 @@ function GetImages()
         url : imgDir,
         success: function (data) {
             $(data).find("a").attr("href", function (i, val) {
+                console.log(val);
                 if( val.match(/\.(jpg)$/) ) {
                     images.push(val);
                 }
             });
+
+            console.log("Images Loaded");
 
             GetTextures();
         }
@@ -83,10 +88,13 @@ function GetTextures()
         url : texDir,
         success: function (data) {
             $(data).find("a").attr("href", function (i, val) {
+                console.log(val);
                 if (val.match(/\.(png)$/) ) {
                     textures.push(val);
                 }
             });
+
+            console.log("Textures Loaded");
 
             GeneratePages();
         }
