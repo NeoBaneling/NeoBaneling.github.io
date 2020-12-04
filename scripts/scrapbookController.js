@@ -67,12 +67,16 @@ function GetImages()
     $.ajax({
         url : imgDir,
         success: function (data) {
+            /*
             $(data).find("a").attr("href", function (i, val) {
                 console.log(val);
                 if( val.match(/\.(jpg)$/) ) {
                     images.push(val);
                 }
             });
+            */
+            console.log(data);
+            images.push(data);
 
             console.log("Images Loaded");
 
