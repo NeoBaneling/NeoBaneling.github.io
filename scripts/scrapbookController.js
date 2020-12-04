@@ -1,4 +1,4 @@
-var imgDir = "../img/scrapbook/images/";
+var imgDir = "../img/scrapbook/images/IMG_0203.jpg";
 var texDir = "../img/scrapbook/textures/";
 var images = [];
 var texts = [];
