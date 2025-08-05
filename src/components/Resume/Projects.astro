@@ -1,0 +1,29 @@
+---
+import ProjectContent from "../ProjectContent/ProjectContent.astro";
+---
+
+<section id="projects" class="pt-42">
+    <div class="section">
+        <h2 class="title mb-24" id="projects">Projects 🎨</h2>
+    </div>
+    <div class="relative space-y-48">
+        <ProjectContent
+            title="Pokemon Tournament"
+            src="/img/thumbnail/shruden.png"
+            alt="tbd"
+            chips={['TypeScript', 'TypeScript', 'TypeScript', 'TypeScript']}
+            link="https://www.google.com"
+            >
+            <p class="body">Full stack Pokemon battle simulation application built with React, Java Spring, and Hibernate (I think).</p>
+        </ProjectContent>
+        <ProjectContent
+            title="Pokemon Tournament"
+            src="/img/thumbnail/shruden.png"
+            alt="tbd"
+            chips={['TypeScript', 'TypeScript', 'TypeScript', 'TypeScript']}
+            reverse
+            >
+            <p class="body">Full stack Pokemon battle simulation application built with React, Java Spring, and Hibernate (I think).</p>
+        </ProjectContent>
+    </div>
+</section>

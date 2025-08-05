@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { About, Contact, Hero, Projects } from '../components/Resume';
+import NavBar from '../components/Navigation';
+---
+
+<Layout>
+	<Hero />
+	<NavBar />
+	<div class="space-y-32">
+		<About />
+		<Projects />
+		<Contact />
+	</div>
+</Layout>

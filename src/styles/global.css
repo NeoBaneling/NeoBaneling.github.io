@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+    --font-sans: Quicksand, sans-serif;
+
+    --color-*: initial;
+    --color-night: #22071A;
+    --color-coral: #E0A38E;
+    --color-sand: #EED3CB;
+    --color-pink: #E3B1D1;
+    --color-lime: #B0EF9E;
+    --color-frog: #29534A;
+    --color-blush: #F5D4E8;
+    --color-purple: #782B62;
+    --color-brown: #613C2D;
+    --color-teal: #289C88;
+    --color-debug-100: #FF0000;
+    --color-debug-200: #FFFF00;
+    --color-debug-300: #00FF00;
+    --color-debug-400: #00FFFF;
+    --color-debug-500: #0000FF;
+    --color-debug-600: #FF00FF;
+
+    --text-sm: 0.75rem;
+    --text-sm--line-height: calc(0.9 / 0.75);
+    --text-base: 0.875rem;
+    --text-base--line-height: calc(1.05 / 0.875);
+    --text-lg: 1rem;
+    --text-lg--line-height: calc(1.2 / 1);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.5/ 1.25);
+    --text-2xl: 1.625rem;
+    --text-2xl--line-height: calc(1.95 / 1.625);
+    --text-3xl: 2.5rem;
+    --text-3xl--line-height: calc(3 / 2.5);
+    --text-4xl: 4rem;
+    --text-4xl--line-height: calc(4.8 / 4);
+}
+
+@layer components {
+    /* text */
+    .title {
+        @apply text-4xl font-bold text-coral tracking-tight;
+    }
+    .big {
+        @apply text-xl font-medium text-coral tracking-tight;
+    }
+    .large {
+        @apply text-lg font-medium text-sand tracking-tight;
+    }
+    .body {
+        @apply text-base font-medium text-sand tracking-tight;
+    }
+    .small {
+        @apply text-sm font-normal text-pink tracking-tight;
+    }
+    .chip {
+        @apply rounded-full bg-frog p-2 border border-transparent text-sm text-lime;
+    }
+    .link {
+        @apply hover:underline hover:cursor-pointer;
+    }
+    /* layout */
+    .section {
+        @apply md:px-28 relative;
+    }
+    .footer {
+        @apply sticky w-92 mt-28 ml-28 pb-16;
+    }
+    .col-group {
+        @apply grid grid-cols-2 gap-32;
+    }
+    .col-item {
+        @apply flex-col h-auto justify-items-center;
+    }
+    /* navbar */
+    .navsection {
+        @apply sticky top-12 w-[100%] flex justify-center z-999;
+    }
+    .navbar {
+        @apply rounded-full bg-brown/50 backdrop-blur-lg py-4 px-8 border border-transparent space-x-4;
+    }
+    .navlink {
+        @apply text-2xl font-medium text-blush tracking-tight py-2 px-4 z-1001 relative;
+    }
+    .navlink-active {
+        @apply rounded-full;
+    }
+    .navbubble {
+        @apply absolute bg-purple rounded-full transition-all duration-300 ease-in-out z-1000
+    }
+    /* misc. */
+    .icon-link {
+        @apply text-3xl text-pink;
+        @apply hover:text-sand hover:cursor-pointer;
+    }
+    .icon-copy {
+        @apply hidden text-sm;
+        @apply group-hover:inline;
+    }
+}

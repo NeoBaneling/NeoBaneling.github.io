@@ -1,0 +1,26 @@
+---
+import ChipGroup from '../Timeline/ChipGroup.astro';
+import Linkish from '../Timeline/Linkish.astro';
+
+interface Props {
+    alt: string;
+    chips?: string[]
+    link?: string;
+    reverse?: boolean;
+    src: string;
+    title: string;
+}
+
+const { alt, chips, reverse, src, ...linkProps } = Astro.props;
+---
+
+<div class=`flex ${reverse ? 'flex-row-reverse space-x-reverse' : 'flex-row'} relative items-center ${reverse ? 'ml-28' : 'mr-28'} space-x-12`>
+    <div class=`border-teal border-64 ${reverse ? 'border-r-0' : 'border-l-0'} w-208`>
+        <img class="aspect-16/9" src={src} alt={alt}/>
+    </div>
+    <div class="flex flex-col relative top-1/2 translate-y-1/2 max-w-112">
+        <div class="pb-2"><Linkish {...linkProps} /></div>
+        <slot />
+        <ChipGroup chips={chips} />
+    </div>
+</div>

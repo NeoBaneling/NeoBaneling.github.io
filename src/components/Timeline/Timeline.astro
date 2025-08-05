@@ -1,0 +1,25 @@
+---
+import ChipGroup from './ChipGroup.astro';
+import Linkish from './Linkish.astro';
+
+interface Props {
+    chips?: string[];
+    end?: string;
+    link?: string;
+    start: string;
+    title: string;
+}
+
+const { start, end, chips, ...linkProps } = Astro.props;
+---
+
+<div class="grid grid-cols-[6rem_auto] grid-rows-[1.25rem_auto] items-end">
+    <p class="small">{start} - {end ?? 'Present'}</p>
+    <Linkish {...linkProps} />
+    <div />
+    <div class="flex-col h-auto mt-1">
+        <slot />
+        <ChipGroup chips={chips} />
+    </div>
+</div>
+

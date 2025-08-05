@@ -1,0 +1,55 @@
+<script is:inline>
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navlink');
+
+    const navBubble = document.getElementById('nav-bubble');
+
+    let isScrolling = false;
+    let scrollTimeout;
+
+    const moveBubbleToLink = (link) => {
+        const rect = link.getBoundingClientRect();
+        const navRect = link.parentElement.getBoundingClientRect();
+
+        navBubble.style.width = `${rect.width}px`;
+        navBubble.style.height = `${rect.height}px`;
+        navBubble.style.transform = `translateX(${rect.left - navRect.left - 33}px) translateY(${rect.top - navRect.top - 16}px)`;
+    }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            if (isScrolling) return;
+
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navLinks.forEach((link) => {
+                        const isActive = link.dataset.nav === id;
+                        link.classList.toggle('navlink-active', isActive);
+                        if (isActive) moveBubbleToLink(link);
+                    });
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+    sections.forEach((section) => observer.observe(section));
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const current = document.querySelector('.nav-link');
+        if (current) moveBubbleToLink(current);
+    });
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            isScrolling = true;
+
+            moveBubbleToLink(link);
+
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isScrolling = false;
+            }, 800);
+        });
+    });
+</script>
