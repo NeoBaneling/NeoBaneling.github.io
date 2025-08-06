@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css'
-import { NavBubbleHandler } from '../components/Navigation';
+import { NavBarHandler, NavBubbleHandler } from '../components/Navigation';
 import Footer from './Footer.astro';
 
 interface Props {
@@ -27,6 +27,7 @@ title = title ? `${title} | Joey Bishop` : 'Joey Bishop';
 		</div>
 		<Footer />
 	</body>
+	<NavBarHandler />
 	<NavBubbleHandler />
 </html>
 

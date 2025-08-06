@@ -1,0 +1,21 @@
+<script is:inline>
+    const nav = document.getElementById('navbar');
+    const hero = document.getElementById('hero');
+
+    const navbarObserver = new IntersectionObserver(
+        ([entry]) => {
+            const isHeroVisible = entry.isIntersecting;
+
+            if (!isHeroVisible) {
+                nav.classList.remove('opacity-0', 'pointer-events-none');
+                nav.classList.add('opacity-100', 'pointer-events-auto');
+            } else {
+                nav.classList.add('opacity-0', 'pointer-events-none');
+                nav.classList.remove('opacity-100', 'pointer-events-auto');
+            }
+        },
+        { threshold: 0.1 }
+    );
+
+    navbarObserver.observe(hero);
+</script>

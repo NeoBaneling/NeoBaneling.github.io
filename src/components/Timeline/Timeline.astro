@@ -13,7 +13,7 @@ interface Props {
 const { start, end, chips, ...linkProps } = Astro.props;
 ---
 
-<div class="grid grid-cols-[6rem_auto] grid-rows-[1.25rem_auto] items-end">
+<div class="grid grid-cols-[4rem_auto] md:grid-cols-[6rem_auto] grid-rows-[1.25rem_auto] items-end">
     <p class="small">{start} - {end ?? 'Present'}</p>
     <Linkish {...linkProps} />
     <div />

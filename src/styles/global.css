@@ -26,6 +26,8 @@
     --color-debug-500: #0000FF;
     --color-debug-600: #FF00FF;
 
+    --text-xs: 0.5rem;
+    --text-xs--line-height: calc(0.6 / 0.5);
     --text-sm: 0.75rem;
     --text-sm--line-height: calc(0.9 / 0.75);
     --text-base: 0.875rem;
@@ -36,71 +38,77 @@
     --text-xl--line-height: calc(1.5/ 1.25);
     --text-2xl: 1.625rem;
     --text-2xl--line-height: calc(1.95 / 1.625);
-    --text-3xl: 2.5rem;
-    --text-3xl--line-height: calc(3 / 2.5);
-    --text-4xl: 4rem;
-    --text-4xl--line-height: calc(4.8 / 4);
+    --text-3xl: 2.25rem;
+    --text-3xl--line-height: calc(2.7 / 2.25);
+    --text-4xl: 2.5rem;
+    --text-4xl--line-height: calc(3 / 2.5);
+    --text-5xl: 4rem;
+    --text-5xl--line-height: calc(4.8 / 4);
 }
 
 @layer components {
     /* text */
     .title {
-        @apply text-4xl font-bold text-coral tracking-tight;
+        @apply text-3xl md:text-5xl font-bold text-coral tracking-tight;
     }
     .big {
-        @apply text-xl font-medium text-coral tracking-tight;
+        @apply text-base md:text-xl font-medium text-coral tracking-tight;
     }
     .large {
-        @apply text-lg font-medium text-sand tracking-tight;
+        @apply md:text-lg font-medium text-sand tracking-tight;
     }
     .body {
-        @apply text-base font-medium text-sand tracking-tight;
+        @apply text-sm md:text-base font-medium text-sand tracking-tight;
     }
     .small {
-        @apply text-sm font-normal text-pink tracking-tight;
+        @apply text-xs md:text-sm font-normal text-pink tracking-tight;
     }
     .chip {
-        @apply rounded-full bg-frog p-2 border border-transparent text-sm text-lime;
+        @apply rounded-full bg-frog p-2 border border-transparent text-xs md:text-sm text-lime;
     }
     .link {
-        @apply hover:underline hover:cursor-pointer;
+        @apply hover:underline hover:cursor-pointer active:underline active:cursor-pointer;
     }
     /* layout */
     .section {
-        @apply md:px-28 relative;
+        @apply px-12 md:px-28 relative;
     }
     .footer {
-        @apply sticky w-92 mt-28 ml-28 pb-16;
+        @apply sticky px-12 pb-36 w-92 md:mt-28 md:ml-28 md:px-0 md:pb-16;
     }
     .col-group {
-        @apply grid grid-cols-2 gap-32;
+        @apply md:grid md:grid-cols-2 md:gap-32;
     }
     .col-item {
-        @apply flex-col h-auto justify-items-center;
+        @apply md:flex-col h-auto justify-items-center;
     }
     /* navbar */
     .navsection {
-        @apply sticky top-12 w-[100%] flex justify-center z-999;
+        @apply fixed md:sticky bottom-16 md:bottom-0 md:top-12 w-full flex justify-center z-999;
+        @apply transition-opacity duration-150 opacity-0 pointer-events-none;
     }
     .navbar {
-        @apply rounded-full bg-brown/50 backdrop-blur-lg py-4 px-8 border border-transparent space-x-4;
+        @apply rounded-full bg-brown/50 backdrop-blur-sm md:backdrop-blur-lg w-[297px] md:w-auto py-3 md:py-4 px-4 md:px-8 border border-transparent space-x-4;
     }
     .navlink {
-        @apply text-2xl font-medium text-blush tracking-tight py-2 px-4 z-1001 relative;
+        @apply text-lg md:text-2xl font-medium text-blush tracking-tight py-2 px-2 md:px-4 z-1001 relative;
     }
     .navlink-active {
         @apply rounded-full;
     }
     .navbubble {
-        @apply absolute bg-purple rounded-full transition-all duration-300 ease-in-out z-1000
+        @apply absolute bg-purple rounded-full transition-all duration-300 ease-in-out z-1000;
     }
     /* misc. */
     .icon-link {
-        @apply text-3xl text-pink;
-        @apply hover:text-sand hover:cursor-pointer;
+        @apply text-2xl md:text-4xl text-pink;
+        @apply hover:text-sand hover:cursor-pointer active:text-sand active:cursor-pointer;
     }
     .icon-copy {
-        @apply hidden text-sm;
+        @apply md:hidden text-xs md:text-sm;
         @apply group-hover:inline;
+    }
+    .image-about {
+        @apply float-left md:float-none aspect-square w-37 mr-3 md:mr-0 md:w-64;
     }
 }

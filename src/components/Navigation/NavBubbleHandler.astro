@@ -11,12 +11,14 @@
         const rect = link.getBoundingClientRect();
         const navRect = link.parentElement.getBoundingClientRect();
 
+        const isMobile = window.matchMedia('(max-width: 764px)').matches;
+
         navBubble.style.width = `${rect.width}px`;
         navBubble.style.height = `${rect.height}px`;
-        navBubble.style.transform = `translateX(${rect.left - navRect.left - 33}px) translateY(${rect.top - navRect.top - 16}px)`;
+        navBubble.style.transform = `translateX(${rect.left - navRect.left - (isMobile ? 17 : 33)}px) translateY(${rect.top - navRect.top - (isMobile ? 13 : 16)}px)`;
     }
 
-    const observer = new IntersectionObserver(
+    const sectionObserver = new IntersectionObserver(
         (entries) => {
             if (isScrolling) return;
 
@@ -33,10 +35,10 @@
         },
         { threshold: 0.5 }
     );
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => sectionObserver.observe(section));
 
     window.addEventListener('DOMContentLoaded', () => {
-        const current = document.querySelector('.nav-link');
+        const current = document.querySelector('.navlink');
         if (current) moveBubbleToLink(current);
     });
 
@@ -52,4 +54,10 @@
             }, 800);
         });
     });
+
+    window.addEventListener('resize', () => {
+        const current = document.querySelector('.navlink');
+        console.log({ current });
+        if (current) moveBubbleToLink(current);
+    })
 </script>

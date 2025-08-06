@@ -14,11 +14,11 @@ interface Props {
 const { alt, chips, reverse, src, ...linkProps } = Astro.props;
 ---
 
-<div class=`flex ${reverse ? 'flex-row-reverse space-x-reverse' : 'flex-row'} relative items-center ${reverse ? 'ml-28' : 'mr-28'} space-x-12`>
-    <div class=`border-teal border-64 ${reverse ? 'border-r-0' : 'border-l-0'} w-208`>
+<div class=`flex ${reverse ? 'flex-col md:flex-row-reverse md:space-x-reverse' : 'flex-col md:flex-row'} relative items-start md:items-center ${reverse ? 'ml-12 md:ml-28' : 'mr-12 md:mr-28'} space-y-8 md:space-y-0 md:space-x-12`>
+    <div class=`border-teal border-24 md:border-64 ${reverse ? 'border-r-0 md:border-r-0' : 'border-l-0 md:border-l-0'} w-auto md:w-208`>
         <img class="aspect-16/9" src={src} alt={alt}/>
     </div>
-    <div class="flex flex-col relative top-1/2 translate-y-1/2 max-w-112">
+    <div class=`flex flex-col relative top-0 md:top-1/2 md:translate-y-1/2 max-w-64 md:max-w-112 ${reverse ? 'ml-0' : 'ml-12 md:ml-0'}`>
         <div class="pb-2"><Linkish {...linkProps} /></div>
         <slot />
         <ChipGroup chips={chips} />
