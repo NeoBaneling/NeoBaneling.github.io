@@ -8,6 +8,6 @@ const { chips } = Astro.props;
 if (!chips) return;
 ---
 
-<div class="flex flex-row mt-2 gap-2">
+<div class="flex flex-row flex-wrap mt-2 gap-2">
     {chips.map((chip) => <div class="chip">{chip}</div>)}
 </div>

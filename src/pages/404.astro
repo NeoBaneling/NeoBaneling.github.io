@@ -1,9 +1,16 @@
 ---
-import { NavLink } from "../components/Navigation";
+import Footer from "../layouts/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout title="🌌 Error" excludeNavbar>
-    <h1>Welcome to the end of the universe</h1>
-    <p>Enjoy the abyss, I guess</p>
-    <NavLink path="/">Leap into a wormhole</NavLink>
+<Layout title="🌌 Error">
+    <div class="h-screen">
+        <div class="fixed bottom-0">
+            <div class="mb-28 md:mb-64 section space-y-4">
+                <h1 class="title">Welcome to the end of the universe</h1>
+                <p class="large">Enjoy the abyss, I guess.</p>
+                <span class="big link"><i class="bi bi-skip-backward-fill icon-link" />  <a href="/">Leap into a wormhole</a>
+            </div>
+            <Footer />
+        </div>
+    </div>
 </Layout>

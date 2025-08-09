@@ -4,10 +4,12 @@ import { NavBarHandler, NavBubbleHandler } from '../components/Navigation';
 import Footer from './Footer.astro';
 
 interface Props {
+	footer?: boolean;
+	navbar?: boolean;
 	title?: string;
 }
 
-let { title } = Astro.props;
+let { footer, navbar, title } = Astro.props;
 title = title ? `${title} | Joey Bishop` : 'Joey Bishop';
 ---
 
@@ -16,19 +18,27 @@ title = title ? `${title} | Joey Bishop` : 'Joey Bishop';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta property="og:site_name" content="Joey Bishop"/>
+        <meta property="og:url" content="https://joeybishop.com">
+        <meta property="og:image" content="../assets/thumbnail.png">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body class="bg-night">
+		<img id="background" alt="" fetchpriority="high" role="presentation" />
 		<div class="flex-col">
 			<slot />
 		</div>
-		<Footer />
+		{footer && <Footer />}
 	</body>
-	<NavBarHandler />
-	<NavBubbleHandler />
+	{navbar && (
+		<>
+			<NavBarHandler />
+			<NavBubbleHandler />
+		</>
+	)}
 </html>
 
 <style>
@@ -37,5 +47,22 @@ title = title ? `${title} | Joey Bishop` : 'Joey Bishop';
 		margin: 0;
 		width: 100%;
 		height: 100%;
+	}
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 25%;
+		filter: blur(75px);
+		content: url('../assets/background_mobile.svg');
+	}
+	@media screen and (min-width: 769px) {
+		#background {
+			filter: blur(200px);
+			content: url('../assets/background_desktop.svg');
+		}
 	}
 </style>

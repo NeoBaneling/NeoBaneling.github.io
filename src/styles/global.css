@@ -38,8 +38,8 @@
     --text-xl--line-height: calc(1.5/ 1.25);
     --text-2xl: 1.625rem;
     --text-2xl--line-height: calc(1.95 / 1.625);
-    --text-3xl: 2.25rem;
-    --text-3xl--line-height: calc(2.7 / 2.25);
+    --text-3xl: 1.75rem;
+    --text-3xl--line-height: calc(2.1 / 1.75);
     --text-4xl: 2.5rem;
     --text-4xl--line-height: calc(3 / 2.5);
     --text-5xl: 4rem;
@@ -55,7 +55,7 @@
         @apply text-base md:text-xl font-medium text-coral tracking-tight;
     }
     .large {
-        @apply md:text-lg font-medium text-sand tracking-tight;
+        @apply text-base md:text-lg font-medium text-sand tracking-tight;
     }
     .body {
         @apply text-sm md:text-base font-medium text-sand tracking-tight;
@@ -99,6 +99,16 @@
     .navbubble {
         @apply absolute bg-purple rounded-full transition-all duration-300 ease-in-out z-1000;
     }
+    /* hero title */
+    .hero-title {
+        @apply flex items-center overflow-hidden;
+    }
+    .slider-section {
+        @apply grid ml-1.75 md:ml-4;
+    }
+    .slider {
+        @apply m-0;
+    }
     /* misc. */
     .icon-link {
         @apply text-2xl md:text-4xl text-pink;
@@ -109,6 +119,6 @@
         @apply group-hover:inline;
     }
     .image-about {
-        @apply float-left md:float-none aspect-square w-37 mr-3 md:mr-0 md:w-64;
+        @apply float-left md:float-none aspect-square w-37 mr-3 md:mr-0 md:w-64 rounded-full;
     }
 }

@@ -1,9 +1,16 @@
 ---
-import { NavLink } from "../components/Navigation";
+import Footer from "../layouts/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout title="😵 Error" excludeNavbar>
-    <h1>500</h1>
-    <p>Uh, this is embarassing</p>
-    <NavLink path="/">Run away!</NavLink>
+<Layout title="😵 Error">
+    <div class="h-screen">
+        <div class="fixed bottom-0">
+            <div class="mb-28 md:mb-64 section space-y-4">
+                <h1 class="title">Uh, this is embarassing</h1>
+                <p class="large">Oopsie something really bad happened!</p>
+                <span class="big link"><i class="bi bi-skip-backward-fill icon-link" />  <a href="/">Run away!</a>
+            </div>
+            <Footer />
+        </div>
+    </div>
 </Layout>
