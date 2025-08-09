@@ -1,8 +1,34 @@
 # NeoBaneling.github.io 👾
 
-AKA **[joeybishop.com](joeybishop.com)** 🦘 
+AKA **[joeybishop.com](joeybishop.com)** 🦘
 
 Start with `yarn && yarn:dev`
+
+## Commands
+
+### `yarn dev`
+
+Starts dev server on [localhost:4321](http://localhost:4321).
+
+### `yarn build`
+
+Builds the app.
+
+### `yarn preview`
+
+Runs the build.
+
+### `yarn fmt`
+
+Runs prettier formatter.
+
+### `yarn lint`
+
+Runs eslint checks.
+
+### `yarn lint:fix`
+
+Runs eslint checks with auto-fixing enabled.
 
 ## Resources
 

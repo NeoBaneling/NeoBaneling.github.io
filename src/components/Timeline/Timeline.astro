@@ -3,23 +3,22 @@ import ChipGroup from './ChipGroup.astro';
 import Linkish from './Linkish.astro';
 
 interface Props {
-    chips?: string[];
-    end?: string;
-    link?: string;
-    start: string;
-    title: string;
+	chips?: string[];
+	end?: string;
+	link?: string;
+	start: string;
+	title: string;
 }
 
 const { start, end, chips, ...linkProps } = Astro.props;
 ---
 
-<div class="grid grid-cols-[4rem_auto] md:grid-cols-[6rem_auto] grid-rows-[1.25rem_auto] items-end">
-    <p class="small">{start} - {end ?? 'Present'}</p>
-    <Linkish {...linkProps} />
-    <div />
-    <div class="flex-col h-auto mt-1">
-        <slot />
-        <ChipGroup chips={chips} />
-    </div>
+<div class="grid grid-cols-[4rem_auto] grid-rows-[1.25rem_auto] items-end md:grid-cols-[6rem_auto]">
+	<p class="small">{start} - {end ?? 'Present'}</p>
+	<Linkish {...linkProps} />
+	<div></div>
+	<div class="mt-1 h-auto flex-col">
+		<slot />
+		<ChipGroup chips={chips} />
+	</div>
 </div>
-

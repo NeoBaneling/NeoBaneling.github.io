@@ -1,45 +1,57 @@
 <section id="contact" class="section pt-42">
-    <h2 class="title mb-28 md:mb-64">Contact 📡</h2>
-    <div class="flex-col space-y-4 mb-18 md:mb-64">
-        <p class="big group w-fit">
-            <span class="link clipboard">(423) - 598 - 3877</span>
-            <i class="bi bi-copy icon-copy" />
-            <span class="body pl-1 opacity-0 transition-opacity duration-300 pointer-events-none" data-copy-alert>Copied to clipboard!</span>
-        </p>
-        <p class="big group w-fit">
-            <span class="link clipboard">josephbishop1499@yahoo.com</span>
-            <i class="bi bi-copy icon-copy" />
-            <span class="body pl-1 opacity-0 transition-opacity duration-300 pointer-events-none" data-copy-alert>Copied to clipboard!</span>
-        </p>
-        <div class="flex flex-row space-x-6 md:space-x-8">
-            <a href="https://github.com/NeoBaneling" target="_blank" class="icon-link"><i class="bi bi-github" /></a>
-            <a href="https://www.linkedin.com/in/joey-bishop-a49b36121/" target="_blank" class="icon-link"><i class="bi bi-linkedin" /></a>
-            <a href="resume.pdf" class="icon-link"><i class="bi bi-file-earmark-text-fill" /></a>
-            <a href="mailto:josephbishop1499@yahoo.com" class="icon-link"><i class="bi bi-mailbox2-flag" /></a>
-        </div>
-    </div>
+	<h2 class="title mb-28 md:mb-64">Contact 📡</h2>
+	<div class="mb-18 flex-col space-y-4 md:mb-64">
+		<p class="big group w-fit">
+			<span class="link clipboard">(423) - 598 - 3877</span>
+			<i class="bi bi-copy icon-copy"></i>
+			<span
+				class="body pointer-events-none pl-1 opacity-0 transition-opacity duration-300"
+				data-copy-alert>Copied to clipboard!</span
+			>
+		</p>
+		<p class="big group w-fit">
+			<span class="link clipboard">josephbishop1499@yahoo.com</span>
+			<i class="bi bi-copy icon-copy"></i>
+			<span
+				class="body pointer-events-none pl-1 opacity-0 transition-opacity duration-300"
+				data-copy-alert>Copied to clipboard!</span
+			>
+		</p>
+		<div class="flex flex-row space-x-6 md:space-x-8">
+			<a href="https://github.com/NeoBaneling" target="_blank" class="icon-link"
+				><i class="bi bi-github"></i></a
+			>
+			<a href="https://www.linkedin.com/in/joey-bishop-a49b36121/" target="_blank" class="icon-link"
+				><i class="bi bi-linkedin"></i></a
+			>
+			<a href="resume.pdf" class="icon-link"><i class="bi bi-file-earmark-text-fill"></i></a>
+			<a href="mailto:josephbishop1499@yahoo.com" class="icon-link"
+				><i class="bi bi-mailbox2-flag"></i></a
+			>
+		</div>
+	</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const clips = Array.from(document.getElementsByClassName('clipboard'));
-            clips.forEach((clip) => {
-                clip.addEventListener('click', () => {
-                    const text = clip.textContent!;
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const clips = Array.from(document.getElementsByClassName('clipboard'));
+			clips.forEach((clip) => {
+				clip.addEventListener('click', () => {
+					const text = clip.textContent!;
 
-                    navigator.clipboard.writeText(text).then(() => {
-                        const alert = clip.parentElement?.querySelector('[data-copy-alert]');
-                        if (!alert) return;
+					navigator.clipboard.writeText(text).then(() => {
+						const alert = clip.parentElement?.querySelector('[data-copy-alert]');
+						if (!alert) return;
 
-                        alert.classList.remove('opacity-0');
-                        alert.classList.add('opacity-100');
+						alert.classList.remove('opacity-0');
+						alert.classList.add('opacity-100');
 
-                        setTimeout(() => {
-                            alert.classList.remove('opacity-100');
-                            alert.classList.add('opacity-0');
-                        }, 1500);
-                    })
-                })
-            })
-        })
-    </script>
+						setTimeout(() => {
+							alert.classList.remove('opacity-100');
+							alert.classList.add('opacity-0');
+						}, 1500);
+					});
+				});
+			});
+		});
+	</script>
 </section>

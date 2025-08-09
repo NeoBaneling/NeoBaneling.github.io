@@ -1,15 +1,23 @@
 ---
 interface Props {
-    link?: string;
-    title: string;
+	link?: string;
+	title: string;
 }
 
 const { link, title } = Astro.props;
 ---
 
 <h3 class="big">
-    {link
-        ? <a href={link} target="_blank" class="link">{title}</a> <i class="bi bi-box-arrow-up-right" />
-        : title
-    }
+	{
+		link ? (
+			<>
+				<a href={link} target="_blank" class="link">
+					{title}
+				</a>{' '}
+				<i class="bi bi-box-arrow-up-right" />
+			</>
+		) : (
+			title
+		)
+	}
 </h3>

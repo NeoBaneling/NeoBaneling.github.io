@@ -1,60 +1,105 @@
 ---
-import ProjectContent from "../ProjectContent/ProjectContent.astro";
+import ProjectContent from '../ProjectContent/ProjectContent.astro';
 ---
 
 <section class="pt-42">
-    <section id="projects" class="section">
-        <h2 class="title mb-24" id="projects">Projects 🎨</h2>
-    </section>
-    <div class="relative space-y-48">
-        <ProjectContent
-            title="Pokémon Tournament Simulator"
-            src="/img/thumbnail/shruden.png"
-            alt="tbd"
-            chips={['API','Web Dev','Java','Spring Boot','PostgreSQL','TypeScript','React','Vite','Docker']}
-            >
-            <p class="body">Full stack application that simulates battles between select Pokémon, with persistent storage, user authentication, and battle configuration. Backend designed iteratively with architecture diagrams. Pokémon sprites provided by <a href="https://pokeapi.co/" target="_blank" class="link">PokéApi</a> <i class="bi bi-box-arrow-up-right" />.</p>
-        </ProjectContent>
-        <ProjectContent
-            title="Behavior of Reinforcement Learning Algorithms on Unique Markov Decision Processes"
-            src="/img/thumbnail/shruden.png"
-            alt="tbd"
-            chips={['AI/ ML','Python','Scikit','Numpy','Matplotlib','Gymnasium']}
-            link="/src/assets/projects/rl-report.pdf"
-            reverse
-            >
-            <p class="body">Research on training RL agents in <a href="https://gymnasium.farama.org/environments/toy_text/blackjack/" target="_blank" class="link">Blackjack</a> <i class="bi bi-box-arrow-up-right" /> and <a href="https://gymnasium.farama.org/environments/classic_control/cart_pole/" target="_blank" class="link">Cart Pole</a> <i class="bi bi-box-arrow-up-right" /> gymnasium environments to explore agent behavior and gain understanding of problem space.</p>
-        </ProjectContent>
-        <ProjectContent
-            title="Knowledge-Based Puzzle Solving Agent"
-            src="/img/thumbnail/shruden.png"
-            alt="tbd"
-            chips={['AI/ ML','Python','Numpy']}
-            link="/src/assets/projects/arc-agi-report.pdf"
-            >
-            <p class="body">AI agent designed to solve visual pixel-based problems that measure <a href="https://arcprize.org/arc-agi" target="_blank" class="link">general intelligence</a> <i class="bi bi-box-arrow-up-right" />.</p>
-        </ProjectContent>
-        <ProjectContent
-            title="Improving Perception for Color Vision Deficiency"
-            src="/img/thumbnail/shruden.png"
-            alt="tbd"
-            chips={['UX Research','Accessibility','Figma','AR']}
-            link="https://www.figma.com/proto/2gJo2ooMkryulajQxjhEnO/Profile-modal?node-id=2-77&starting-point-node-id=2%3A77&t=olqG2grwMZuhe3at-1"
-            reverse
-            >
-            <p class="body">Mobile application prototype that improves color perception for color-deficient users with augmented reality, iteratively improving design through research and user studies.</p>
-        </ProjectContent>
-        <div>
-            <!-- empty section included to capture the end of the projects section for navbar functionality -->
-            <section id="projects" />
-            <ProjectContent
-                title="Princess Duchess’s Excellent Adventure"
-                src="/src/assets/projects/pd-overview.png"
-                alt="screen capture of a video game which features 3-dimensional block level design in a cute, hand-drawn crayon artstyle."
-                chips={['Game Dev','C#','Unity','UX']}
-                >
-                <p class="body">3D puzzle-action platformer game built in Unity, with emphasis on user experience through menu design, environment artifacts, and game feel.</p>
-            </ProjectContent>
-        </div>
-    </div>
+	<section id="projects" class="section">
+		<h2 class="title mb-24" id="projects">Projects 🎨</h2>
+	</section>
+	<div class="relative space-y-48">
+		<ProjectContent
+			title="Pokémon Tournament Simulator"
+			src="/img/thumbnail/shruden.png"
+			alt="tbd"
+			chips={[
+				'API',
+				'Web Dev',
+				'Java',
+				'Spring Boot',
+				'PostgreSQL',
+				'TypeScript',
+				'React',
+				'Vite',
+				'Docker'
+			]}
+		>
+			<p class="body">
+				Full stack application that simulates battles between select Pokémon, with persistent
+				storage, user authentication, and battle configuration. Backend designed iteratively with
+				architecture diagrams. Pokémon sprites provided by <a
+					href="https://pokeapi.co/"
+					target="_blank"
+					class="link">PokéApi</a
+				>
+				<i class="bi bi-box-arrow-up-right"></i>.
+			</p>
+		</ProjectContent>
+		<ProjectContent
+			title="Behavior of Reinforcement Learning Algorithms on Unique Markov Decision Processes"
+			src="/img/thumbnail/shruden.png"
+			alt="tbd"
+			chips={['AI/ ML', 'Python', 'Scikit', 'Numpy', 'Matplotlib', 'Gymnasium']}
+			link="/src/assets/projects/rl-report.pdf"
+			reverse
+		>
+			<p class="body">
+				Research on training RL agents in <a
+					href="https://gymnasium.farama.org/environments/toy_text/blackjack/"
+					target="_blank"
+					class="link">Blackjack</a
+				>
+				<i class="bi bi-box-arrow-up-right"></i> and <a
+					href="https://gymnasium.farama.org/environments/classic_control/cart_pole/"
+					target="_blank"
+					class="link">Cart Pole</a
+				>
+				<i class="bi bi-box-arrow-up-right"></i> gymnasium environments to explore agent behavior and
+				gain understanding of problem space.
+			</p>
+		</ProjectContent>
+		<ProjectContent
+			title="Knowledge-Based Puzzle Solving Agent"
+			src="/img/thumbnail/shruden.png"
+			alt="tbd"
+			chips={['AI/ ML', 'Python', 'Numpy']}
+			link="/src/assets/projects/arc-agi-report.pdf"
+		>
+			<p class="body">
+				AI agent designed to solve visual pixel-based problems that measure <a
+					href="https://arcprize.org/arc-agi"
+					target="_blank"
+					class="link">general intelligence</a
+				>
+				<i class="bi bi-box-arrow-up-right"></i>.
+			</p>
+		</ProjectContent>
+		<ProjectContent
+			title="Improving Perception for Color Vision Deficiency"
+			src="/img/thumbnail/shruden.png"
+			alt="tbd"
+			chips={['UX Research', 'Accessibility', 'Figma', 'AR']}
+			link="https://www.figma.com/proto/2gJo2ooMkryulajQxjhEnO/Profile-modal?node-id=2-77&starting-point-node-id=2%3A77&t=olqG2grwMZuhe3at-1"
+			reverse
+		>
+			<p class="body">
+				Mobile application prototype that improves color perception for color-deficient users with
+				augmented reality, iteratively improving design through research and user studies.
+			</p>
+		</ProjectContent>
+		<div>
+			<!-- empty section included to capture the end of the projects section for navbar functionality -->
+			<section id="projects"></section>
+			<ProjectContent
+				title="Princess Duchess’s Excellent Adventure"
+				src="/src/assets/projects/pd-overview.png"
+				alt="screen capture of a video game which features 3-dimensional block level design in a cute, hand-drawn crayon artstyle."
+				chips={['Game Dev', 'C#', 'Unity', 'UX']}
+			>
+				<p class="body">
+					3D puzzle-action platformer game built in Unity, with emphasis on user experience through
+					menu design, environment artifacts, and game feel.
+				</p>
+			</ProjectContent>
+		</div>
+	</div>
 </section>

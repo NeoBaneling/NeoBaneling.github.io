@@ -1,62 +1,62 @@
 <script is:inline>
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.navlink');
+	const sections = document.querySelectorAll('section');
+	const navLinks = document.querySelectorAll('.navlink');
 
-    const navBubble = document.getElementById('nav-bubble');
+	const navBubble = document.getElementById('nav-bubble');
 
-    let isScrolling = false;
-    let scrollTimeout;
+	let isScrolling = false;
+	let scrollTimeout;
 
-    const moveBubbleToLink = (link) => {
-        const rect = link.getBoundingClientRect();
-        const navRect = link.parentElement.getBoundingClientRect();
+	const moveBubbleToLink = (link) => {
+		const rect = link.getBoundingClientRect();
+		const navRect = link.parentElement.getBoundingClientRect();
 
-        const isMobile = window.matchMedia('(max-width: 764px)').matches;
+		const isMobile = window.matchMedia('(max-width: 764px)').matches;
 
-        navBubble.style.width = `${rect.width}px`;
-        navBubble.style.height = `${rect.height}px`;
-        navBubble.style.transform = `translateX(${rect.left - navRect.left - (isMobile ? 17 : 33)}px) translateY(${rect.top - navRect.top - (isMobile ? 13 : 16)}px)`;
-    }
+		navBubble.style.width = `${rect.width}px`;
+		navBubble.style.height = `${rect.height}px`;
+		navBubble.style.transform = `translateX(${rect.left - navRect.left - (isMobile ? 17 : 33)}px) translateY(${rect.top - navRect.top - (isMobile ? 13 : 16)}px)`;
+	};
 
-    const sectionObserver = new IntersectionObserver(
-        (entries) => {
-            if (isScrolling) return;
+	const sectionObserver = new IntersectionObserver(
+		(entries) => {
+			if (isScrolling) return;
 
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.id;
-                    navLinks.forEach((link) => {
-                        const isActive = link.dataset.nav === id;
-                        link.classList.toggle('navlink-active', isActive);
-                        if (isActive) moveBubbleToLink(link);
-                    });
-                }
-            });
-        },
-        { threshold: 0.5 }
-    );
-    sections.forEach((section) => sectionObserver.observe(section));
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const id = entry.target.id;
+					navLinks.forEach((link) => {
+						const isActive = link.dataset.nav === id;
+						link.classList.toggle('navlink-active', isActive);
+						if (isActive) moveBubbleToLink(link);
+					});
+				}
+			});
+		},
+		{ threshold: 0.5 }
+	);
+	sections.forEach((section) => sectionObserver.observe(section));
 
-    window.addEventListener('DOMContentLoaded', () => {
-        const current = document.querySelector('.navlink');
-        if (current) moveBubbleToLink(current);
-    });
+	window.addEventListener('DOMContentLoaded', () => {
+		const current = document.querySelector('.navlink');
+		if (current) moveBubbleToLink(current);
+	});
 
-    navLinks.forEach((link) => {
-        link.addEventListener('click', (e) => {
-            isScrolling = true;
+	navLinks.forEach((link) => {
+		link.addEventListener('click', () => {
+			isScrolling = true;
 
-            moveBubbleToLink(link);
+			moveBubbleToLink(link);
 
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                isScrolling = false;
-            }, 800);
-        });
-    });
+			clearTimeout(scrollTimeout);
+			scrollTimeout = setTimeout(() => {
+				isScrolling = false;
+			}, 800);
+		});
+	});
 
-    window.addEventListener('resize', () => {
-        const current = document.querySelector('.navlink');
-        if (current) moveBubbleToLink(current);
-    })
+	window.addEventListener('resize', () => {
+		const current = document.querySelector('.navlink');
+		if (current) moveBubbleToLink(current);
+	});
 </script>
