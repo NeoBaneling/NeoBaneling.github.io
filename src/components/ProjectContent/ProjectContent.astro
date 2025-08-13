@@ -1,6 +1,8 @@
 ---
 import ChipGroup from '../Timeline/ChipGroup.astro';
 import Linkish from '../Timeline/Linkish.astro';
+import BlobGreener from './BlobGreener.astro';
+import BlobPink from './BlobPink.astro';
 
 interface Props {
 	alt: string;
@@ -14,19 +16,20 @@ interface Props {
 const { alt, chips, reverse, src, ...linkProps } = Astro.props;
 ---
 
-<div
-	class=`flex ${reverse ? 'flex-col md:flex-row-reverse md:space-x-reverse' : 'flex-col md:flex-row'} relative items-start md:items-center ${reverse ? 'ml-12 md:ml-28' : 'mr-12 md:mr-28'} space-y-8 md:space-y-0 md:space-x-12`
->
+<div>
 	<div
-		class=`border-teal border-24 md:border-64 ${reverse ? 'border-r-0 md:border-r-0' : 'border-l-0 md:border-l-0'} w-auto md:w-208`
+		class=`flex ${reverse ? 'flex-col md:flex-row-reverse md:space-x-reverse' : 'flex-col md:flex-row'} relative ${reverse ? 'items-end' : 'items-start'} md:items-center ${reverse ? 'ml-12 md:ml-36' : 'mr-12 md:mr-36'} space-y-12 md:space-y-24 md:space-x-6`
 	>
-		<img class="aspect-16/9" src={src} alt={alt} />
-	</div>
-	<div
-		class=`flex flex-col relative top-0 md:top-1/2 md:translate-y-1/2 max-w-64 md:max-w-112 ${reverse ? 'ml-0' : 'ml-12 md:ml-0'}`
-	>
-		<div class="pb-2"><Linkish {...linkProps} /></div>
-		<slot />
-		<ChipGroup chips={chips} />
-	</div>
+		<div class=`relative flex items-center py-12 ${reverse ? 'justify-end' : 'justify-start'}`>
+			{reverse ? <BlobPink /> : <BlobGreener />} 
+			<img src={src} alt={alt} class=`aspect-[16/9] w-[80%] relative z-10 ${reverse ? 'rounded-l-xl md:rounded-l-3xl' : 'rounded-r-xl md:rounded-r-3xl'}` />
+		</div>
+		<div
+			class=`flex flex-col relative top-0 md:top-1/2 md:translate-y-1/2 max-w-72 md:max-w-112 ${reverse ? 'mr-12 md:mr-0' : 'ml-12 md:ml-0'}`
+		>
+			<div class="pb-2"><Linkish {...linkProps} /></div>
+			<slot /> 
+			<ChipGroup chips={chips} />
+		</div>
+	</div >
 </div>

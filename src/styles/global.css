@@ -74,7 +74,7 @@
 		@apply relative px-12 md:px-28;
 	}
 	.footer {
-		@apply sticky w-92 px-12 pb-36 md:mt-28 md:ml-28 md:px-0 md:pb-16;
+		@apply sticky max-w-92 px-12 pb-36 md:mt-28 md:ml-28 md:px-0 md:pb-16;
 	}
 	.col-group {
 		@apply md:grid md:grid-cols-2 md:gap-32;
