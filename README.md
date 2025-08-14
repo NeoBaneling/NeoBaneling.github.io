@@ -1,4 +1,4 @@
-# NeoBaneling.github.io 👾
+# NeoBaneling.github.io 👾 
 
 AKA **[joeybishop.com](joeybishop.com)** 🦘
 
