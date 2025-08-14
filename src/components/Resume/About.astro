@@ -1,12 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import Timeline from '../Timeline';
+import headshot from '../../assets/headshot.png';
 ---
 
 <section id="about" class="section px-4.5 pt-24 md:px-12 md:pt-42">
 	<h2 class="title mb-24 ml-7.5 md:ml-0">About 🦘</h2>
 	<div class="col-group space-y-9 md:space-y-0">
 		<div class="col-item md:space-y-12">
-			<img class="image-about" src="/src/assets/headshot.png" alt="headshot of Joey Bishop" />
+			<Image src={headshot} class="image-about" alt="headshot of Joey Bishop" />
 			<p class="big">
 				I'm a curious and motivated full-stack engineer with a passion for building accessible,
 				performant web experiences.<br /><br />TypeScript and React are my bread and butter, but I

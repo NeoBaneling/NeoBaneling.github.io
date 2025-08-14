@@ -1,5 +1,9 @@
 ---
 import ProjectContent from '../ProjectContent/ProjectContent.astro';
+import bjGif from '../../assets/projects/blackjack.gif';
+import arcagiImage from '../../assets/projects/arc-agi-overview.png';
+import cbImage from '../../assets/projects/cb-overview.png';
+import pdImage from '../../assets/projects/pd-overview.png';
 ---
 
 <section>
@@ -9,7 +13,7 @@ import ProjectContent from '../ProjectContent/ProjectContent.astro';
 	<div class="relative space-y-48">
 		<ProjectContent
 			title="Pokémon Tournament Simulator"
-			src="/src/assets/projects/pd-overview.png"
+			src={pdImage}
 			alt="tbd"
 			chips={[
 				'API',
@@ -36,8 +40,8 @@ import ProjectContent from '../ProjectContent/ProjectContent.astro';
 		</ProjectContent>
 		<ProjectContent
 			title="Behavior of Reinforcement Learning Algorithms on Unique Markov Decision Processes"
-			src="/src/assets/projects/blackjack.gif"
-			alt="tbd"
+			src={bjGif}
+			alt="an animation of an AI agent rapidly playing through several sequences of the card game Blackjack. Numbers indicate scores for the agent and the dealer. A face-up card appears in the middle of the screen."
 			chips={['AI/ ML', 'Python', 'Scikit', 'Numpy', 'Matplotlib', 'Gymnasium']}
 			link="/src/assets/projects/rl-report.pdf"
 			reverse
@@ -59,8 +63,8 @@ import ProjectContent from '../ProjectContent/ProjectContent.astro';
 		</ProjectContent>
 		<ProjectContent
 			title="Knowledge-Based Puzzle Solving Agent"
-			src="/src/assets/projects/arc-agi-overview.png"
-			alt="tbd"
+			src={arcagiImage}
+			alt="two pixel grids make up the input and output for a knowledge-based puzzle agent. The input image contains three blobs made up of blue pixels against a black pixel background. The output image contains the same blobs, where each blob that is fully contained has a green line inside the blob and a red line outside the blob."
 			chips={['AI/ ML', 'Python', 'Numpy']}
 			link="/src/assets/projects/arc-agi-report.pdf"
 		>
@@ -75,8 +79,8 @@ import ProjectContent from '../ProjectContent/ProjectContent.astro';
 		</ProjectContent>
 		<ProjectContent
 			title="Color Blind Supplement AR App Design"
-			src="/src/assets/projects/cb-overview.png"
-			alt="tbd"
+			src={cbImage}
+			alt="three wireframe mocks for a mobile application. The first mock features a landing screen. The second mock shows a welcome dialog in the main view, with interaction points. The third mock has another modal prompting the user to enter their color deficiency type."
 			chips={['UX Research', 'Accessibility', 'Figma', 'AR']}
 			link="https://www.figma.com/proto/2gJo2ooMkryulajQxjhEnO/Profile-modal?node-id=2-77&starting-point-node-id=2%3A77&t=olqG2grwMZuhe3at-1"
 			reverse
@@ -91,7 +95,7 @@ import ProjectContent from '../ProjectContent/ProjectContent.astro';
 			<section id="projects"></section>
 			<ProjectContent
 				title="Princess Duchess’s Excellent Adventure"
-				src="/src/assets/projects/pd-overview.png"
+				src={pdImage}
 				alt="screen capture of a video game which features 3-dimensional block level design in a cute, hand-drawn crayon artstyle."
 				chips={['Game Dev', 'C#', 'Unity', 'UX']}
 			>
