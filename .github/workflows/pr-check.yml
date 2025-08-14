@@ -26,4 +26,4 @@ jobs:
         run: yarn fmt
 
       - name: build project
-        uses: yarn build
+        run: yarn build
