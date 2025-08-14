@@ -1,4 +1,4 @@
-# NeoBaneling.github.io 👾 
+# NeoBaneling.github.io 👾
 
 AKA **[joeybishop.com](joeybishop.com)** 🦘
 
@@ -21,6 +21,10 @@ Runs the build.
 ### `yarn fmt`
 
 Runs prettier formatter.
+
+### `yarn fmt:fix`
+
+Runs prettier formatter with auto-writing enabled.
 
 ### `yarn lint`
 

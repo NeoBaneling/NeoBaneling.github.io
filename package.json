@@ -8,7 +8,8 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"fmt": "prettier --write .",
+		"fmt": "prettier .",
+		"fmt:fix": "prettier --write .",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix"
 	},
