@@ -1,11 +1,15 @@
 ---
-import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 ---
 
 <section id="contact" class="section mt-42">
 	<h2 class="title mb-6 md:mb-0">Contact 📡</h2>
-	<div class="flex flex-col md:flex-row-reverse justify-between">
-		<LottieAnimation src="src/assets/animated/envelope.json" autoplay="visible" class="w-full md:w-150" />
+	<div class="flex flex-col justify-between md:flex-row-reverse">
+		<LottieAnimation
+			src="src/assets/animated/envelope.json"
+			autoplay="visible"
+			class="w-full md:w-150"
+		/>
 		<div class="mb-28 flex-col space-y-4 md:mt-64">
 			<p class="big group w-fit">
 				<span class="link clipboard">(423) - 598 - 3877</span>
@@ -27,8 +31,10 @@ import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 				<a href="https://github.com/NeoBaneling" target="_blank" class="icon-link"
 					><i class="bi bi-github"></i></a
 				>
-				<a href="https://www.linkedin.com/in/joey-bishop-a49b36121/" target="_blank" class="icon-link"
-					><i class="bi bi-linkedin"></i></a
+				<a
+					href="https://www.linkedin.com/in/joey-bishop-a49b36121/"
+					target="_blank"
+					class="icon-link"><i class="bi bi-linkedin"></i></a
 				>
 				<a href="resume.pdf" class="icon-link"><i class="bi bi-file-earmark-text-fill"></i></a>
 				<a href="mailto:josephbishop1499@yahoo.com" class="icon-link"

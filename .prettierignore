@@ -12,3 +12,6 @@ dist
 pnpm-lock.yaml
 yarn.lock
 package-lock.json
+
+# animations
+**/animated/*.json
