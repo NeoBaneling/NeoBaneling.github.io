@@ -19,10 +19,12 @@
 		"@types/react-dom": "^19.1.7",
 		"astro": "^5.12.5",
 		"astro-integration-lottie": "^0.3.2",
+		"astro-particles": "^2.10.0",
 		"lottie-web": "^5.13.0",
 		"react": "^19.1.1",
 		"react-dom": "^19.1.1",
-		"tailwindcss": "^4.1.11"
+		"tailwindcss": "^4.1.11",
+		"tsparticles": "2.12"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.33.0",
