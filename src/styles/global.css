@@ -114,6 +114,10 @@
 		@apply text-pink text-2xl md:text-4xl;
 		@apply hover:text-sand active:text-sand hover:cursor-pointer active:cursor-pointer;
 	}
+	.icon-arrow {
+		@apply text-sm md:text-base;
+		@apply group-hover:inline;
+	}
 	.icon-copy {
 		@apply text-xs md:hidden md:text-sm;
 		@apply group-hover:inline;
