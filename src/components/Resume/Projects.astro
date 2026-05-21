@@ -5,6 +5,7 @@ import bjGif from '../../assets/projects/blackjack.gif';
 import arcagiImage from '../../assets/projects/arc-agi-overview.png';
 import cbImage from '../../assets/projects/cb-overview.png';
 import pdImage from '../../assets/projects/pd-overview.png';
+import sbImage from '../../assets/projects/sb-overview.png';
 ---
 
 <section>
@@ -12,6 +13,26 @@ import pdImage from '../../assets/projects/pd-overview.png';
 		<h2 class="title mb-36" id="projects">Projects 🎨</h2>
 	</section>
 	<div class="relative space-y-48">
+		<ProjectContent
+			title="StoryBlocks"
+			src={sbImage}
+			alt="The UI of the StoryBlocks application running on an iPad, next to two of the StoryBlocks interlocking building blocks."
+			link="https://youtu.be/wqyiuDA-dtI"
+			chips={[
+				'App Dev',
+				'Education',
+				'AR',
+				'Unity',
+				'C#',
+				'Tangible User Interfaces',
+				'CAD',
+				'UX'
+			]}
+		>
+			<p class="body">
+				Mixed-media puzzle game that teaches early literacy learning while promoting fine motor skills, with an iOS application built in Unity and 3D-printed interlocking building blocks. Designed to <a href="projects/sb-report.pdf" target="_blank" class="link">promote physical play and critical thinking</a> <i class="bi bi-box-arrow-up-right"></i>.
+			</p>
+		</ProjectContent>
 		<ProjectContent
 			title="Pokémon Tournament Simulator"
 			src={pkmImage}
@@ -27,6 +48,7 @@ import pdImage from '../../assets/projects/pd-overview.png';
 				'Vite',
 				'Docker'
 			]}
+			reverse
 		>
 			<p class="body">
 				Full stack application that simulates battles between select Pokémon, with persistent
@@ -35,6 +57,22 @@ import pdImage from '../../assets/projects/pd-overview.png';
 					href="https://pokeapi.co/"
 					target="_blank"
 					class="link">PokéApi</a
+				>
+				<i class="bi bi-box-arrow-up-right"></i>.
+			</p>
+		</ProjectContent>
+		<ProjectContent
+			title="Knowledge-Based Puzzle Solving Agent"
+			src={arcagiImage}
+			alt="two pixel grids make up the input and output for a knowledge-based puzzle agent. The input image contains three blobs made up of blue pixels against a black pixel background. The output image contains the same blobs, where each blob that is fully contained has a green line inside the blob and a red line outside the blob."
+			chips={['AI/ ML', 'Python', 'Numpy']}
+			link="projects/arc-agi-report.pdf"
+		>
+			<p class="body">
+				AI agent designed to solve visual pixel-based problems that measure <a
+					href="https://arcprize.org/arc-agi"
+					target="_blank"
+					class="link">general intelligence</a
 				>
 				<i class="bi bi-box-arrow-up-right"></i>.
 			</p>
@@ -63,28 +101,11 @@ import pdImage from '../../assets/projects/pd-overview.png';
 			</p>
 		</ProjectContent>
 		<ProjectContent
-			title="Knowledge-Based Puzzle Solving Agent"
-			src={arcagiImage}
-			alt="two pixel grids make up the input and output for a knowledge-based puzzle agent. The input image contains three blobs made up of blue pixels against a black pixel background. The output image contains the same blobs, where each blob that is fully contained has a green line inside the blob and a red line outside the blob."
-			chips={['AI/ ML', 'Python', 'Numpy']}
-			link="projects/arc-agi-report.pdf"
-		>
-			<p class="body">
-				AI agent designed to solve visual pixel-based problems that measure <a
-					href="https://arcprize.org/arc-agi"
-					target="_blank"
-					class="link">general intelligence</a
-				>
-				<i class="bi bi-box-arrow-up-right"></i>.
-			</p>
-		</ProjectContent>
-		<ProjectContent
 			title="Color Blind Supplement AR App Design"
 			src={cbImage}
 			alt="three wireframe mocks for a mobile application. The first mock features a landing screen. The second mock shows a welcome dialog in the main view, with interaction points. The third mock has another modal prompting the user to enter their color deficiency type."
 			chips={['UX Research', 'Accessibility', 'Figma', 'AR']}
 			link="https://www.figma.com/proto/2gJo2ooMkryulajQxjhEnO/Profile-modal?node-id=2-77&starting-point-node-id=2%3A77&t=olqG2grwMZuhe3at-1"
-			reverse
 		>
 			<p class="body">
 				Mobile application prototype that improves color perception for color-deficient users with
@@ -99,6 +120,7 @@ import pdImage from '../../assets/projects/pd-overview.png';
 				src={pdImage}
 				alt="screen capture of a video game which features 3-dimensional block level design in a cute, hand-drawn crayon artstyle."
 				chips={['Game Dev', 'C#', 'Unity', 'UX']}
+				reverse
 			>
 				<p class="body">
 					3D puzzle-action platformer game built in Unity, with emphasis on user experience through
